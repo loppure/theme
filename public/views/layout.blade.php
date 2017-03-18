@@ -7,50 +7,52 @@
         {{ wp_head() }}
     </head>
     <body {{ body_class() }}>
-        <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 
-        <div id="page" class="hfeed site">
+            <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 
-            <header id="masthead" class="site-header" role="banner">
-                <div class="header-wrapper">
-                    <div class="site-branding">
-                        <div class="nascondi-cerchio"></div>
-                        <div class="cerchio-logo">
-                            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                                #TODO Logo oppure qui
-                            </a>
-                        </div>
-                    </div><!-- .site-branding -->
+            <div id="page" class="hfeed site">
 
-                    <nav id="site-navigation" class="main-navigation" role="navigation">
-                        <button class="menu-toggle" aria-controls="menu-menu-1" aria-expanded="false"></button>
-						            {{ wp_nav_menu( array( 'theme_location' => 'header-menu' ) ) }}
-                    </nav><!-- #site-navigation -->
+                <header id="masthead" class="site-header" role="banner">
+                    <div class="header-wrapper">
+                        <div class="site-branding">
+                            <div class="nascondi-cerchio"></div>
+                            <div class="cerchio-logo">
+                                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                                    <img alt="logo L'oppure" src="<?php echo get_template_directory_uri()?>/public/assets/src/img/logo/loppure-logo-nero.svg">
+                                </a>
+                            </div>
+                        </div><!-- .site-branding -->
 
-					          @include('shared.searchform')
-					          
-                </div><!-- .header-wrapper -->
-            </header><!-- #masthead -->
+                        <nav id="site-navigation" class="main-navigation" role="navigation">
+                            <button class="menu-toggle" aria-controls="menu-menu-1" aria-expanded="false"></button>
+                            {{ wp_nav_menu( array( 'theme_location' => 'header-menu' ) ) }}
+                        </nav><!-- #site-navigation -->
 
-			      <section id="content" class="site-content">
-				        <div id="primary" class="content-area">
-					          <main id="main" class="site-main" role="main">
-						            @yield('content')
-					          </main>
-				        </div> <!-- #primary -->
-			      </section> <!-- #content -->
+                        @include('shared.searchform')
 
-			      <footer id="colophon" class="site-footer" role="contentinfo">
-				        <div class="site-info">
-					          {{ wp_nav_menu( array( 'theme_location' => 'header-menu' ) ) }}
-                    <?php dynamic_sidebar('sidebar-footer') ?>
-				        </div>
-			      </footer>
+                    </div><!-- .header-wrapper -->
+                </header><!-- #masthead -->
 
-			      <div class="scroll_up" id="scroll_up"></div>
+                <section id="content" class="site-content">
+                    <div id="primary" class="content-area">
+                        <main id="main" class="site-main" role="main">
+                            @yield('content')
+                        </main>
+                    </div> <!-- #primary -->
+                </section> <!-- #content -->
 
-        </div> <!-- #page -->
+                <footer id="colophon" class="site-footer" role="contentinfo">
+                    <div class="site-info">
+                        {{ wp_nav_menu( array( 'theme_location' => 'header-menu' ) ) }}
+                        <?php dynamic_sidebar('sidebar-footer') ?>
+                    </div>
+                </footer>
 
-        {{ wp_footer() }}
+                <div class="scroll_up" id="scroll_up"></div>
+
+            </div> <!-- #page -->
+
+            {{ wp_footer() }}
+
     </body>
 </html>

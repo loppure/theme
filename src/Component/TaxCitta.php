@@ -31,6 +31,7 @@ class TaxCitta extends CustomTaxonomy
             'publicly_queryable'  => true,
             'exclude_from_search' => false,
             'query_var'           => true,
+            'show_in_rest'        => true,
             'rewrite'             => array( 'slug' => 'sezione' ),
         );
 

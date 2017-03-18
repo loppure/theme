@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Overlay Card Article</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../../assets/dist/styles/app.css">
+</head>
+<body>
+
+<div class="sfondo-overlay article">
+  <section class="overlay overlay-article">
+    <figure style="background-image: url({{ $post->thumbnail }})" data-image-url="">
+      <button class="close-overlay"></button>
+      <span class="citta">Pordenone</span>
+    </figure>
+    <article class="content">
+      <header>
+        <div class="img-category-post"></div>
+        <h3>Title post overlay</h3>
+        <span class="categoria">Categria</span>
+      </header>
+
+      <div class="single-social">
+        <button>icona condividi</button>
+        <h3>Condividi</h3>
+        <ul>
+          <li class="item item-facebook">Facebook</li>
+          <li class="item item-twitter">Twitter</li>
+          <li class="item item-googleplus">Google+</li>
+          <li class="item item-linkedin">Linkedin</li>
+          <li class="item item-whatsapp">Whatsapp</li>
+          <li class="item item-telegram">Telegram</li>
+          <li class="item item-mail">Mail</li>
+        </ul>
+      </div> <!-- .entry-social -->
+
+      <div class="text">
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies
+          eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+          Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+        </p>
+      </div>
+
+      <div class="widget-single" role="complementary">
+          @include('Widget/rubriche/index')
+          @include('Widget/Citta/index')
+          @include('Widget/Porta-citta/index')
+      </div>
+
+      <div class="content-button">
+        <button class="button-like-post" data-love="{{ $post->love }}">{{ $post->love }} &#9829;</button>
+        <button>Commenta</button>
+        <button>share</button>
+      </div>
+    </article>
+    <footer>
+      @include('shared.comment-form')
+    </footer>
+  </section>
+</div>
+</body>
+</html>

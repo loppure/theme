@@ -7,31 +7,30 @@
     >
 
         <header>
-            <div class="img-category-post"></div>
-            <div class="img-article-post"></div>
-            <div class="text-header-post">
+            <span class="img-category-post"></span>
                 {{ $post->category_list }}
-                <span class="date-post">{{ $post->time }}</span>
-            </div>
+            <span class="text-name-citta">Pordenone</span>
         </header>
 
         <section>
+          <div class="text-card">
+            <h3><a href="{{ $post->permalink }}">{{ $post->title }}</a></h3>
             @if( $post->description )
                 <p>{{ $post->description }}</p>
             @endif
-            <div class="content-article-post">
-                <div class="img-post" style="background-image: url({{ $post->thumbnail }})" data-image-url=""></div>
-                <div class="title-article-post">
-                    <div class="cicle-color-category-post"></div>
-                    <h3><a href="{{ $post->permalink }}">{{ $post->title }}</a></h3>
-                </div>
-            </div>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada
+              fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies
+              eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+              Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+            </p>
+          </div>
+          <div class="img-post" style="background-image: url({{ $post->thumbnail }})" data-image-url="">
+            <button class="button-like-post" data-love="{{ $post->love }}">{{ $post->love }} &#9829;</button>
+            <button>Commenta</button>
+          </div>
         </section>
 
         <footer>
-            <button class="button-like-post" data-love="{{ $post->love }}">{{ $post->love }} &#9829;</button>
-            <button>Commenta</button>
-
             @include('shared.comment-form')
         </footer>
 

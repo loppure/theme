@@ -1,0 +1,111 @@
+/*menu*/
+.main-navigation
+  height: 100%
+
+  @media (max-width: 599px)
+    float: right
+    height: 100%
+
+  .menu-toggle
+    display: none
+
+    @media (max-width: 599px)
+      padding: 0 0 0 0
+      width: 40px
+      height: 40px
+      margin-top: 25%
+      background-color: transparent
+      background-position: center
+      background-size: 60%
+      background-repeat: no-repeat
+      border: 2px solid rgba(0, 0, 0, 0.5)
+      border-radius: 50%
+      background-image: url("img/svg/icon-menu.svg") /*rivedere*/
+
+  .main-menu
+    max-width: 65%
+    height: 100%
+    float: right
+    pointer-events: none
+
+    @media (max-width: 599px)
+      position: fixed
+      width: 100%
+      height: 100%
+      right: -100%
+      top: 0
+      z-index: 900
+
+      &::before
+        content: ""
+        width: 20%
+        height: 100%
+        background-color: transparent
+
+      .menu-list
+        width: 60%
+        height: 100%
+        float: right
+        border-left: 2px solid #E4E4E4
+        background-color: #F7F7F7
+
+      li
+        display: block
+        margin: 15px 0
+        width: 100%
+
+        &:first-child
+          margin-top: 80px
+
+        a
+          display: block
+          width: 100%
+          height: 100%
+          padding: 15px 25px
+          text-transform: uppercase
+          font-size: 18px
+          text-decoration: none
+          color: #707474
+          background-color: #EDEDED
+          -webkit-transition: background-color, 400ms ease-in-out
+          -moz-transition: background-color, 400ms ease-in-out
+          transition: background-color, 400ms ease-in-out
+          -webkit-transition: color, 300ms ease-in-out
+          -moz-transition: color, 300ms ease-in-out
+          transition: color, 300ms ease-in-out
+
+          &:hover
+            background-color: #C1C6C6
+            color: #40484C
+
+    .menu-list
+      margin: 0
+      padding: 0
+      height: 100%
+      width: 100%
+
+    li
+      display: block
+      float: left
+      width: 100px
+      height: 100%
+      margin: 0 10px
+
+    a
+      display: table
+      height: 100%
+      width: 100%
+      text-align: center
+      color: rgba(0, 0, 0, 0.5)
+      line-height: 70px
+      text-transform: uppercase
+      pointer-events: all
+
+    a:hover
+      background-color: #DDDDDD
+      color: #40484C
+
+    a span
+      display: table-cell
+      vertical-align: middle
+      line-height: 1

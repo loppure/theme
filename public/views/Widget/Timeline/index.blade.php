@@ -1,15 +1,29 @@
-{{ $args['before_widget'] }}
-
-{{ $args['before_title'] }} {{ $title }} {{ $args['after_title'] }}
-
-<ul>
-    @foreach( $archives as $archive )
-        <li class="archive-item">
-            <a href="{{ $archive->url }}" title="Archivio per il mese di {{ $archive->month }}">
-                {{ $archive->month }}
-            </a>
-        </li>
-    @endforeach
-</ul>
-
-{{ $args['after_widget'] }}
+<div class="widget-item timeline">
+  <ul>
+    <li class="item archive-item">
+      <a href="#" title="Archivio per il mese di maggio">
+          Adesso
+      </a>
+    </li>
+    <li class="item archive-item">
+      <a href="#" title="Archivio per il mese di giugno">
+          Giugno
+      </a>
+    </li>
+    <li class="item archive-item">
+      <a href="#" title="Archivio per il mese di luglio">
+          Luglio
+      </a>
+    </li>
+    <li class="item archive-item">
+      <a href="#" title="Archivio per il mese di agosto">
+          Agosto
+      </a>
+    </li>
+  </ul>
+  <div class="content-button-widget">
+    <a class="button" href="#" title="Pagina archivio">
+      Archivio
+    </a>
+  </div>
+</div>
