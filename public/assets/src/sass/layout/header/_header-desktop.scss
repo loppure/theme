@@ -1,0 +1,110 @@
+.site-header {
+  position: fixed;
+  width: 100%;
+  height: $height__md-header;
+  background: $color__background-header;
+  border-bottom: 4px solid $gray-medium;
+
+  @include transition(transform, .3s ease);
+  @include transition(height, .2s ease-out);
+
+  z-index: 9;
+
+  &.headroom--not-top {
+    height: 50px;
+
+
+    .menu-toggle{
+      width: 30px;
+      height: 30px;
+    }
+    .main-navigation {
+       a {
+          line-height: 50px;
+       }
+     }
+
+    .cerchio-logo {
+      width: 150px;
+      height: 150px;
+      top: -77px;
+
+      img {
+        height: 55px;
+        top:60px;
+      }
+
+        @include media("<tablet-verticale") {
+          left: 22%;
+
+        }
+        @include media("<mini-tablet") {
+          left: 8%;
+
+        }
+
+        @include media("<fat-phone") {
+          left: -10.5%;
+
+        }
+        @include media("<phone") {
+          left: -11.5%;
+
+        }
+    }
+  }
+
+  .cerchio-logo {
+    width: 163px;
+    height: 163px;
+    position: relative;
+    background: $color__background-header;
+    border: 4px solid $gray-medium;
+    border-radius: 50%;
+    top:-65px;
+    left: 2px;
+  }
+
+  .nascondi-cerchio {
+    width: 200px;
+    height: 100%;
+    background: $color__background-header;
+    position: absolute;
+    z-index: 9;
+
+    @include media("<fat-phone") {
+      margin-left: -3%;
+
+    }
+  }
+
+
+  .header-wrapper {
+    width: $width__sm-site-content;
+    max-width: $dimensione-content;
+    margin: 0 auto;
+    height: 100%;
+  }
+
+  .site-branding {
+    width: 30%;
+    float: left;
+    margin: 0 auto;
+    height: 100%;
+
+    img {
+      height: $height__md-header +5px;
+      margin: 19px auto;
+      display: block;
+      position: relative;
+      z-index: 99;
+      top: 48px;
+    }
+  }
+
+  @include media("<fat-phone") {
+    &.slide--up {
+      @include transform( translateY(-180%) );
+    }
+  }
+}

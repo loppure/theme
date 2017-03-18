@@ -1,0 +1,13 @@
+node_modules/
+*~
+.\#*
+\#*
+*.swp
+composer.phar
+.phpcomplete_extended/
+
+vendor/
+
+public/cache/
+
+public/assets/dist/

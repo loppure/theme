@@ -1,0 +1,137 @@
+@include media(">=mini-tablet") {
+  .main-navigation {
+    height: 100%;
+
+    .menu-toggle {
+      display: none;
+    }
+
+    .main-menu {
+      max-width: 65%;
+      height: 100%;
+      float: right;
+      pointer-events: none;
+
+      .menu-list {
+        padding: 0 0 0 0;
+        height: 100%;
+        width: 100%;
+      }
+
+      li {
+        display: block;
+        float: left;
+        width: 100px;
+        height: 100%;
+        margin: 0 10px;
+      }
+
+      a {
+        display: table;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        color: $gray;
+        line-height: 70px;
+        text-transform: uppercase;
+        pointer-events: all;
+
+        &:hover{
+          background-color: $gray-medium;
+          color: $gray-dark;
+        }
+
+        span {
+          display: table-cell;
+          vertical-align: middle;
+          line-height: 1;
+        }
+      }
+    }
+  }
+}
+
+@include media("<mini-tablet") {
+  .main-navigation {
+    float: right;
+    height: 100%;
+
+    .menu-toggle {
+      padding: 0 0 0 0;
+      width: 40px;
+      height: 40px;
+      margin-top: 25%;
+      background-color: transparent;
+
+      background: {
+        position: center;
+        size: 60%;
+        repeat: no-repeat;
+      }
+      @include background-svg( "icon-menu" );
+
+      border: 2px solid $gray;
+      border-radius: 50%;
+    }
+
+    .main-menu {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      right: -100%;
+      top: 0;
+
+      z-index: 900;
+
+
+      &::before {
+        content: "";
+        width: 20%;
+        height: 100%;
+        background-color: transparent;
+      }
+
+      .menu-list {
+        width: 60%;
+        height: 100%;
+        float: right;
+
+        // da vedere /////////////////////////////////////////////////////////////
+        border-left: 2px solid #E4E4E4;
+
+        // colore da cambiare ////////////////////////////////////////////////////
+        background-color: #F7F7F7;
+      }
+
+      li {
+        &:first-child {
+          margin-top: 80px;
+        }
+
+        display:block;
+        margin: 15px 0;
+        width: 100%;
+
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          padding: 15px 25px;
+          text-transform: uppercase;
+          font-size: 18px;
+          text-decoration: none;
+          color: #707474;
+          background-color: #EDEDED;
+
+          @include transition( background-color, 400ms ease-in-out );
+          @include transition( color, 300ms ease-in-out );
+
+          &:hover {
+            background-color: #C1C6C6;
+            color: $gray-dark;
+          }
+        }
+      }
+    }
+  }
+}

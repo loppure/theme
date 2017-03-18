@@ -1,0 +1,26 @@
+{
+    "name": "loppure/theme",
+    "description": "Tema per L'oppure",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Omar Polo",
+            "email": "yum1096@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "spatie/laravel-blade": "^1.0",
+        "phpdocumentor/phpdocumentor": "2.*",
+        "mobiledetect/mobiledetectlib": "^2.8",
+        "symfony/yaml": "^2.7",
+        "squizlabs/php_codesniffer": "2.*",
+        "symfony/var-dumper": "^3.0"
+    },
+		"autoload": {
+				"psr-4": {
+						"Theine\\": "app/Theine",
+						"Loppure\\": "src/"
+				}
+		}
+}

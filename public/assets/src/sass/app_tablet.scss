@@ -1,0 +1,56 @@
+//stili per i tablet
+
+// lib
+@import "lib/bourbon/bourbon";          // burbon
+@import "base/base";                    // base styling & cose fighe
+@import "lib/neat/neat";                // grid system
+@import "lib/include-media";            // custom media queries
+@import "lib/normalize";                // normalize
+@import "lib/mixins/mixins-master";     // mixins
+
+@import "lib/config";                   // configurazione framework
+
+
+// base
+
+@import "base/typography/font";
+@import "base/typography/typography";
+
+
+
+@import "card/card-tablet";
+
+@import "commenti/card/commenti-tablet";
+@import "commenti/single/commenti-tablet";
+
+@import "layout/accessibility/accessibility";
+@import "layout/header/header-tablet";
+@import "layout/header/rivedere/navigation";
+@import "layout/page/page-tablet";
+@import "layout/sidbaer/sidebar-tablet";
+//@import "layout/footer/footer-tablet";
+
+@import "overlay/overlay-tablet";
+
+@import "page/404/404-tablet";
+@import "page/archivio/archivio-tablet";
+@import "page/contatti/contatti-tablet";
+@import "page/facciamo/facciamo-tablet";
+@import "page/sezioni/sezioni-tablet";
+@import "page/team/team-tablet";
+
+@import "single/single-tablet";
+
+@import "widget/articoli/widget-single-tablet";
+@import "widget/articoli/ultimi_articoli/ultimi-articoli-tablet";
+@import "widget/sezioni/facciamo/facciamo-tablet";
+@import "widget/sezioni/iniziative/iniziative-tablet";
+@import "widget/sezioni/rubriche/rubriche-tablet";
+@import "widget/sezioni/time_line/timeline-tablet";
+@import "widget/sezioni/widgets-tablet";
+
+
+@import "sistemare/SISTEMAMI";
+
+
+@import "color/color";

@@ -1,0 +1,11 @@
+ $grid-columns: 48 !global;
+
+ $breakpoints: (
+  'phone': 350px,
+  'fat-phone': 520px,
+  'mini-tablet': 600px,
+  'tablet-verticale': 720px,
+  'tablet': 800px,
+  'desktop': 960px,
+  'fixed': 1070px,
+ ) !global;

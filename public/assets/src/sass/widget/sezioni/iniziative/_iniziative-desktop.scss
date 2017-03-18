@@ -1,0 +1,18 @@
+
+.widget {
+	.img-iniziative{
+		height: 90px;
+		width: 120px;
+		@include background_svg( 'logo-iniziative-piccola' );
+
+		@include media( "<tablet-verticale" ) {
+			float: none;
+			margin: 0 auto;
+		}
+	}
+
+	.img-sistienici {
+		@extend .img-iniziative;
+		@include background_svg( 'logo-sostienici-piccola' );
+	}
+}

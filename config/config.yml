@@ -1,0 +1,18 @@
+directory:
+  cache:  '/public/cache/'
+  assets: '/public/assets/dist/'
+  views:  '/public/views/'
+
+routing:
+  single: '\Loppure\Controllers\singleController'
+  taxonomy: '\Loppure\Controllers\taxController'
+  category: '\Loppure\Controllers\categoryController'
+  home: '\Loppure\Controllers\homeController'
+  author: '\Loppure\Controllers\authorController'
+  archive: '\Loppure\Controllers\archiveController'
+  search: '\Loppure\Controllers\searchController'
+  default: '\Loppure\Controllers\indexController'
+
+custom_page_template:
+  'esempio-1': 'Primo esempio'
+  'esempio-2': 'Esempio 2'

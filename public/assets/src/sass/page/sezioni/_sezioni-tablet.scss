@@ -1,0 +1,54 @@
+.page-gray {
+  @include outer-container(100%);
+  position: relative;
+
+  .sidebar-1 {
+    @include span-columns(9);
+    float: left;
+    width: 18%;
+    @include media( "<desktop" ) {
+      width: 20%;
+    }
+
+
+    @include media( "<tablet-verticale" ) {
+      @include span-columns(48);
+    }
+  }
+
+  .section-cont-article {
+    @include span-columns(26);
+    margin-right: 1%;
+    margin-left: 1%;
+
+    @include media( "<desktop" ) {
+      margin-right: 0;
+      margin-left: 0.7%;
+    }
+
+    @include media( "<tablet" ) {
+      margin-right: 0;
+      width: 54.5%;
+    }
+
+    @include media( "<tablet-verticale" ) {
+      @include span-columns(48);
+    }
+  }
+
+  .sidebar-2 {
+    @include span-columns(12);
+    float: right;
+
+    @include media( "<desktop" ) {
+      @include span-columns(11);
+      float: right;
+      margin-left: 0.7%;
+    }
+
+    @include media( "<tablet-verticale" ) {
+      @include span-columns(48);
+      margin: 0;
+    }
+  }
+}
