@@ -4,8 +4,7 @@
   "description": "Theme for L'oppure",
   "main": "index.php",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "grunt watch"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -15,12 +14,33 @@
   "license": "MIT",
   "homepage": "https://bitbucket.org/omar_polo/loppure#readme",
   "devDependencies": {
+    "babel-plugin-transform-react-jsx": "^6.8.0",
     "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.11.1",
     "babelify": "^7.2.0",
+    "eslint": "^3.8.1",
+    "eslint-plugin-react": "^6.4.1",
     "grunt": "^0.4.5",
     "grunt-browserify": "^4.0.1",
+    "grunt-contrib-uglify": "^2.0.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-image": "^1.2.0",
-    "grunt-sass": "^1.1.0"
+    "grunt-notify": "^0.4.5",
+    "grunt-sass": "^1.1.0",
+    "react": "^15.3.2",
+    "react-collapse": "^2.3.3",
+    "react-height": "^2.1.1",
+    "react-html-parser": "^1.0.3",
+    "react-motion": "^0.4.5"
+  },
+  "dependencies": {
+    "bean": "github:fat/bean",
+    "component-ajax": "github:forbeslindesay/ajax",
+    "es6-promise": "^3.0.2",
+    "jquery": "^2.1.4",
+    "moment": "^2.15.1",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-router": "^2.8.1"
   }
 }

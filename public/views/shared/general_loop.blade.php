@@ -19,18 +19,23 @@
             @if( $post->description )
                 <p>{{ $post->description }}</p>
             @endif
+
             <div class="content-article-post">
-                <div class="img-post" style="background-image: url({{ $post->thumbnail }})" data-image-url=""></div>
-                <div class="title-article-post">
-                    <div class="cicle-color-category-post"></div>
-                    <h3><a href="{{ $post->permalink }}">{{ $post->title }}</a></h3>
-                </div>
+                <div class="img-post" style="background-image: url({{ $post->thumbnail }})"
+                     data-image-url="{{ $post->hd_thumb }}"></div>
+
+                @if( $post->type != "image")
+                    <div class="title-article-post">
+                        <div class="cicle-color-category-post"></div>
+                        <h3><a href="{{ $post->permalink }}">{{ $post->title }}</a></h3>
+                    </div>
+                @endif
             </div>
         </section>
 
         <footer>
             <button class="button-like-post" data-love="{{ $post->love }}">{{ $post->love }} &#9829;</button>
-            <button>Commenta</button>
+            <button class="comments-button">Commenta</button>
 
             @include('shared.comment-form')
         </footer>

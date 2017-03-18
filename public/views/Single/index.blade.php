@@ -2,13 +2,13 @@
 
 @section('content')
 
-	  <article id="post-{{ $post->id }}" data-image="image here" data-id="{{ $post->id }}" {{ post_class() }}>
+	    <article id="post-{{ $post->id }}" data-image="image here" data-id="{{ $post->id }}" {{ post_class() }}>
 		    <header class="entry-header">
 			      <h1 class="entry-title">{{ $post->title }}</h1>
 		    </header>
 		    <section class="single-content-wrapper">
 			      <div class="entry-primary">
-				        <figure class="entry-image" style="background-image: /* image here */">IMAGE HERE</figure>
+				        <figure class="entry-image" style="background-image: url({{ $post->image }})"></figure>
 
 				        <div class="entry-content-wrapper">
 					          <div class="entry-content text-article">
@@ -40,7 +40,7 @@
 			      <p class="author-bio">{{ get_the_author_meta( 'description' ) }}</p>
 		    </footer>
 	  </article>
-	  
+
 	  @include('Single.comments')
-	  
+
 @endsection

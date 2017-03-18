@@ -21,10 +21,11 @@
     </header>
 
     <section class="page-gray home-section">
+		<div id="container"></div>
         <div class="widget-area" role="complementary">
 			      <?php dynamic_sidebar('sidebar-dx') ?>
 		    </div>
-        
+
         <div class="section-cont-article">
 	          @if( $posts )
 		            @include('shared.general_loop', ['show_city' => true])
@@ -40,5 +41,5 @@
 		    </div>
 
     </section>
-	  
+
 @endsection

@@ -163,7 +163,7 @@
       .rispondi{
         clear: both;
         padding: 10px 0;
-        height: 50px;
+        height: auto; /*luca*/
         p{
           padding: 0;
           margin: 0;
@@ -177,7 +177,6 @@
 /* aggiusta il footer delle card - temporaneo */
 .post footer {
   height: auto !important; // Brutta cosa, lo so, ma è solo per non andare a modificare
-
 }
 
 button.add-comment{

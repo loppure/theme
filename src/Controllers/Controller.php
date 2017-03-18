@@ -20,6 +20,12 @@ class Controller extends \Theine\Controller\Controller
         $custom_filters = array_merge(
             array(
                 array(
+                    "name"    => "type",
+                    "closure" => function($id) {
+                        return get_post_type() == "loppure_image" ? "image" : "normal";
+                    }
+                ),
+                array(
                     "name"    => "time",
                     "closure" => function() {
                         return get_the_time('j F Y');
@@ -58,6 +64,13 @@ class Controller extends \Theine\Controller\Controller
                     "name"    => "thumbnail",
                     "closure" => function($id) {
                         $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($id), 'medium');
+                        return $thumb[0];
+                    }
+                ),
+                array(
+                    "name"    => "hd_thumb",
+                    "closure" => function($id) {
+                        $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($id), 'large');
                         return $thumb[0];
                     }
                 ),

@@ -15,20 +15,20 @@ class PostFields extends customPostFields
         $this->post_types = array('post', 'loppure_image');
 
         $this->custom_fields = array(
-            array(
-                'name'         => 'description',
-                'title'        => 'Descrizione',
-                'description'  => 'Descrizione dell\'immagine.',
-                'type'         => 'textarea',
-                'scope'        => array('loppure_image'),
-                'capability'   => 'edit_post'
-            ),
+            // array(
+            //     'name'         => 'description',
+            //     'title'        => 'Descrizione',
+            //     'description'  => 'Descrizione dell\'immagine.',
+            //     'type'         => 'textarea',
+            //     'scope'        => array('loppure_image', 'post'),
+            //     'capability'   => 'edit_post'
+            // ),
             array(
                 'name'         => 'description_2',
                 'title'        => 'Descrizione',
                 'description'  => 'Descrizione del post',
                 'type'         => 'text',
-                'scope'        =>  array( 'post' ),
+                'scope'        =>  array( 'post', 'loppure_image' ),
                 'capability'   => 'edit_post'
             ),
             array(
