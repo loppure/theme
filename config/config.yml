@@ -11,6 +11,7 @@ routing:
   author: '\Loppure\Controllers\authorController'
   archive: '\Loppure\Controllers\archiveController'
   search: '\Loppure\Controllers\searchController'
+  page: '\Loppure\Controllers\pageController'
   default: '\Loppure\Controllers\indexController'
 
 custom_page_template:
