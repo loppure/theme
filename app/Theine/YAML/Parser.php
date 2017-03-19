@@ -62,7 +62,12 @@ class Parser
 
         $data_exported = var_export($data, true);
 
-        mkdir(get_template_directory() . '/public/cache/parsed/');
+        $dir = get_template_directory() . '/public/cache/parsed';
+
+        if (!file_exists($dir)) {
+            mkdir($dir);
+        }
+
         file_put_contents(
             get_template_directory() . '/public/cache/parsed/' . $file . '.cache.php',
             "<?php return $data_exported; ?>"
