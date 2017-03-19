@@ -33,9 +33,15 @@ class Parser
      */
     public static function file($path)
     {
-        $file = end(
-            explode('/', $path)
-        );
+        // XXX: php è strano. Non posso fare
+        // ```
+        //  $file = end(explode('/', $path))
+        // ```
+        // perchè ottengo un errore, ma così è perfetto
+        //
+        // boh
+        $_tmp = explode('/', $path);
+        $file = end($_tmp);
 
         if (!WP_DEBUG && self::cacheExists($file)) {
             return self::getCache($file);
