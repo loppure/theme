@@ -93,6 +93,11 @@ class View
             return false;
         }
 
+        // FIXME: serve solo per avere sempre il debug (se abilitato). ho
+        // scoperto che aiuta abbastanza. Più avanti (theine 2?) verrà rimosso
+        // da qui e sistemato meglio
+        $data['debug'] = WP_DEBUG;
+
         $this->path = $path;
         $this->data = $data;
 
@@ -150,13 +155,6 @@ class View
      */
     protected function render()
     {
-        //        ob_end_clean(); // clean any pre-called view.
-
-        // if (is_customize_preview()) {
-        //     ob_start();
-        // } else {
-        //     ob_start('gzhandler');
-        // }
         ob_start();
         echo $this->blade->view()->make($this->path, $this->data);
         ob_end_flush();
