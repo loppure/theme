@@ -38,13 +38,13 @@ class Controller extends \Theine\Controller\Controller
             array(
                 array(
                     "name"    => "time",
-                    "closure" => function() {
+                    "closure" => function () {
                         return get_the_time('j F Y');
                     }
                 ),
                 array(
                     "name"    => "love",
-                    "closure" => function($id) {
+                    "closure" => function ($id) {
                         $love = get_post_meta($id, 'op_love');
                         $love = empty($love) ? array(0) : $love;
                         return $love[0];
@@ -52,17 +52,17 @@ class Controller extends \Theine\Controller\Controller
                 ),
                 array(
                     "name"    => "comment_status",
-                    "closure" => function() {
+                    "closure" => function () {
                         global $post;
                         return $post->comment_status;
                     }
                 ),
                 array(
                     "name"    => "css_class",
-                    "closure" => function() {
+                    "closure" => function () {
                         $string = "";
-        
-                        foreach(get_post_class() as $class) {
+
+                        foreach (get_post_class() as $class) {
                             $string .= $class . " ";
                         }
 
@@ -73,14 +73,14 @@ class Controller extends \Theine\Controller\Controller
                 ),
                 array(
                     "name"    => "thumbnail",
-                    "closure" => function($id) {
+                    "closure" => function ($id) {
                         $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($id), 'medium');
                         return $thumb[0];
                     }
                 ),
                 array(
                     "name"    => "comments",
-                    "closure" => function($id) {
+                    "closure" => function ($id) {
                         $comments = get_comments(array(
                             'post_id' => $id,
                             'status'  => 'approve',
@@ -89,7 +89,7 @@ class Controller extends \Theine\Controller\Controller
 
                         $result = array();
 
-                        foreach ($comments as $comment)
+                        foreach ($comments as $comment) {
                             $result[] = array(
                                 'id'  => $comment->comment_ID,
                                 'author'  => $comment->comment_author,
@@ -98,32 +98,36 @@ class Controller extends \Theine\Controller\Controller
                                 'parent'  => $comment->comment_parent,
                                 'post'  => $comment->comment_post_ID
                             );
+                        }
 
-                        $not_nested = array_filter($result, function($single) {
+                        $not_nested = array_filter($result, function ($single) {
                             return $single['parent'] == 0;
                         });
 
-                        $nested = array_filter($result, function($single) {
+                        $nested = array_filter($result, function ($single) {
                             return $single['parent'] != 0;
                         });
 
-                        foreach ($nested as &$n)
-                            foreach ($not_nested as &$nn)
-                                if ($n['parent'] == $nn['id'])
+                        foreach ($nested as &$n) {
+                            foreach ($not_nested as &$nn) {
+                                if ($n['parent'] == $nn['id']) {
                                     $nn['sons'][] = $n;
+                                }
+                            }
+                        }
 
                         return $not_nested;
                     }
                 ),
                 array(
                     "name"    => "description",
-                    "closure" => function($id) {
+                    "closure" => function ($id) {
                         return get_post_meta($id, '__loppure__description_2', true);
                     }
                 ),
                 array(
                     "name"    => "source",
-                    "closure" => function($id) {
+                    "closure" => function ($id) {
                         return array(
                             "link"  => get_post_meta($id, '__loppure__image_source', true),
                             "text"  => get_post_meta($id, '__loppure__text_source', true)

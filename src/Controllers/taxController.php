@@ -13,11 +13,10 @@ class taxController extends Controller
         $term = get_term_by(
             'slug',
             get_query_var('term'),
-            get_query_var('taxonomy'));
-            
-        parent::__construct("Taxonomy:". $term->slug);
+            get_query_var('taxonomy')
+        );
 
-        parent::__construct("Taxonomy:". $term->slug);
+        parent::__construct("Taxonomy:". $term->taxonomy);
 
         $file = $this->theme['config']['directory']['assets'] . 'dist/img/' . $term->slug . '/' . date('d') . '.jpg';
 
