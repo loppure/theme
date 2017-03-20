@@ -14,6 +14,23 @@ class Controller extends \Theine\Controller\Controller
         $this->data['user']->logged = is_user_logged_in();
         $this->data['user']->name = wp_get_current_user()->user_login;
     }
+
+    /**
+     * Raccoglie dei dati utili sull'autore del post corrente, oppure
+     * dell'archivio utente richiesto. In tutte le altre occasioni degrada senza
+     * aggiungere informazioni
+     *
+     * @since 1.0.0
+     * @return void
+     */
+    protected function getAuthorInfo() {
+        if (is_single() || is_author()) {
+            $this->data['author'] = new StdClass();
+            $this->data['author']->name = get_the_author_meta('display_name');
+            $this->data['author']->thumb = get_avatar(get_the_author_meta('user_email'), $size=96);
+            $this->data['author']->bio = get_the_author_meta('description');
+        }
+    }
     
     public function getPosts($filters = array(), $author = true, $comments = true)
     {
