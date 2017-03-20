@@ -21,6 +21,7 @@ class singleController extends Controller
         );
         
         $this->getPosts($custom_filters);
+        $this->getAuthorInfo();
         
         $this->data['post'] = $this->data['posts'][0];
         $this->data['posts'] = null;
