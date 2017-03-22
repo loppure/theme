@@ -14,9 +14,8 @@ use Theine\Theme;
 /**
  * Classe per i Custom Page Template
  *
- * Questa classe permette di definire dei custom page template
- * **senza** dover creare dei file all'interno di alcune directory
- * (come wordpress vorrebbe).
+ * Questa classe permette di definire dei custom page template **senza** dover
+ * creare dei file all'interno di alcune directory (come wordpress vorrebbe).
  *
  * @since  1.0.0 Introdotta
  * @author Omar Polo <yum1096@gmail.com>
@@ -81,7 +80,8 @@ class CustomPageTemplate
     }
 
     /**
-     * Torna a prendere i template quando l'editing post viene postato per permettere di salvare
+     * Torna a prendere i template quando l'editing post viene postato per
+     * permettere di salvare
      *
      * @return void
      * @uses   CustomPageTemplate::templatesInit
@@ -99,7 +99,8 @@ class CustomPageTemplate
     }
 
     /**
-     * Questo metodo modifica la cache per includere i nostri template (oltre a quelli già presenti)
+     * Questo metodo modifica la cache per includere i nostri template (oltre a
+     * quelli già presenti)
      */
     public function setCustomPageTemplates()
     {

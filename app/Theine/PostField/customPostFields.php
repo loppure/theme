@@ -94,9 +94,10 @@ abstract class customPostFields extends View
     }
 
     /**
-     * Filter the custom fields
+     * Filtra i custom fields
      *
-     * If the current user do not have the right permission to edit that post field, it'll not be displayed
+     * Se l'utente corrente non ha i permessi per poter editare quel post field,
+     * allora tale post field non verrà renderizzato
      *
      * @return array
      */
@@ -125,7 +126,7 @@ abstract class customPostFields extends View
     }
 
     /**
-     * Override the Theine\View\View class, and replace the path of the view directory
+     * Fa l'override di `Theine\View` e rimpiazza il path cartella delle view
      *
      * @return void
      */
@@ -137,6 +138,7 @@ abstract class customPostFields extends View
     }
 
     /**
+     * Renderizza il meta box sfruttando Theine\View\View
      * Render the `meta box` using Theine\View\View
      *
      * @return void
@@ -147,7 +149,7 @@ abstract class customPostFields extends View
     }
 
     /**
-     * Save the new custom fields values
+     * Salva il nuovo valore del custom fields
      *
      * @param Integer $post_id The post id
      * @param Object  $post    The post object

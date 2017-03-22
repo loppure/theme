@@ -56,7 +56,7 @@ class CustomTaxonomy
      * Registra la taxonomy
      *
      * @return void
-     * @todo quel flush_rewrite_rules() non va chiamato a ogni richiesta D:
+     * @FIXME quel flush_rewrite_rules() non va chiamato a ogni richiesta!
      */
     public function register()
     {

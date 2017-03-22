@@ -15,10 +15,9 @@ use Spatie\Blade\Blade;
 /**
  * Renderizza le view.
  *
- * Si occupa di renderizzare le view. Dovrebbe essere chiamata da una
- * classe `Theine\Controller\Controller`, ma può essere usata anche da
- * altre classi (si veda, ad esempio, le classi
- * `Theine\Exceptions\ErrorHandler` e
+ * Si occupa di renderizzare le view. Dovrebbe essere chiamata da una classe
+ * `Theine\Controller\Controller`, ma può essere usata anche da altre classi (si
+ * veda, ad esempio, le classi `Theine\Exceptions\ErrorHandler` e
  * `Theine\Exceptions\ExceptionsHandler`).
  *
  * Segue una serie di convenzioni:
@@ -70,8 +69,8 @@ class View
     private $blade;
 
     /**
-     * Contine un array di dati, come la cartella base delle view o la
-     * cartella della cache.
+     * Contine un array di dati, come la cartella base delle view o la cartella
+     * della cache.
      *
      * @var Array
      */
@@ -105,7 +104,7 @@ class View
     }
 
     /**
-     * Set the infos about the path of the views directory and cache directory.
+     * Setta il path delle cartelle delle views e della cache
      *
      * @return void
      */
@@ -119,8 +118,8 @@ class View
     }
 
     /**
-     * "Sistema" la stringa passata, in modo da permettere
-     * l'estensione di questa classe.
+     * "Sistema" la stringa passata, in modo da permettere l'estensione di
+     * questa classe.
      *
      * @since 1.0.0 Introdotta
      */

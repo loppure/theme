@@ -24,6 +24,9 @@ class InputHidden implements AssetInterface
      */
     private $data;
 
+    /**
+     * @param array $data una coppia di dati (attributo => valore)
+     */
     public function __construct($data)
     {
         $this->data = $data;

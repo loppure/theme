@@ -14,12 +14,8 @@ use Theine\View\View;
 /**
  * Una (primitiva) gestione degli errori.
  *
- * Wordpress gestisce gli errori in maniera schifosa. O meglio, non li
- * gestisce affatto quasi. Fortunatamente php permette di definire
- * degli Handler per una gestione migliore degli errori.
- *
- * ErrorHandler si occupa di questo. Genera delle view per gli errori.
- *
+ * Migliora la gestioni errori di wordpress (al momento inesistente). Registra
+ * degli handler per renderizzare pagine di errore se necessario
  *
  * @since  1.0.0 Introdotta
  * @author Omar Polo <yum1096@gmail.com>

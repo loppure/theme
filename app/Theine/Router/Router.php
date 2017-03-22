@@ -14,9 +14,8 @@ use Theine\Theme;
 /**
  * La classe di routing.
  *
- * Questa classe implementa un sistema di routing grazie ai
- * *conditional tags* di wordpress.
- * Supporta una configurazione da oggetto o da file yaml.
+ * Questa classe implementa un sistema di routing grazie ai *conditional tags*
+ * di wordpress.  Supporta una configurazione da oggetto o da file yaml.
  *
  * @author Omar Polo <yum1096@gmail.com>
  * @since  1.0.0 Introdotta
@@ -24,7 +23,7 @@ use Theine\Theme;
 class Router
 {
     /**
-     * Le route definite dall'utente (sia a mano che da yaml)
+     * Le route definite dall'utente
      *
      * @var array
      */
@@ -114,8 +113,7 @@ class Router
     }
 
     /**
-     * Dopo aver definito le route, sceglie quale controller far
-     * partire.
+     * Dopo aver definito le route, sceglie quale controller far partire.
      *
      * @return void
      */

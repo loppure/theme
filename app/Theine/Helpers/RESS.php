@@ -15,9 +15,8 @@ use Detection\MobileDetect;
 /**
  * REsponsive Server Side
  *
- * Sfrutta la libreria `MobileDetect` per capire se il browser che ha
- * effettuato la richiesta è un `"phone"`, un `"tablet"` o un
- * `"desktop"`
+ * Sfrutta la libreria `MobileDetect` per capire se il browser che ha effettuato
+ * la richiesta è un `"phone"`, un `"tablet"` o un `"desktop"`
  *
  * @author Omar Polo <yum1096@gmail.com>
  * @since  1.0.0
@@ -25,8 +24,8 @@ use Detection\MobileDetect;
 class RESS extends Singleton
 {
     /**
-     * Definisce la classe del dispositivo: un "phone", un
-     * "tablet" o un "desktop".
+     * Definisce la classe del dispositivo: un "phone", un "tablet" o un
+     * "desktop".
      *
      * @var string
      */

@@ -45,7 +45,7 @@ class Parser
     }
 
     /**
-     * Make the (php) cache file
+     * Crea un file di cache
      *
      * @return The content of the file to be cached
      */
@@ -66,8 +66,9 @@ class Parser
     }
 
     /**
+     * Controlla l'esistenza della cache
      *
-     *
+     * @return Boolean `true` se la cache esiste, `false` altrimenti
      */
     private static function cacheExists($file)
     {
@@ -77,9 +78,13 @@ class Parser
     }
 
     /**
+     * Ritorna la cache contenuta nel file specificato. NON VERIFICA che tale
+     * file esista pero!
      *
-     * @return The content of the cache file (via `import`)
-ppppp     */
+     * @param string $file il path al file di cache precedentemente creato. È
+     *   RICHIESTO che il file esista
+     * @return Il contenuto della cache
+     */
     private static function getCache($file)
     {
         return include(get_template_directory() . '/public/cache/parsed/' . $file . '.cache.php');

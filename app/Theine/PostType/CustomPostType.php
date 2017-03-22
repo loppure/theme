@@ -31,11 +31,21 @@ class CustomPostType
         $this->cpt = $cpt;
     }
 
+    /**
+     * Accoda la registrazione
+     *
+     * @return void
+     */
     public function run()
     {
         add_action('init', [$this, 'register'], 0);
     }
 
+    /**
+     * Registra il post type
+     *
+     * @return void
+     */
     public function register()
     {
         register_post_type($this->name, $this->cpt);

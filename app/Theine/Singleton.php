@@ -11,12 +11,12 @@ namespace Theine;
 /**
  * Implementa il modello singleton.
  *
- * Quando si vuole avere **una e una sola** istanza di una classe, si
- * estenda questa classe. Se il constructor è settato come privato,
- * non si potranno creare diverse istanze della classe. Un metodo
- * statico `Theine\Singleton::getInstance()` è definito, e grazie a
- * una variabile statica ritorna sempre la stessa istanza, o ne crea
- * una nuova se non ne esisteva un'altra prima.
+ * Quando si vuole avere **una e una sola** istanza di una classe, si estenda
+ * questa classe. Se il constructor è settato come privato, non si potranno
+ * creare diverse istanze della classe. Un metodo statico
+ * `Theine\Singleton::getInstance()` è definito, e grazie a una variabile
+ * statica ritorna sempre la stessa istanza, o ne crea una nuova se non ne
+ * esisteva un'altra prima.
  *
  * Nella nuova versione questa classe non sarà più presente.
  *
@@ -26,9 +26,9 @@ namespace Theine;
 class Singleton
 {
     /**
-     * Returns the *Singleton* instance of this class.
+     * Ritorna una istanza *signleton* della classe
      *
-     * @staticvar Singleton $instance The *Singleton* instances of this class.
+     * @static var Singleton $instance The *Singleton* instances of this class.
      *
      * @return Singleton The *Singleton* instance.
      */
@@ -43,17 +43,15 @@ class Singleton
     }
 
     /**
-     * Protected constructor to prevent creating new instance of the
-     * *Singleton* class via the `new` operator from outside of this
-     * class.
+     * Costruttore protetto per prevenire la creazione di una nuova istanza
+     * della classe *Singleton* attraverso l'operatore new
      */
     protected function __construct()
     {
     }
 
     /**
-     * Private clone method to prevent cloning of the instance of the
-     * *Singleton* instance.
+     * Impedisce la clonaione di una istanza della classe
      *
      * @return void
      */
@@ -62,8 +60,7 @@ class Singleton
     }
 
     /**
-     * Private unserialize method to prevent unserializing of the
-     * *Singleton* instance.
+     * Impedisce la deserializzazione dell'istanza sigleton
      *
      * @return void
      */

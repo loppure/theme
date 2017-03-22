@@ -12,12 +12,11 @@ namespace Theine\Debug;
 /**
  * `Debug` gestisce l'aspetto debug-friendly del tema.
  *
- * Fornisce delle funzioni comode per lanciare degli errori o delle
- * eccezioni per vedere se vengono *prese* degli handler. Fornisce
- * delle funzioni per catturare gli errori e mandarli alla rispettive
- * view. Si vedano le classi `Theine\Debug\ErrorHandler` e
- * `Theine\Debug\ExceptionHandler` per comprendere come gli errori
- * vengano davvero gestiti.
+ * Fornisce delle funzioni comode per lanciare degli errori o delle eccezioni
+ * per vedere se vengono *prese* degli handler. Fornisce delle funzioni per
+ * catturare gli errori e mandarli alla rispettive view. Si vedano le classi
+ * `Theine\Debug\ErrorHandler` e `Theine\Debug\ExceptionHandler` per comprendere
+ * come gli errori vengano davvero gestiti.
  *
  * @author Omar Polo <yum1096@gmail.com>
  * @since  1.0.0 Introdotta
@@ -26,7 +25,8 @@ namespace Theine\Debug;
 class Debug
 {
     /**
-     * Dice a wordpress, se `WP_DEBUG` è `true`, di non mandare l'header della cache.
+     * Dice a wordpress, se `WP_DEBUG` è `true`, di non mandare l'header della
+     * cache.
      */
     public function __construct()
     {
@@ -56,26 +56,24 @@ class Debug
     }
 
     /**
-     * Genera un errore. Utile in alcuni casi per testare l'aspetto
-     * debug del tema.
+     * Genera un errore. Utile per testare il debug
      *
      * @return void
      * @since  1.0.0 Introdotta
      */
     public function throwAnError()
     {
-        trigger_error("Errore @deòaa#", E_USER_ERROR);
+        trigger_error('Oh no, un errore!', E_USER_ERROR);
     }
 
     /**
-     * Lancia un'eccezione. Anche questa cosa può tornare utile, in
-     * alcuni casi...
+     * Lancia un'eccezione. Anche questo utile per testare il debug
      *
      * @return void
      * @since  1.0.0
      */
     public function throwAnException()
     {
-        throw new \Exception('blah blah blah');
+        throw new \Exception('My awesome exception was throwed!');
     }
 }

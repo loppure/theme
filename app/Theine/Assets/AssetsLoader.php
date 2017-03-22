@@ -62,9 +62,9 @@ class AssetsLoader extends Singleton implements ArrayAccess
     }
 
     /**
-     * Implementa, come richiesto da `\ArrayAccess` il "settare" un
-     * elemento. Se `$value` non è un'istanza di
-     * `Theine\Assets\AssetInterface` lancia un errore.
+     * Implementa, come richiesto da `\ArrayAccess` il "settare" un elemento. Se
+     * `$value` non è un'istanza di `Theine\Assets\AssetInterface` lancia un
+     * errore.
      *
      * @param string $offset Il nome dell'indice
      * @param any    $value  Il valore

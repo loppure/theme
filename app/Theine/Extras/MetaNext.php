@@ -10,8 +10,8 @@
 namespace Theine\Extras;
 
 /**
- * Abilita o disabilita il link presente nel tag `<head>` del sito,
- * che indica al browser la pagina/post successivo/precedente.
+ * Abilita o disabilita il link presente nel tag `<head>` del sito, che indica
+ * al browser la pagina/post successivo/precedente.
  *
  * @since  1.0.0 Introdotta
  * @author Omar Polo <yum1096@gmail.com>

@@ -15,12 +15,11 @@ use Theine\Debug\Exception\ForbiddenException;
 /**
  * Questa classe fornisce una astrazione su ajax in wordpress.
  *
- * Permette di realizzare iterfacce ajax (private e pubbliche) in modo
- * più veloce. Integra il supporto alla creazione/verifica di nonces,
- * si occupa di gestire gli errori. Essendo astratta deve essere
- * estesa, e deve essere fornito il metodo `action`, ovvero quello
- * chiamato se viene effettuata una chiamata ajax con quel metodo e il
- * nonce risulta corretto.
+ * Permette di realizzare iterfacce ajax (private e pubbliche) in modo più
+ * veloce. Integra il supporto alla creazione/verifica di nonces, si occupa di
+ * gestire gli errori. Essendo astratta deve essere estesa, e deve essere
+ * fornito il metodo `action`, ovvero quello chiamato se viene effettuata una
+ * chiamata ajax con quel metodo e il nonce risulta corretto.
  *
  * @author Omar Polo <yum1096@gmail.com>
  * @since  1.0.0 Introdotta
@@ -77,12 +76,12 @@ abstract class AbstractAjax
     }
 
     /**
-     * Controlla il nonce. Se è errato, lancia un'eccezione.
-     * Altrimenti chiama il metodo `action()`, e poi muore.
+     * Controlla il nonce. Se è errato, lancia un'eccezione.  Altrimenti chiama
+     * il metodo `action()`, e poi muore.
      *
      * @return void
-     * @throws \Theine\Debug\Exception\ForbiddenException if the nonce
-     * does not correspond
+     * @throws \Theine\Debug\Exception\ForbiddenException se il nonce non
+     * corrisponde
      */
     public function validate()
     {

@@ -17,8 +17,9 @@ use Theine\Theme;
 /**
  * Il Controller.
  *
- * Questa classe si occupa di gestire i dati e *indirizzarli* alla view corretta.
- * Si noti come è definita come `abstrac`. Ciò significa che non può essere inizializzata direttamente.
+ * Questa classe si occupa di gestire i dati e *indirizzarli* alla view
+ * corretta.  Si noti come è definita come `abstrac`. Ciò significa che non può
+ * essere inizializzata direttamente.
  *
  * Esempio di utilizzo:
  * ```

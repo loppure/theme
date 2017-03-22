@@ -14,10 +14,9 @@ use Theine\Theme;
 /**
  * Un tipo di asset.
  *
- * La classe `Script` implementa un tipo di asset: lo script
- * javascript. In aggiunta alle funzionalità definite da wordpress,
- * questa classe permette di far accodare lo script solo in alcuni
- * dispositivi.
+ * La classe `Script` implementa un tipo di asset: lo script javascript. In
+ * aggiunta alle funzionalità definite da wordpress, questa classe permette di
+ * far accodare lo script solo in alcuni dispositivi.
  *
  * Esempio di utilizzo:
  * ```php
@@ -28,7 +27,8 @@ use Theine\Theme;
  * $theme = Theme::getInstace();
  * $theme['assets'] = AssetsLoader::getInstance();
  *
- * $theme['assets'][] = new Script( 'foo', 'foo.js', [], '1.0.0', true, true, ['tablet', 'desktop'] );
+ * $theme['assets'][] = new Script( 'foo', 'foo.js', [], '1.0.0', true, true,
+ *    ['tablet', 'desktop'] );
  *
  * $theme->run();
  * ```

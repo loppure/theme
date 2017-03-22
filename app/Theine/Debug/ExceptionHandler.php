@@ -14,9 +14,9 @@ use Theine\View\View;
 /**
  * Gestisce le eccezioni
  *
- * In maniera simile alla classe `Theine\Exceptions\ErrorHandler`
- * questa gestisce si occupa di gestire le eccezioni. Genera un
- * template dove vengono mostrate delle informazioni sull'eccezione.
+ * In maniera simile alla classe `Theine\Exceptions\ErrorHandler` questa
+ * gestisce si occupa di gestire le eccezioni. Genera un template dove vengono
+ * mostrate delle informazioni sull'eccezione.
  *
  * @since  1.0.0 Introdotta
  * @author Omar Polo <yum1096@gmail.com>

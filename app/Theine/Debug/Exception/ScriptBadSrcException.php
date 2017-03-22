@@ -13,8 +13,8 @@ use Theine\View\View;
 use Exception;
 
 /**
- * ScriptBadSrcExcpetion viene lanciata quando non viene passato un
- * `src` corretto alla classe Theine\Scripts\Script.
+ * ScriptBadSrcExcpetion viene lanciata quando non viene passato un `src`
+ * corretto alla classe Theine\Scripts\Script.
  *
  * @author Omar Polo <yum1096@gmail.com>
  * @since  1.0.0 Introdotta
@@ -23,8 +23,7 @@ use Exception;
 class ScriptBadSrcException extends Exception
 {
     /**
-     * Genera un bel messaggio d'errore e poi fa fare il resto a
-     * \Exception.
+     * Genera un bel messaggio d'errore e poi fa fare il resto a \Exception.
      *
      * @param  Array  $device  The wrong device name used
      */

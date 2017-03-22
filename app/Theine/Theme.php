@@ -16,9 +16,9 @@ use Theine\Assets\AssetsLoader;
 /**
  * Classe principale del Tema.
  *
- * Un coltellino svizzero per caricare tutto ciò di cui il tema ha
- * bisogno. Implementa la classe `ArrayAccess` per poter dare alcune
- * proprietà all'oggeto finale.
+ * Un coltellino svizzero per caricare tutto ciò di cui il tema ha bisogno.
+ * Implementa la classe `ArrayAccess` per poter dare alcune proprietà all'oggeto
+ * finale.
  *
  * Esempio:
  * ```php
@@ -37,8 +37,8 @@ use Theine\Assets\AssetsLoader;
 class Theme extends Singleton implements \ArrayAccess
 {
     /**
-     * Gli elementi che vengono salvati all'interno della classe
-     * grazie ad `\ArrayAccess`.
+     * Gli elementi che vengono salvati all'interno della classe grazie ad
+     * `\ArrayAccess`.
      *
      * @var array
      */
@@ -125,8 +125,8 @@ class Theme extends Singleton implements \ArrayAccess
     }
 
     /**
-     * Si occupa di prendere tutti i valori salvati dentro `contents`,
-     * e se possiedono un metodo `run` lo esegue.
+     * Si occupa di prendere tutti i valori salvati dentro `contents`, e se
+     * possiedono un metodo `run` lo esegue.
      *
      * @author Omar Polo <yum1096@gmail.com>
      * @since  1.0.0 Introdotta
