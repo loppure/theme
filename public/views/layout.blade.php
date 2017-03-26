@@ -4,6 +4,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- TODO caricare tramite il fuction -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700" rel="stylesheet">
         {{ wp_head() }}
     </head>
     <body {{ body_class() }}>
@@ -17,7 +19,7 @@
                         <div class="site-branding">
                             <div class="nascondi-cerchio"></div>
                             <div class="cerchio-logo">
-                                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                                <a href="{{ esc_url( home_url( '/' )) }}" rel="home">
                                     <img alt="logo L'oppure" src="<?php echo get_template_directory_uri()?>/public/assets/src/img/logo/loppure-logo-nero.svg">
                                 </a>
                             </div>

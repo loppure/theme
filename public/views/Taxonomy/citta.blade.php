@@ -1,1 +1,54 @@
-TODO: città
+@extends('layout')
+
+@section('content')
+
+    <header class="header-taxonomy-citta">
+        @if( $taxonomy->cover )
+            <figure style="background-image: url({{ $taxonomy->cover }}">
+              <h1>{{ $taxonomy->name }}</h1>
+            </figure>
+        @else
+            <div class="img-header">
+              <h1>{{ $taxonomy->name }}</h1>
+            </div>
+        @endif
+
+    </header>
+
+    <section class="page-gray content-post-citta">
+        <div class="widget-sx" role="complementary">
+            @include('Widget/Timeline/index')
+            @include('Widget/Sostienici/index')
+
+            {{--{{ dynamic_sidebar('sidebar-sx') }} --}}
+        </div>
+
+        <div class="section-cont-article" id="section-cont-article">
+          {{--@if( $posts )
+              @include('shared.general_loop')
+
+              {{ next_posts_link() }}
+          @else
+              @include('shared.empty')
+          @endif TODO risolvere --}}
+        </div>
+
+        <div class="widget-dx" role="complementary">
+            @include('Widget/Categorie/index')
+            @include('Widget/Porta-citta/index')
+
+            {{--{{ dynamic_sidebar('sidebar-dx') }} --}}
+        </div>
+    </section>
+
+    <section class="altre-citta">
+      <ul>
+        <!-- TODO non stampare quella corrente -->
+        <li><a href="#">Pordenone</a></li>
+        <li><a href="#">Udine</a></li>
+        <li><a href="#">Gorizia</a></li>
+        <li><a href="#">Trieste</a></li>
+        <li><a href="#">Treviso</a></li>
+      </ul>
+    </section>
+@endsection

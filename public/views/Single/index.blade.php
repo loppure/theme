@@ -13,18 +13,7 @@
 			    <div class="content-single">
 				    <figure class="single-image" style="background-image: /* image here */">IMAGE HERE</figure>
 
-						<div class="single-social">
-              <h3>Condividi</h3>
-              <ul>
-                <li class="item item-facebook">Facebook</li>
-                <li class="item item-twitter">Twitter</li>
-                <li class="item item-googleplus">Google+</li>
-								<li class="item item-linkedin">Linkedin</li>
-								<li class="item item-whatsapp">Whatsapp</li>
-								<li class="item item-telegram">Telegram</li>
-								<li class="item item-mail">Mail</li>
-              </ul>
-            </div> <!-- .entry-social -->
+						@include('Widget/Social/share/index')
 
 						<div class="content-text">
 	              <div class="text">
@@ -47,12 +36,25 @@
 		</section> <!-- .single-content-wrapper -->
 
 			  <footer>
-			      <p>#TODO Immagine autore qui</p>
+					<div class="informative">
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+							ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+							aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+							in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+							sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+							mollit anim id est laborum.
+						</p>
+					</div>
+					<div class="content-author-single">
+			      <img src="#" /> <!--#TODO Immagine autore qui -->
 			      <h4>{{ the_author_posts_link() }}</h4>
 			      <p class="author-bio">{{ get_the_author_meta( 'description' ) }}</p>
+					</div>
 		    </footer>
 	  </article>
-
+		{{--
 	  @include('Single.comments')
-
+			--}}
 @endsection
