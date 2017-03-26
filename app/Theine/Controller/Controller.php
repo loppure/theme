@@ -115,25 +115,25 @@ abstract class Controller
             while (have_posts()) {
                 the_post();
 
-                $post = new StdClass();
+                $p = new StdClass();
 
-                $post->id = get_the_ID();
-                $post->title = get_the_title();
-                $post->excerpt = get_the_excerpt();
-                $post->category = $this->getCategory();
-                $post->category_list = get_the_category_list();
-                $post->time = get_the_time();
-                //$post->taxonomy = $this->getTaxonomy();
-                $post->permalink = get_the_permalink();
-                $post->meta = $this->getMeta();
+                $p->id = get_the_ID();
+                $p->title = get_the_title();
+                $p->excerpt = get_the_excerpt();
+                $p->category = $this->getCategory();
+                $p->category_list = get_the_category_list();
+                $p->time = get_the_time();
+                //$p->taxonomy = $this->getTaxonomy();
+                $p->permalink = get_the_permalink();
+                $p->meta = $this->getMeta();
 
                 foreach ($custom_filters as $filter) {
                     $name = $filter['name'];
                     $closure = $filter['closure'];
-                    $post->{$name} = $closure( $post->id );
+                    $p->{$name} = $closure( $p->id );
                 }
 
-                $this->posts[] = $post;
+                $this->posts[] = $p;
             }
         } else {
             $this->posts = false;
