@@ -8,8 +8,6 @@ class taxController extends Controller
 {
     public function __construct()
     {
-        $this->getPosts();
-
         $term = get_term_by(
             'slug',
             get_query_var('term'),
@@ -17,6 +15,8 @@ class taxController extends Controller
         );
 
         parent::__construct("Taxonomy:". $term->taxonomy);
+
+        $this->getPosts();
 
         $file = $this->theme['config']['directory']['assets'] . 'dist/img/' . $term->slug . '/' . date('d') . '.jpg';
 
