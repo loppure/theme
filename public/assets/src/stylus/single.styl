@@ -9,11 +9,17 @@
 .sidebar-single
   col(3)
 
+.sidebar-single-mobile
+  display: none
+
+.single .content-area
+  padding: 0
+
 .single article.post
   width: 100%
   display: block
   margin: 0 auto
-  padding: 0 20px
+  padding: 0
   background-color: grigio-chiaro
 
 /*Single - header*/
@@ -61,7 +67,7 @@
   background-color: colore-loppure
 
   .text
-    width: 90%
+    width: 91%
     display: block
     float: left
     margin: 0 auto
@@ -71,7 +77,103 @@
     font-size: 1rem
     text-align: justify
 
+    font-family: 'Merriweather', serif;
 
+/*Single - Content text - content-fonti*/
+
+.content-fonti
+  padding-top: 20px;
+  border-top: 2px solid colore-loppure
+  color: colore-loppure
+
+  span
+    display: block
+    margin: 10px auto
+    clear: left
+    line-height: 25px
+    font-size: 14px
+
+    &::before
+      width: 25px
+      height: 25px
+      display: block
+      margin 0 auto
+      margin-right: 10px
+      content: ' '
+      float: left
+      background-color red
+
+    &:nth-child(2)::before
+      background-color: green
+
+    &:nth-child(3)::before
+      background-color: blue
+
+
+/*Single - Footer*/
+
+/*Single - Footer - informativa*/
+.footer-single
+  height: auto
+  overflow: hidden
+
+  .informativa
+    width: 1200px
+    height: auto
+    overflow: hidden
+    display: block
+    margin: 0 auto
+    margin-bottom: 20px
+    clear: both
+
+    article
+      col(9)
+      margin: 0;
+      background-color: colore-loppure
+      color: bianco
+
+      &::after
+        width: 30px
+        height: 70px
+        display: block
+        margin: 20px auto
+        content: ' '
+        float: right
+        background-color: red
+
+      p
+        width: 60%
+        float: right
+        margin: 20px 100px 10px 20px;
+        font-size: 13px
+        text-align: justify
+
+/*Single - Footer - Author*/
+.content-author-single
+  border-top: 2px solid colore-loppure
+
+  .author-single
+    width: 720px
+    display: block
+    margin: 20px auto
+    padding 20px 10px
+    background-color: grigio-intermedio
+
+    img
+      width: 100px
+      height: 100px
+      display: block
+      margin: 0 auto
+      border-radius: 50%
+      border: 2px solid colore-loppure
+
+    h4
+      margin: 20px auto
+      display: block
+      text-align: center
+
+    .author-bio
+      padding: 20px 10px
 /*Single - colori*/
 /*Single - colori: gusti della terra*/
 .category-gusti-della-terra

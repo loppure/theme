@@ -17,38 +17,31 @@
 
     <section class="page-gray content-post-citta">
         <div class="widget-sx" role="complementary">
-            @include('Widget/Timeline/index')
-            @include('Widget/Sostienici/index')
+            @include('Widget/Tax-citta/Timeline/index')
+            @include('Widget/Tax-citta/Sostienici/index')
 
             {{--{{ dynamic_sidebar('sidebar-sx') }} --}}
         </div>
 
         <div class="section-cont-article" id="section-cont-article">
-          {{--@if( $posts )
+          @if( $posts )
               @include('shared.general_loop')
 
               {{ next_posts_link() }}
           @else
               @include('shared.empty')
-          @endif TODO risolvere --}}
+          @endif
         </div>
 
         <div class="widget-dx" role="complementary">
-            @include('Widget/Categorie/index')
-            @include('Widget/Porta-citta/index')
+            @include('Widget/Tax-citta/Categorie/index')
+            @include('Widget/Tax-citta/Porta-citta/index')
 
             {{--{{ dynamic_sidebar('sidebar-dx') }} --}}
         </div>
     </section>
 
     <section class="altre-citta">
-      <ul>
-        <!-- TODO non stampare quella corrente -->
-        <li><a href="#">Pordenone</a></li>
-        <li><a href="#">Udine</a></li>
-        <li><a href="#">Gorizia</a></li>
-        <li><a href="#">Trieste</a></li>
-        <li><a href="#">Treviso</a></li>
-      </ul>
+        @include('Widget/Tax-citta/Citta/index')
     </section>
 @endsection

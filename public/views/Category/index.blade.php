@@ -4,12 +4,13 @@
 
 	<header class="page-header header-category">
 		<h1>{{ $category }}</h1>
+		<a class="info" href="#">Informazioni</a>
 	</header>
 
 	<section class="page-gray page-category">
 
 		<div class="widget-sx" role="complementary">
-				@include('Widget/Timeline/index')
+				@include('Widget/Rubriche/Timeline/index')
 				{{-- @include('Widget/Sostienici/index') --}}
 
 			 {{--{{ dynamic_sidebar('sidebar-sx') }}--}}
@@ -26,8 +27,8 @@
 			@endif
 		</div>
 		<div class="widget-dx" role="complementary">
-				@include('Widget/Citta/index')
-				@include('Widget/Porta-citta/index')
+				@include('Widget/Rubriche/Citta/index')
+				@include('Widget/Rubriche/Porta-citta/index')
 
 				{{--{{ dynamic_sidebar('sidebar-dx') }}--}}
 		</div>

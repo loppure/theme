@@ -26,19 +26,39 @@
 		</div>
 
 	</section>
-	<section class="content-button-chi-siamo">
-		<div class="box-rettangolo-3 documento">
-			<a href="#"> Scarica la presentazione</a>
+	<section>
+		<div class="content-box-attivita">
+			<article class="box-attivita-2">
+				<figure></figure>
+				<a href="#"><h4>Il nostro sguardo</h4></a>
+			</article>
+			<article class="box-attivita-2">
+				<figure></figure>
+				<a href="#"><h4>Eventi</h4></a>
+			</article>
 		</div>
+		<div>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			</p>
+			<div class="box-documento center">
+					<a href="#"> Scarica la presentazione</a>
+			</div>
+		</div>
+	</section>
 
-		<div class="box-rettangolo-3 associazione">
+	<section class="content-box-slim">
+		<div class="box-slim associazione">
 			<a href="{{the_permalink()}}/associazione"> Associazione</a>
 		</div>
 
-		<div class="box-rettangolo-3 informativa">
+		<div class="box-slim informativa">
 			<a href="{{the_permalink()}}/informativa"> Informative</a>
 		</div>
 	</section>
+
 
 </div>
 @endsection

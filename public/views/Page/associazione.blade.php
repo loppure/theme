@@ -19,45 +19,45 @@
 		</p>
 	</section>
 
-	<section class="content-direttivo">
+	<section class="content-box-team-medium">
 		<h2>Direttivo</h2>
-		<article>
+		<article class="box-team-medium">
 			<img src="#">
 			<span class="ruolo">Presidente</span>
 			<h3>Mattia Carbone</h3>
 		</article>
 
-		<article>
+		<article class="box-team-medium">
 			<img src="#">
 			<span class="ruolo">Vice presidente</span>
 			<h3>Mattia Carbone</h3>
 		</article>
 
-		<article>
+		<article class="box-team-medium">
 			<img src="#">
 			<span class="ruolo">Segretario</span>
 			<h3>Mattia Carbone</h3>
 		</article>
 
-		<article>
+		<article class="box-team-medium">
 			<img src="#">
 			<span class="ruolo">Consigliere</span>
 			<h3>Mattia Carbone</h3>
 		</article>
 
-		<article>
+		<article class="box-team-medium">
 			<img src="#">
 			<span class="ruolo">Consigliere</span>
 			<h3>Mattia Carbone</h3>
 		</article>
 
-		<article>
+		<article class="box-team-medium">
 			<img src="#">
 			<span class="ruolo">Consigliere</span>
 			<h3>Mattia Carbone</h3>
 		</article>
 
-		<article>
+		<article class="box-team-medium">
 			<img src="#">
 			<span class="ruolo">Consigliere</span>
 			<h3>Mattia Carbone</h3>
@@ -69,11 +69,12 @@
 	<section class="documenti-associazione">
 		<h2>Documenti di fondazione</h2>
 
-		<article>
-			<a href="#">
-				<h4>Titolo documento</h4>
-			</a>
-		</article>
+		<div class="content-box-documento">
+			<article class="box-documento">
+				<a href="#"><h4>Titolo documento</h4></a>
+				<span>Data: 15 gennaio 2017</span>
+			</article>
+	</div>
 
 		<!-- TODO Custom field ripetitore -->
 	</section>
@@ -81,11 +82,12 @@
 	<section class="documenti-bilancio">
 		<h2>Bilancio</h2>
 
-		<article>
-			<a href="#">
-				<h4>Titolo documento</h4>
-			</a>
-		</article>
+		<div class="content-box-documento">
+			<article class="box-documento">
+				<a href="#"><h4>Titolo documento</h4></a>
+				<span>Data: 15 gennaio 2017</span>
+			</article>
+		</div>
 
 		<!-- TODO Custom field ripetitore -->
 	</section>

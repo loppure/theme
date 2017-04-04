@@ -6,6 +6,16 @@
   margin-bottom: 10px
   background-color: red
 
+  &::before
+    width: 35px
+    height: 35px
+    margin: 10px
+    display: block
+    content: ' '
+    background-position: center
+    background-repeat: no-repeat
+    background-size: contain
+
   @media (max-width: tablet)
     height: 100px
 
@@ -21,50 +31,94 @@
     margin-bottom: 5px
     height: 120px
 
+// Elementi-loppure -> Rettagoli home: tipografia
+.home-header .box-rettangolo-4
+  color: bianco
+
+  .date
+    margin: 10px
+    float: right
+    font-size: 15px
+    color: grigio-intermedio
+    font-family: 'Montserrat', sans-serif
+    font-weight: 700
+
+  a
+    width: 100%
+    display: block
+    clear: both
+    margin: 10px
+    margin-top: 20px
+    font-size: 20px
+    line-height: 20px
+    color: bianco
+    font-family: 'Montserrat', sans-serif
+    font-weight: 700
+
+.home-header .box-rettangolo-4.prossimamente
+  a
+    position: relative
+    top: 22px
+    color: grigio-medio
+
 // Elementi-loppure -> Rettagoli home: colori e icone
 
+// Elementi-loppure -> Rettagoli home: Gusti della terra
 .home-header .gusti-della-terra
   background-color: color-gusti-della-terra
-  background-image: img-gusti-della-terra
-  background-size: 15%
 
+  &::before
+    background-image: img-gusti-della-terra-bianco
+
+// Elementi-loppure -> Rettagoli home: voli sul territorio
 .home-header .voli-sul-territorio
   background-color: color-voli-sul-territorio
-  background-image: img-voli-sul-territorio
-  background-size: 25%
 
+  &::before
+    background-image: img-voli-sul-territorio-bianco
+
+// Elementi-loppure -> Rettagoli home: radici nel tempo
 .home-header .radici-nel-tempo
   background-color: color-radici-nel-tempo
-  background-image: img-radici-nel-tempo
-  background-size: 25%
 
+  &::before
+    background-image: img-radici-nel-tempo-bianco
+
+// Elementi-loppure -> Rettagoli home: a parole nostre
 .home-header .parole-nostre
   background-color: color-parole-nostre
-  background-image: img-parole-nostre
-  background-size: 25%
 
+  &::before
+    background-image: img-parole-nostre-bianco
+
+// Elementi-loppure -> Rettagoli home: pausa caffe
 .home-header .pausa-caffe
   background-color: color-pausa-caffe
-  background-image: img-pausa-caffe
-  background-size: 20%
 
+  &::before
+    background-image: img-pausa-caffe-bianco
+
+// Elementi-loppure -> Rettagoli home: pensieri tra le pagine
 .home-header .pensieri-tra-le-pagine
   background-color: color-pensieri-tra-le-pagine
-  background-image: img-pensieri-tra-le-pagine
-  background-size: 20%
 
-.home-header .reportage
-  background-color: color-reportage
+  &::before
+    background-image: img-pensieri-tra-le-pagine-bianco
 
-.home-header .progetti
-  background-color: color-progetti
-  background-image: img-progetti
-  background-size: 25%
+// Elementi-loppure -> Rettagoli home:  prossimamente
+.home-header .prossimamente
+  background-color: colore-loppure
+
+  &::before
+    display: none
 
 // Elementi-loppure -> Rettagoli home: gusti-della-terra Hover
 .home-header div:hover.gusti-della-terra
   background-color: bianco
-  box-shadow: ombra-gusti-della-terra
+  box-shadow: ombra-box-gusti-della-terra
+
+  &::before
+    background-image: img-gusti-della-terra
 
 .home-header div:hover.gusti-della-terra a
   color: color-gusti-della-terra
@@ -75,7 +129,10 @@
 // Elementi-loppure -> Rettagoli home: voli-sul-territorio Hover
 .home-header div:hover.voli-sul-territorio
   background-color: bianco
-  box-shadow: ombra-voli-sul-territorio
+  box-shadow: ombra-box-voli-sul-territorio
+
+  &::before
+    background-image: img-voli-sul-territorio
 
 .home-header div:hover.voli-sul-territorio a
   color: color-voli-sul-territorio
@@ -86,7 +143,10 @@
 // Elementi-loppure -> Rettagoli home: radici-nel-tempo Hover
 .home-header div:hover.radici-nel-tempo
   background-color: bianco
-  box-shadow: ombra-radici-nel-tempo
+  box-shadow: ombra-box-radici-nel-tempo
+
+  &::before
+    background-image: img-radici-nel-tempo
 
 .home-header div:hover.radici-nel-tempo a
   color: color-radici-nel-tempo
@@ -97,7 +157,10 @@
 // Elementi-loppure -> Rettagoli home: parole-nostre Hover
 .home-header div:hover.parole-nostre
   background-color: bianco
-  box-shadow: ombra-parole-nostre
+  box-shadow: ombra-box-parole-nostre
+
+  &::before
+    background-image: img-parole-nostre
 
 .home-header div:hover.parole-nostre a
   color: color-parole-nostre
@@ -108,7 +171,10 @@
 // Elementi-loppure -> Rettagoli home: pausa-caffe Hover
 .home-header div:hover.pausa-caffe
   background-color: bianco
-  box-shadow: ombra-pausa-caffe
+  box-shadow: ombra-box-pausa-caffe
+
+  &::before
+    background-image: img-pausa-caffe
 
 .home-header div:hover.pausa-caffe a
   color: color-pausa-caffe
@@ -119,7 +185,10 @@
 // Elementi-loppure -> Rettagoli home: pensieri-tra-le-pagine Hover
 .home-header div:hover.pensieri-tra-le-pagine
   background-color: bianco
-  box-shadow: ombra-pensieri-tra-le-pagine
+  box-shadow: ombra-box-pensieri-tra-le-pagine
+
+  &::before
+    background-image: img-pensieri-tra-le-pagine
 
 .home-header div:hover.pensieri-tra-le-pagine a
   color: color-pensieri-tra-le-pagine
@@ -127,26 +196,19 @@
   &:hover, &:active, &:focus
     color: color-pensieri-tra-le-pagine
 
-// Elementi-loppure -> Rettagoli home: progetti Hover
-.home-header div:hover.progetti
-  background-color: bianco
-  box-shadow: ombra-progetti
+// Elementi-loppure -> Rettagoli home: prossimamente Hover
+.home-header div:hover.prossimamente
+  background: none
+  background-color: colore-loppure
+  box-shadow: none
 
-.home-header div:hover.progetti a
-  color: color-progetti
+.home-header div:hover.prossimamente a
+  color: #fff
 
   &:hover, &:active, &:focus
-    color: color-progetti
+    color: #fff
+
+// Elementi-loppure -> Rettagoli home: progetti Hover
+
 
 // Elementi-loppure -> Rettagoli home: reportage Hover
-.home-header div:hover.reportage
-  background-color: bianco
-  box-shadow: ombra-reportage
-
-.home-header div:hover.reportage a
-  color: color-reportage
-
-  &:hover, &:active, &:focus
-    color: color-reportage
-
-// Elementi-loppure -> Rettagoli home: tipografia

@@ -5,38 +5,38 @@
 	  <header class="page-header home-header">
         <div class="wrapper-box wrapper-categories">
             <div class="box-rettangolo-4 gusti-della-terra">
-							<a href="#"> Gusti della Terra </a>
+							<a href="{{ esc_url( home_url( '/rubriche' )) }}/gusti-della-terra"> Gusti della Terra </a>
 						</div>
             <div class="box-rettangolo-4 voli-sul-territorio">
-							<a href="#"> Voli sul territorio </a>
+							<a href="{{ esc_url( home_url( '/rubriche' )) }}/voli-sul-territorio"> Voli sul territorio </a>
 						</div>
             <div class="box-rettangolo-4 radici-nel-tempo">
-							<a href="#"> Radici nel tempo</a>
+							<a href="{{ esc_url( home_url( '/rubriche' )) }}/radici-nel-tempo"> Radici nel tempo</a>
 						</div>
-            <div class="box-rettangolo-4 pensieri-tra-le-pagine">
-							<a href="#"> Pensieri tra le pagine </a>
+						<div class="box-rettangolo-4 parole-nostre prossimamente">
+							<span class="date">Prossimamente</span>
+							<a href="{{ esc_url( home_url( '/' )) }}/prossimamente"> A parole nostre </a>
 						</div>
             <div class="box-rettangolo-4 pausa-caffe">
-							<a href="#"> Pausa caffè </a>
+							<a href="{{ esc_url( home_url( '/rubriche' )) }}/gusti-della-terra"> Pausa caffè </a>
 						</div>
-						<div class="box-rettangolo-4 parole-nostre">
-							<span class="date">Prossimamente</span>
-							<a href="#"> A parole nostre </a>
+						<div class="box-rettangolo-4 pensieri-tra-le-pagine">
+							<a href="{{ esc_url( home_url( '/rubriche' )) }}/pensieri-tra-le-pagine"> Pensieri tra le pagine </a>
 						</div>
-						<div class="box-rettangolo-4 reportage">
+						<div class="box-rettangolo-4 reportage prossimamente">
 							<span class="date">Prossimamente</span>
-							<a href="#"> Reportage </a>
+							<a href="{{ esc_url( home_url( '/' )) }}/prossimamente"> Reportage </a>
 						</div>
-            <div class="box-rettangolo-4 progetti">
+            <div class="box-rettangolo-4 progetti prossimamente">
 							<span class="date">Prossimamente</span>
-							<a href="#"> Progetti </a>
+							<a href="{{ esc_url( home_url( '/' )) }}/prossimamente"> Progetti </a>
 						</div>
         </div>
     </header>
 
     <section class="page-gray home-section">
         <div class="widget-sx" role="complementary">
-						@include('Widget/Timeline/index')
+						@include('Widget/Home/Timeline/index')
 						{{-- @include('Widget/Sostienici/index') --}}
 
 			     {{--{{ dynamic_sidebar('sidebar-sx') }}--}}
@@ -53,8 +53,8 @@
         </div>
 
         <div class="widget-dx" role="complementary">
-						@include('Widget/Citta/index')
-						@include('Widget/Porta-citta/index')
+						@include('Widget/Home/Citta/index')
+						@include('Widget/Home/Porta-citta/index')
 
 						{{--{{ dynamic_sidebar('sidebar-dx') }}--}}
 		    </div>
