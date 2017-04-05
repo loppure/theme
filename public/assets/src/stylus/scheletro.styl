@@ -1,0 +1,106 @@
+/* body - scheletro*/
+
+html
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+
+body
+  margin: 0
+  padding: 0
+  background-color: grigio-chiaro
+
+html, body
+  min-height: 100%;
+
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary
+  display: block
+
+div, section
+  height: auto
+  display: block
+  overflow: visible
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+
+/*site-content - scheletro*/
+.site
+  height: 90%
+
+.site-content
+  margin: 0 auto
+  padding-top: 50px
+  width: 100%
+  max-width: 1200px
+  min-height: 100%
+
+  @media (max-width: max)
+    width: 95%
+    max-width: 100%
+
+  @media (max-width: medium)
+    width: 100%
+    max-width: 100%
+
+  @media (max-width: min)
+    width: 100%
+    max-width: 100%
+
+.content-area
+  padding: 0 0.5rem
+
+  @media (max-width: medium)
+    padding: 0 1rem
+
+  @media (max-width: min)
+    padding: 0 0.5rem
+
+/* Scheletro - Colore conent page */
+.site-main
+  background-color: grigio-intermedio
+
+.page-gray
+  background-color: grigio-chiaro
+
+/*Scheletro - Page-gray */
+.page-gray
+  gs("fluid")
+  width: 96%
+  clear: both
+  margin: 0 auto
+  margin-top: -145px
+  padding: 0 20px
+
+  @media (max-width: max)
+    padding: 40px 10px
+
+  @media (max-width: smartphone)
+    width: 100%;
+    margin-top: -120px
+    padding: 20px 10px
+
+  @media (max-width: min)
+    padding: 20px 5px
+
+  p
+    color: rgba(0, 0, 0, 0.5)
+    text-align: justify
+    padding: 0 20px
+
+.page-standard
+  width: 99%
+  margin-top: 0
+  padding: 0
+
+  section
+    height: auto
+    overflow: hidden
+    padding: 10px 20px
+    margin: 20px auto
+
+
+
+/*extra provisorio - scheletro*/
+a.skip-link.screen-reader-text
+  display: none

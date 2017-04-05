@@ -1,0 +1,45 @@
+/*menu*/
+.main-navigation
+  height: 100%
+
+  @media (max-width: 599px)
+    float: right
+    height: 100%
+
+  .menu-toggle
+    display: none
+
+    @media (max-width: 599px)
+      padding: 0 0 0 0
+      width: 40px
+      height: 40px
+      margin-top: 25%
+      background-color: transparent
+      background-position: center
+      background-size: 60%
+      background-repeat: no-repeat
+      border: 2px solid rgba(0, 0, 0, 0.5)
+      border-radius: 50%
+      background-image: url("img/svg/icon-menu.svg") /*rivedere*/
+
+  .menu-menu-container
+    max-width: 65%
+    height: 100%
+    float: right
+
+    ul
+      height: auto
+      overflow: hidden
+      text-align: center
+
+      li
+        display: inline-block
+        margin: 0 5px
+
+        a
+          display: inline-block
+          padding: 15px 10px
+
+          &:hover, &:focus, &:active
+            color: bianco
+            background-color: colore-loppure

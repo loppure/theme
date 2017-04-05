@@ -1,0 +1,76 @@
+// temporaneo
+form#searchform
+  display: none
+
+/*header site - header*/
+header.site-header
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  height: 50px
+  padding: 0;
+  background: #F7F7F7
+  border-bottom: 2px solid colore-loppure
+  transition: transform 0.3s ease, height 0.2s ease-out
+  z-index: 9
+  overflow: visible
+
+  *
+    overflow: visible
+
+  .cerchio-logo
+    width: 110px
+    height: 110px
+    position: relative
+    background: #F7F7F7
+    border: 2px solid colore-loppure
+    border-radius: 50%
+    top: -30px
+    left: 2px
+
+    img
+      height: 60px
+      margin: 0 auto
+      display: block
+      position: relative
+      z-index: 99
+      top: 35px
+
+  .nascondi-cerchio
+    width: 200px
+    height: 100%
+    background: #F7F7F7
+    position: absolute
+    z-index: 9
+
+    @media (max-width: 519px)
+      margin-left: -3%
+
+  .slide--up
+    @media (max-width: 519px)
+      transform: translateY(-180%)
+
+  .header-wrapper
+    width: 90%
+    max-width: 1200px
+    margin: 0 auto
+    height: 100%
+
+    @media (max-width: max)
+      width: 90%
+      max-width: 100%
+
+    @media (max-width: medium)
+      width: 95%
+      max-width: 100%
+
+    @media (max-width: min)
+      width: 95%
+      max-width: 100%
+
+  .site-branding
+    width: 30%
+    float: left
+    margin: 0 auto
+    height: 100%

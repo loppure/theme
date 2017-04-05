@@ -1,0 +1,147 @@
+.wrapper-box
+  gs("fluid")
+
+.box-rettangolo-4
+  col(3)
+  height: 100px
+  margin-bottom: 10px
+  background-color: colore-loppure
+
+  @media (max-width: tablet)
+    height: 150px
+
+  @media (max-width: medium)
+    col(6)
+    height: 130px
+    margin-bottom: 10px
+
+  @media (max-width: mini-tablet)
+    height: 100px
+    margin-bottom: 5px
+
+  @media (max-width: smartphone)
+    height: 80px
+
+.box-rettangolo-3
+  col(4)
+
+  @media (max-width: medium)
+    col(6)
+
+  @media (max-width: min)
+    col(12)
+
+//box-slim
+.content-box-slim
+  height: auto
+  display: block
+  overflow: hidden
+  text-align: center
+
+.box-slim
+  display: inline-block
+  padding: 10px 7px
+  margin: 10px 15px
+  border: 2px solid colore-loppure
+  border-radius: 15px
+  font-size: 18px
+
+  a, & a:visited
+    color: colore-loppure
+
+  &::before
+    width: 25px
+    height: 25px
+    content: ' '
+    display: block
+    float: left
+    margin-right: 10px
+    background-color: red
+
+  &:hover, &:active, &:focus
+    color: bianco
+    background-color: colore-loppure
+
+    a
+      color: bianco
+
+    &::before
+      background-color: blue
+
+//Box documento
+.box-documento
+  height: 50px
+  width: 250px
+  display: inline-block
+  padding: 10px 5px
+  border: 1px solid grigio-intermedio
+  border-bottom: 2px solid colore-loppure
+
+  &::before
+    width: 30px
+    height: 40px
+    content:' '
+    display: block
+    margin-right: 10px
+    float: left
+    background-color: colore-loppure
+
+  a, & h4, & span
+    margin: 0 auto
+    font-size: 16px
+    font-weight: 400
+    color: colore-loppure
+
+  span
+    font-size: 13px
+    color: grigio-intermedio
+
+  &:hover, &:active, &:focus
+    border-color: colore-loppure
+    background-color: colore-loppure
+
+    & a, & h4, & span
+      color: bianco
+
+    &::before
+      background-color: bianco
+
+//Box documento: center
+.center
+  display: block
+  text-align: center
+  margin: 0 auto
+  float: none
+
+//box-attivita
+.content-box-attivita
+  gs("fluid")
+  width: 720px
+
+.box-attivita-2
+  col(6)
+  width: 48%
+  height: 220px
+  margin-bottom: 10px
+  border: 1px solid grigio-intermedio
+  border-bottom: 2px solid colore-loppure
+
+  figure
+    height: 180px
+    padding: 0
+    margin: 0
+    background-color: red
+
+  & a, & h4
+    display: inline-block
+    margin: 5px
+    font-size: 18px
+    font-weight: 400
+    color: colore-loppure
+
+  &:hover, &:active, &:focus
+    background-color: colore-loppure
+    border-color: colore-loppure
+
+    & a, & h4
+      color: bianco

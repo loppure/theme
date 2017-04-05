@@ -84,14 +84,19 @@ class View
      * @since  1.0.0 Introdotta
      * @param String $path L'indirizzo alla view. Si vedano
      *  convenzioni espresse nell'intestazione di questa classe.
-     * @param  Array $data I dati da *passare* alla view.
+     * @param Array $data I dati da *passare* alla view.
      */
     public function __construct($path, $data = array())
     {
         if (empty($path)) {
-        // errore! - lanciare un'eccezione
+            // errore! - lanciare un'eccezione
             return false;
         }
+
+        // FIXME: serve solo per avere sempre il debug (se abilitato). ho
+        // scoperto che aiuta abbastanza. Più avanti (theine 2?) verrà rimosso
+        // da qui e sistemato meglio
+        $data['debug'] = WP_DEBUG;
 
         $this->path = $path;
         $this->data = $data;
@@ -99,7 +104,6 @@ class View
         $this->setViewData();
 
         $this->blade = new Blade($this->view_data['base_dir'], $this->view_data['cache']);
-
         $this->parsePath();
         $this->render();
     }
@@ -147,16 +151,10 @@ class View
      *
      * @author Omar Polo <yum1096@gmail.com>
      * @since  1.0.0 Introdotta
+     * @return void
      */
     protected function render()
     {
-        //        ob_end_clean(); // clean any pre-called view.
-
-        // if (is_customize_preview()) {
-        //     ob_start();
-        // } else {
-        //     ob_start('gzhandler');
-        // }
         ob_start();
         echo $this->blade->view()->make($this->path, $this->data);
         ob_end_flush();

@@ -1,0 +1,265 @@
+/*Single - Scheletro */
+.single-content-wrapper
+  gs("fluid")
+
+.content-single
+  col(9)
+  margin 0 auto
+
+.sidebar-single
+  col(3)
+
+.sidebar-single-mobile
+  display: none
+
+.single .content-area
+  padding: 0
+
+.single article.post
+  width: 100%
+  display: block
+  margin: 0 auto
+  padding: 0
+  background-color: grigio-chiaro
+
+/*Single - header*/
+.single-header
+  col(9)
+  height: auto
+  margin: 0 auto
+  padding: 0
+  padding-top: 50px
+
+  .content-title
+    width: 100%
+    height: auto
+    overflow: hidden
+    float: right
+    background-color: colore-loppure
+
+    h1
+      width: 100%
+      margin 20px 10px 10px
+      float: right
+      font-size: 1.75rem
+      color: bianco
+
+      &::before
+        width: 50px
+        height: 50px
+        content: ' '
+        float: left
+        margin-right: 20px
+        border-right: 2px solid bianco
+
+/*Single - Image*/
+.single-image
+  width: 100%
+  height: 300px
+  float: right
+  clear: both
+  background-color: red
+
+/*Single - Content text */
+.content-text
+  width: 82%
+  float: right
+  background-color: colore-loppure
+
+  .text
+    width: 91%
+    display: block
+    float: left
+    margin: 0 auto
+    padding: 20px 30px
+    background-color: bianco
+
+    font-size: 1rem
+    text-align: justify
+
+    font-family: 'Merriweather', serif;
+
+/*Single - Content text - content-fonti*/
+
+.content-fonti
+  padding-top: 20px;
+  border-top: 2px solid colore-loppure
+  color: colore-loppure
+
+  span
+    display: block
+    margin: 10px auto
+    clear: left
+    line-height: 25px
+    font-size: 14px
+
+    &::before
+      width: 25px
+      height: 25px
+      display: block
+      margin 0 auto
+      margin-right: 10px
+      content: ' '
+      float: left
+      background-color red
+
+    &:nth-child(2)::before
+      background-color: green
+
+    &:nth-child(3)::before
+      background-color: blue
+
+
+/*Single - Footer*/
+
+/*Single - Footer - informativa*/
+.footer-single
+  height: auto
+  overflow: hidden
+
+  .informativa
+    width: 1200px
+    height: auto
+    overflow: hidden
+    display: block
+    margin: 0 auto
+    margin-bottom: 20px
+    clear: both
+
+    article
+      col(9)
+      margin: 0;
+      background-color: colore-loppure
+      color: bianco
+
+      &::after
+        width: 30px
+        height: 70px
+        display: block
+        margin: 20px auto
+        content: ' '
+        float: right
+        background-color: red
+
+      p
+        width: 60%
+        float: right
+        margin: 20px 100px 10px 20px;
+        font-size: 13px
+        text-align: justify
+
+/*Single - Footer - Author*/
+.content-author-single
+  border-top: 2px solid colore-loppure
+
+  .author-single
+    width: 720px
+    display: block
+    margin: 20px auto
+    padding 20px 10px
+    background-color: grigio-intermedio
+
+    img
+      width: 100px
+      height: 100px
+      display: block
+      margin: 0 auto
+      border-radius: 50%
+      border: 2px solid colore-loppure
+
+    h4
+      margin: 20px auto
+      display: block
+      text-align: center
+
+    .author-bio
+      padding: 20px 10px
+/*Single - colori*/
+/*Single - colori: gusti della terra*/
+.category-gusti-della-terra
+  .content-title
+    background-color: color-gusti-della-terra
+
+  .content-text
+    background-color: color-gusti-della-terra
+
+/*Single - colori: voli sul territorio*/
+.category-voli-sul-territorio
+  .content-title
+    background-color: color-voli-sul-territorio
+
+  .content-text
+    background-color: color-voli-sul-territorio
+
+/*Single - colori: radici nel tempo*/
+.category-radici-nel-tempo
+  .content-title
+    background-color: color-radici-nel-tempo
+
+  .content-text
+    background-color: color-radici-nel-tempo
+
+/*Single - colori: Pausa caffe*/
+.category-pausa-caffe
+  .content-title
+    background-color: color-pausa-caffe
+
+  .content-text
+    background-color: color-pausa-caffe
+
+/*Single - colori: pensieri tra le pagine*/
+.category-pausa-caffe
+  .content-title
+    background-color: color-pensieri-tra-le-pagine
+
+  .content-text
+    background-color: color-pensieri-tra-le-pagine
+
+/*Single - icon TODO VANNO BIANCHE*/
+/*Single - icon: gusti della terra*/
+.category-gusti-della-terra
+  .content-title h1::before
+    background: img-gusti-della-terra
+
+/*Single - colori: voli sul territorio*/
+.category-voli-sul-territorio
+  .content-title h1::before
+    background-color: img-voli-sul-territorio
+
+/*Single - colori: radici nel tempo*/
+.category-radici-nel-tempo
+  .content-title h1::before
+    background-color: img-radici-nel-tempo
+
+/*Single - colori: Pausa caffe*/
+.category-pausa-caffe
+  .content-title h1::before
+    background-color: img-pausa-caffe
+
+/*Single - colori: pensieri tra le pagine*/
+.category-pausa-caffe
+  .content-title h1::before
+    background-color: img-pensieri-tra-le-pagine
+
+
+
+/*Single - Tipogafia*/
+
+.text
+  p
+    margin: 0 auto
+    margin-top: 5px
+    margin-bottom: 10px
+
+  a, a:visited
+    color: red;
+
+  a:hover, a:focus, a:active
+    color: colore-loppure
+    text-decoration: none
+
+  b, strong
+    font-weight: bold
+
+  i, em
+    font-style: italic
