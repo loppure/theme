@@ -21,8 +21,8 @@ class DB
 
         $sql = $wpdb->prepare("
 CREATE TABLE %s (
-  id mediumint(9) NOT NULL AUTO_INCREMENT,
-  list varchar(255),
+  id MEDIUMINT(9) NOT NULL AUTO_INCREMENT,
+  list TEXT DEFAULT '' NOT NULL,
   UNIQUE KEY id (id)
 ) %s
 ", $this->table_name, $charset_collate);
@@ -43,7 +43,7 @@ CREATE TABLE %s (
     public function updateBy($id, $post_id)
     {
         global $wpdb;
-
+        
         $id = intval($id);
         $post_id = intval($post_id);
 
@@ -62,7 +62,7 @@ CREATE TABLE %s (
         }
 
         $wpdb->update(
-            $this->table_name(),          // TABLE
+            $this->table_name,            // TABLE
             ['list' => serialize($list)], // [data]
             ['id' => $id]                 // WHERE
         );
@@ -93,13 +93,14 @@ CREATE TABLE %s (
     {
         global $wpdb;
 
-        $list = $wpdb->get_var(
-            $wpdb->prepare("
-SELECT list
-FROM %s
-WHERE id=%d
-", $this->table_name, $id));
-
-        return unserialize($list);
+//         $list = $wpdb->get_var(
+//             $wpdb->prepare("
+// SELECT list
+// FROM %s
+// WHERE `id`=%d
+// ", $this->table_name, $id));
+        $list = $wpdb->get_results("SELECT list FROM $this->table_name WHERE id=$id");
+        //        var_dump(unserialize($list[0]->list));die();
+        return unserialize($list[0]->list);
     }
 }

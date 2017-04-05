@@ -40,6 +40,9 @@
 						{{-- @include('Widget/Sostienici/index') --}}
 
 			     {{--{{ dynamic_sidebar('sidebar-sx') }}--}}
+		<div id="container"></div>
+        <div class="widget-area" role="complementary">
+			      <?php dynamic_sidebar('sidebar-dx') ?>
 		    </div>
 
         <div class="section-cont-article">

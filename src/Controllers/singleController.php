@@ -17,6 +17,13 @@ class singleController extends Controller
                     $content = apply_filters('the_content', $content);
                     return $content;
                 }
+            ),
+            array(
+                "name"    => "image",
+                "closure" => function($id) {
+                    $img = wp_get_attachment_image_src(get_post_thumbnail_id($id), 'large');
+                    return $img[0];
+                }
             )
         );
         

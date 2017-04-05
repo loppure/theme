@@ -10,7 +10,6 @@
         {{ wp_head() }}
     </head>
     <body {{ body_class() }}>
-
             <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 
             <div id="page" class="hfeed site">
@@ -55,7 +54,10 @@
 
             </div> <!-- #page -->
 
-            {{ wp_footer() }}
+            <script>
+                window.logged = {{ is_user_logged_in() ? 'true' : 'false' }};
+            </script>
 
+            {{ wp_footer() }}
     </body>
 </html>
