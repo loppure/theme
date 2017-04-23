@@ -6,7 +6,6 @@
   <link rel="stylesheet" type="text/css" href="../../assets/dist/styles/app.css">
 </head>
 <body>
-
 <div class="sfondo-overlay">
   <section class="overlay overlay-image">
     <div class="content-img">
@@ -20,7 +19,7 @@
 
       <img title="verticale-large" src="http://www.sabap.fvg.beniculturali.it/wp-content/themes/soprintendenza/images/bg-pagine/particolare6.jpg" />
       <span class="citta">Pordenone</span>
-    </div>
+    </div> <!-- chiusura content-img -->
     <article class="content">
       <button class="close-overlay"></button>
       <header>
@@ -28,7 +27,7 @@
         <h3>Title post overlay</h3>
 
         <span class="categoria">Categria</span>
-      </header>
+      </header> <!-- chiusura content header -->
       <div class="text">
         <p>Pellentesque habitant morbi tristique senectus et netus et malesuada
           fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies
@@ -36,15 +35,90 @@
           Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
         </p>
       </div>
-      <div class="content-button">
+      <div class="content-button-interazione">
         <button class="button-like-post" data-love="{{ $post->love }}">{{ $post->love }} &#9829;</button>
         <button>Commenta</button>
         <button>share</button>
-      </div>
+      </div><!-- chiusura content-button-interazione -->
     </article>
     <footer>
-      @include('shared.comment-form')
-    </footer>
+      <div class="content-commenti">
+        @if( $post->comment_status == 'open' )
+            <div class="comments-wrapper">
+                <div class="close_comments"></div>
+
+                <!--- Apertura lista dei commenti -->
+                <article data-comment-id="{{ $comment['id'] }}">
+                    <header class="vcard author entry-title">
+                        <h3>{{ $comment['author'] }}</h3>
+                    </header>
+                    <section class="comment-body">
+                        <p>{{ $comment['body'] }}</p>
+                    </section>
+
+                    @if( isset($comment['sons']) )
+                        <section class="sons">
+                            @foreach( $comment['sons'] as $son)
+                                <article data-comment-id="{{ $son['id'] }}" class="son">
+                                    <header class="vcard author entry-title">
+                                        <h3>{{ $son['author'] }}</h3>
+                                    </header>
+                                    <section class="comment-body">
+                                        <p>{{ $son['body'] }} </p>
+                                    </section>
+                                </article>
+                            @endforeach
+                        </section>
+                    @endif
+
+                    <footer class="rispondi">
+                        <button class="reply-anchor">rispondi</button>
+                    </footer>
+                </article>
+
+                <!--- Chiusra lista dei commenti -->
+
+                <!--- apertura form commenti -->
+                <div class="respond">
+                    {{ cancel_comment_reply_link() }}
+
+                    <form action="{{ get_option('siteurl') }}/wp-comments-post.php" method="post" data-id="{{ $post->id }}" class="comment-form" data-selector="form">
+                        @if( $user->logged )
+
+                            <p>Sei loggato come <a href="{{ get_option('siteurl') }}/wp-admin/profile.php">{{ $user->name }}</a>. <a href="{{ wp_logout_url($post->permalink) }}" title="Log out of this account">Log out &raquo;</a></p>
+
+                        @else
+
+                            <p class="comment-form-author">
+                                <input type="text" name="author" class="op-input" placeholder="Nome" size="22" tabindex="2" aria-required="true" required>
+                            </p>
+
+                            <p class="comment-form-email">
+                                <input type="email" name="email" class="op-input" placeholder="Email" size="22" tabindex="2" aria-required="true" required>
+                            </p>
+
+                        @endif
+
+                        <p class="comment-form-comment">
+                            <textarea name="comment" tabindex="4" class="op-input" aria-required="true" required></textarea>
+                        </p>
+
+                        <p class="comment-notes">Nel rispetto della privacy non rendermo pubblica la tua mail.</p>
+
+                        <p class="form-submit">
+                            <input name="submit" type="submit" class="submit" tabindex="5" value="Commenta" />
+                        </p>
+
+                        <input type="hidden" name="comment_post_ID" value="" class="comment_post_ID">
+                        <input type="hidden" name="comment_parent" class="comment_parent" value="">
+
+                    </form>
+                </div>
+            </div>
+        @endif
+          <!--- chiusura form commenti -->
+      </div><!-- chiusura content-commenti-->
+    </footer><!-- chiusura footer card -->
   </section>
 </div>
 
