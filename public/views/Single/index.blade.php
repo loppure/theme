@@ -71,7 +71,6 @@
 						{{--{{ dynamic_sidebar('sidebar-single') }}--}}
 				</section> <!-- .widget-area -->
 	  </article>
-		{{--
+
 	  @include('Single.comments')
-			--}}
 @endsection

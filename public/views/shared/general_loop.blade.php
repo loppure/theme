@@ -25,11 +25,9 @@
             </p>
           </div>
           <div class="img-post" style="background-image: url({{ $post->thumbnail }})" data-image-url="">
-            <!-- TODO implementare successivamente
-            {{--
+            <!-- TODO implementare successivamente -->
             <button class="button-like-post" data-love="{{ $post->love }}">{{ $post->love }} &#9829;</button>
             <button>Commenta</button>
-          --}}-->
           </div>
         </section>
 
