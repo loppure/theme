@@ -11,7 +11,7 @@
     </head>
     <body {{ body_class() }}>
             <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
-
+            <div id="overlay_mark"></div>
             <div id="page" class="hfeed site">
 
                 <header id="masthead" class="site-header" role="banner">
