@@ -9,16 +9,18 @@
 
 <div class="sfondo-overlay article">
   <section class="overlay overlay-article">
-    <figure style="background-image: url({{ $post->thumbnail }})" data-image-url="">
-      <button class="close-overlay"></button>
-      <span class="citta">Pordenone</span>
-    </figure>
+    <header>
+      <div class="img-category-post"></div>
+      <h3>Title post overlay</h3>
+      <span class="categoria">Categria</span>
+
+      <figure style="background-image: url({{ $post->thumbnail }})" data-image-url="">
+        <button class="close-overlay"></button>
+        <span class="citta">Pordenone</span>
+      </figure>
+    </header><!-- chiusura Header -->
+
     <article class="content">
-      <header>
-        <div class="img-category-post"></div>
-        <h3>Title post overlay</h3>
-        <span class="categoria">Categria</span>
-      </header>
 
       <div class="single-social">
         <button>icona condividi</button>
@@ -32,31 +34,152 @@
           <li class="item item-telegram">Telegram</li>
           <li class="item item-mail">Mail</li>
         </ul>
-      </div> <!-- .entry-social -->
+      </div> <!-- chiusura single-social -->
 
       <div class="text">
         <p>Pellentesque habitant morbi tristique senectus et netus et malesuada
           fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies
           eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
           Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+            fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies
+            eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+            Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
         </p>
-      </div>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies
+          eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+          Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+            fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies
+            eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+            Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+        </p>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies
+          eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+          Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+            fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies
+            eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+            Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+        </p>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies
+          eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+          Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+            fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies
+            eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
+            Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+        </p>
+
+
+        <div class="content-fonti">
+          <h6>Fonti:</h6>
+          <span>Foto presa da Wikipedia</span>
+          <span>Informazioni presa da Wikipedia, sito 1, sito 2 e sito 3</span>
+        </div><!--- chiusura content-fonti -->
+      </div><!--- chiusura text -->
 
       <div class="widget-single" role="complementary">
-          @include('Widget/rubriche/index')
-          @include('Widget/Citta/index')
-          @include('Widget/Porta-citta/index')
+        <div class="widget-item categorie">
+          <ul>
+            <li class="item categorie-item voli-sul-territorio">
+              <a href="#" title="Guarda gli articoli della rubrica della rubirca Voli sul terriorio">
+                  Voli sul territorio
+              </a>
+            </li>
+            <li class="item categorie-item gusti-della-terra">
+              <a href="#" title="Guarda gli articoli della rubrica della rubirca Gusti della terra">
+                  Gusti della terra
+              </a>
+            </li>
+            <li class="item categorie-item radici-nel-tempo">
+              <a href="#" title="Guarda gli articoli della rubrica della rubirca Radici nel tempo">
+                  Radoci nel tempo
+              </a>
+            </li>
+            <li class="item categorie-item pausa-caffe">
+              <a href="#" title="Guarda gli articoli della rubrica della rubirca Pausa caffè">
+                  Pausa caffè
+              </a>
+            </li>
+            <li class="item categorie-item pensieri-tra-le-pagine">
+              <a href="#" title="Guarda gli articoli della rubrica della rubirca Pensieri tra le pagine">
+                  Pensieri tra le pagine
+              </a>
+            </li>
+          </ul>
+        </div><!-- chiusura content-widget-rubriche -->
+
+        <div class="widget-item-single citta">
+          <h3>Dove siamo presenti</h3>
+          <ul>
+            <li class="item citta-item pordenone">
+              <a href="{{esc_url( home_url( '/' ))}}sezione/pordenone" title="Carica gli articoli della città di Pordenone">
+                  Pordenone
+              </a>
+            </li>
+            <li class="item citta-item udine">
+              <a href="{{esc_url( home_url( '/' ))}}sezione/udine" title="Carica gli articoli della città di Udine">
+                  Udine
+              </a>
+            </li>
+            <li class="item citta-item trieste">
+              <a href="{{esc_url( home_url( '/' ))}}sezione/trieste" title="Carica gli articoli della città di Trieste">
+                  Trieste
+              </a>
+            </li>
+            <li class="item citta-item gorizia">
+              <a href="{{esc_url( home_url( '/' ))}}sezione/gorizia" title="Carica gli articoli della città di Gorizia">
+                  Gorizia
+              </a>
+            </li>
+            <li class="item citta-item treviso">
+              <a href="{{the_permalink()}}/sezione/treviso" title="Carica gli articoli della città di Treviso">
+                  Treviso
+              </a>
+            </li>
+          </ul>
+        </div> <!-- Chiusura widget città -->
+
       </div>
 
-      <div class="content-button">
+      <div class="content-button-interazione">
         <button class="button-like-post" data-love="{{ $post->love }}">{{ $post->love }} &#9829;</button>
         <button>Commenta</button>
         <button>share</button>
-      </div>
-    </article>
+      </div><!-- chiusura content-button-interazione -->
+    </article><!-- chiusura article -->
     <footer>
-      @include('shared.comment-form')
-    </footer>
+        <div class="informativa">
+          <article>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+              ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+              in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+              sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+              mollit anim id est laborum.
+            </p>
+          </article>
+        </div><!-- chiusura informativa -->
+
+        <div class="content-author-single">
+          <article class="author-single">
+            <img src="#" /> <!--#TODO Immagine autore qui -->
+            <h4>{{ the_author_posts_link() }}</h4>
+            <p class="author-bio">{{ get_the_author_meta( 'description' ) }}</p>
+          </article>
+        </div><!-- chiusura content-author-single -->
+
+        <div class="content-commenti">
+          @include('shared.comment-form')
+        </div><!-- chiusura content-commenti-->
+
+    </footer><!-- chiusura footer Article-->
   </section>
 </div>
 </body>
