@@ -17,7 +17,7 @@ export default class Load {
         .then(
             obj => {
                 for (let card of obj) {
-                    this.cards.push(card)
+                    this.cards.push(card) 
                 }
                 ReactDOM.render(
                     <Application

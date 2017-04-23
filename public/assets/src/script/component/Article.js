@@ -34,6 +34,7 @@ export default class Article extends React.Component {
                 <Section
                 link ={this.state.link}
                 title ={this.state.title}
+                content = {this.state.content}
                 media = {this.state.featured_media}
                 mediaURL = {this.state.mediaURL}
                 sourceMedium = {this.state.sourceMedium}
