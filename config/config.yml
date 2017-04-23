@@ -12,6 +12,7 @@ routing:
   archive: '\Loppure\Controllers\archiveController'
   search: '\Loppure\Controllers\searchController'
   page: '\Loppure\Controllers\pageController'
+  404: '\Loppure\Controllers\PageNotFoundController'
   default: '\Loppure\Controllers\indexController'
 
 custom_page_template:

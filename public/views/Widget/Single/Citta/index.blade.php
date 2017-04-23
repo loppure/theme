@@ -1,4 +1,4 @@
-<div class="widget-item-single citta">
+<div class="widget-item-list-single citta">
   <h3>Dove siamo presenti</h3>
   <ul>
     <li class="item citta-item pordenone">

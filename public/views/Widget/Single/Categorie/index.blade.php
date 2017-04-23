@@ -1,4 +1,4 @@
-<div class="widget-item-single categorie">
+<div class="widget-item-single list-categorie">
   <h3>Le nostre rubriche</h3>
   <ul>
     <li class="item categorie-item voli-sul-territorio">
@@ -6,9 +6,9 @@
           Voli sul territorio
       </a>
     </li>
-    <li class="item categorie-item friuli-eat">
+    <li class="item categorie-item gusti-della-terra">
       <a href="#" title="Guarda gli articoli della rubrica della rubirca Sapori della terra">
-          Sapori della terra
+          Gusti della terra
       </a>
     </li>
     <li class="item categorie-item radici-nel-tempo">
@@ -21,9 +21,9 @@
           Pausa caffè
       </a>
     </li>
-    <li class="item categorie-item book-life">
+    <li class="item categorie-item pensieri-tra-le-pagine">
       <a href="#" title="Guarda gli articoli della rubrica della rubirca Book life">
-          Book life
+          Pensieri tra le pagine
       </a>
     </li>
   </ul>

@@ -22,14 +22,15 @@
 
 /*Page - Nessun Post*/
 
+
 .no-results
   width: 250px
   height: 200px
-  padding: 20px 20px
-  margin: 20px auto
+  padding: 40px 30px 20px
+  margin: 40px auto
   display: block
   text-align: center
-  border 2px solid colore-loppure
+  border 1px solid colore-loppure
 
   header
     height: auto
@@ -42,13 +43,16 @@
     margin-bottom: 10px
 
     &::before
-      width: 50px
-      height: 50px
+      width: 70px
+      height: 30px
       content: ""
       margin: 0 auto
       margin-bottom: 10px
       display: block
-      background-color: red
+      background-image: ico-no-articoli
+      background-position: center
+      background-size: cover
+      background-repeat: no-repeat
 
   p
     text-align: center
@@ -103,7 +107,7 @@
     height: 120px
     padding: 20px 10px
     text-align: center
-    background-color: grigio-intermedio
+    border: 1px solid colore-loppure
 
     h3
       font-size: 18px
@@ -111,13 +115,16 @@
       text-align: left
 
       &::before
-        width: 40px
+        width: 60px
         height: 70px
         content:' '
         display: block
-        margin-right: 10px
+        margin-right: 20px
         float: left
-        background-color: colore-loppure
+        background-image: ico-contatti-mail
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center
 
 
     span
@@ -148,7 +155,7 @@
         display: block
         margin-right: 10px
         float: left
-        background-color: colore-loppure
+        background-image: ico-local
 
   .content-social
     width: 500px

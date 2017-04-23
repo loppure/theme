@@ -1,6 +1,6 @@
 <?php
 
-namespace Loppure\Controller;
+namespace Loppure\Controllers;
 
 class archiveController extends Controller
 {
