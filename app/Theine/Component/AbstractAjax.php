@@ -60,6 +60,12 @@ abstract class AbstractAjax
     {
         $this->nonce = wp_create_nonce($action);
         $this->action = $action;
+
+        $self = $this;
+        add_action( 'wp_footer', function() use ($self) {
+            echo '<input type="hidden" id="'. $this->getAction() .'-nonce"
+            value="'. $this->nonce .'"/> ';
+        });
     }
 
     /**

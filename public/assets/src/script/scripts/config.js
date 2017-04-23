@@ -25,6 +25,10 @@ export const URL = {
     comments_post_id: function (id) {
         return this.wp_json() + 'comments?post=' + id;
     },
+    //  MEDIA
+    media: function (id) {
+        return this.wp_json() + 'media/';
+    },
     //  MEDIA ID
     media_id: function (id) {
         return this.wp_json() + 'media/' + id;

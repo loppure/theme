@@ -7,9 +7,7 @@ export default class Header extends React.Component {
     render() {
         return (
             <header>
-                <div className="img-category-post"></div>
-                <div className="img-article-post"></div>
-                <div className="text-header-post">
+                <span className="img-category-post"></span>
                 <ul className="post-categories">
                 {this.props.categories.map((category, index) => (
                     <Header_Categories key={index}
@@ -17,8 +15,7 @@ export default class Header extends React.Component {
                     />
                 ))}
                 </ul>
-                    <span className="date-post">{this.converDate()}</span>
-                </div>
+                    <span className="text-name-città">{this.converDate()}</span>
             </header>
         );
     }
