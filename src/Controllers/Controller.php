@@ -31,7 +31,7 @@ class Controller extends \Theine\Controller\Controller
             $this->data['author']->bio = get_the_author_meta('description');
         }
     }
-    
+
     public function getPosts($filters = array(), $author = true, $comments = true)
     {
         $custom_filters = array_merge(
@@ -75,6 +75,21 @@ class Controller extends \Theine\Controller\Controller
                         $string .= "card";
 
                         return trim($string);
+                    }
+                ),
+                array(
+                    "name"    => "city",
+                    "closure" => function ($id) {
+                        return array_map(
+                            function ($term) {
+                                $t = new StdClass();
+                                $t->name = $term->name;
+                                $t->slug = $term->slug;
+                                $t->link = get_term_link($term);
+                                return $t;
+                            },
+                            get_the_terms($id, 'citta')
+                        );
                     }
                 ),
                 array(

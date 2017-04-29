@@ -8,8 +8,10 @@
 
         <header>
             <span class="img-category-post"></span>
-                {{ $post->category_list }}
-            <span class="text-name-citta">Pordenone</span>
+            {{ $post->category_list }}
+            @if ($post->city)
+                <span class="text-name-citta"><a href="{{ $post->city[0]->link }}">{{ $post->city[0]->name }}</a></span>
+            @endif
         </header>
 
         <section>
@@ -17,12 +19,9 @@
             <h3><a href="{{ $post->permalink }}">{{ $post->title }}</a></h3>
             @if( $post->description )
                 <p>{{ $post->description }}</p>
+            @else
+                <p>{{ $post->excerpt }}</p>
             @endif
-            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada
-              fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies
-              eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
-              Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
-            </p>
           </div>
           <div class="img-post" style="background-image: url({{ $post->thumbnail }})" data-image-url="">
 
