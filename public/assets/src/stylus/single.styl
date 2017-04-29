@@ -38,9 +38,9 @@
     background-color: colore-loppure
 
     h1
-      width: 100%
+      max-width: 100%
       margin 20px 10px 10px
-      float: right
+      float: left
       font-size: 1.75rem
       color: bianco
 
@@ -51,6 +51,7 @@
         float: left
         margin-right: 20px
         border-right: 2px solid bianco
+
 
 /*Single - Image*/
 .single-image
@@ -183,8 +184,11 @@
   .content-text
     background-color: color-gusti-della-terra
 
+    .content-fonti
+      border-color: color-gusti-della-terra
+
 /*Single - colori: voli sul territorio*/
-.category-voli-sul-territorio
+.category-voli-sul-terriotorio
   .content-title
     background-color: color-voli-sul-territorio
 
@@ -219,27 +223,144 @@
 /*Single - icon: gusti della terra*/
 .category-gusti-della-terra
   .content-title h1::before
-    background: img-gusti-della-terra
+    background: img-gusti-della-terra-bianco
 
 /*Single - colori: voli sul territorio*/
 .category-voli-sul-territorio
   .content-title h1::before
-    background-color: img-voli-sul-territorio
+    background-color: img-voli-sul-territorio-bianco
 
 /*Single - colori: radici nel tempo*/
 .category-radici-nel-tempo
   .content-title h1::before
-    background-color: img-radici-nel-tempo
+    background-color: img-radici-nel-tempo-bianco
 
 /*Single - colori: Pausa caffe*/
 .category-pausa-caffe
   .content-title h1::before
-    background-color: img-pausa-caffe
+    background-color: img-pausa-caffe-bianco
 
 /*Single - colori: pensieri tra le pagine*/
 .category-pausa-caffe
   .content-title h1::before
-    background-color: img-pensieri-tra-le-pagine
+    background-color: img-pensieri-tra-le-pagine-bianco
+
+//Single - commenti
+.comments-area
+  width: 700px
+  display: block
+  margin: 30px auto
+
+  .show-hide-img
+    width: 50px
+    height: 50px
+    display: block
+    margin: 0 auto
+    border: 3px solid colore-loppure
+    border-radius: 50%
+
+  .comments-show-hide
+    background-color: red
+
+  //contenitore wrapper
+  .comments-wrapper
+    border: 1px solid colore-loppure
+
+    //Elemento di chiusura dei commenti
+    .close_comments
+      width: 25px
+      height: 25px
+      display: block
+      float: left
+      background-color: red
+      border-radius: 50%
+
+    //Contenitore commento
+    .comment-content
+      max-width: 500px
+      height: auto
+      overflow: hidden
+      display: block
+      clear: both
+      margin: 0 auto
+      padding: 10px 17px
+      font-size: 14px
+      background-color: grigio-intermedio
+      border-radius: 20px
+
+      header
+        height: auto
+        display: block
+        margin: 0 auto
+        padding: 0;
+        clear: left
+        color: colore-loppure
+
+        h3
+          margin: 0 auto
+          padding: 0
+          font-size: 15px
+
+      .comment-body p
+        font-size: 13px
+        color: colore-loppure
+
+      .rispondi button
+        background: none
+        border: 1px solid colore-loppure
+
+        &:hover
+          background-color: colore-loppure
+          border: 1px solid colore-loppure
+          color: #fff
+
+  form
+    height: auto
+    overflow: hidden
+    display: block
+    margin: 20px auto
+
+    p
+      margin: 0
+      padding: 0
+
+    input
+      width: 400px
+      display: block
+      margin: 10px auto
+      padding: 3px 5px
+      font-size: 16px
+      border: 2px solid colore-loppure
+      border-radius: 5px
+      color: #000
+      outline: none
+
+    .form-submit
+      text-align: center
+
+      input.submit
+        width: auto
+        height: auto
+        display: inline-block
+
+    textarea
+      width: 400px
+      max-width: 90%
+      height: 100px
+      display: block
+      margin: 10px auto
+      padding: 3px 5px
+      font-size: 14px
+      border: 2px solid colore-loppure
+      border-radius: 10px
+      color: #000
+
+    .comment-notes
+      width: 300px
+      display: block
+      margin: 0 auto
+      font-size: 12.5px
+      text-align: center
 
 
 

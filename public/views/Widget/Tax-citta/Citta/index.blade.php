@@ -1,4 +1,4 @@
-<div class="widget-item citta">
+<div class="widget-item widget-altro altre-citta">
   <ul>
     <li class="item citta-item pordenone">
       <a href="{{ esc_url( home_url( '/sezione' )) }}/pordenone" title="Carica gli articoli della città di Pordenone">
@@ -20,18 +20,10 @@
           Gorizia
       </a>
     </li>
-  </ul>
-  <ul>
     <li class="item citta-item treviso">
       <a href="{{ esc_url( home_url( '/sezione' )) }}/treviso" title="Carica gli articoli della città di Treviso">
           Treviso
       </a>
     </li>
   </ul>
-    <!--TODO funzione che attiviamo appena implementiamo Overlay
-    <div class="content-button-widget">
-      <a class="button" href="" title="Carica tutti gli articoli delle città">
-          Tutte
-      </a>
-    </div> -->
 </div>
