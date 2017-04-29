@@ -1,10 +1,10 @@
 
 @if( $post->comment_status == 'open' )
     <div class="comments-wrapper">
-        <div class="close_comments"></div>
+        <button class="close_comments"></button>
 
         @include('shared.comments')
-        
+
 	      <div class="respond">
 		        {{ cancel_comment_reply_link() }}
 

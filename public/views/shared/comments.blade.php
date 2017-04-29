@@ -5,7 +5,7 @@
 
 @foreach( $post->comments as $comment )
 
-    <article data-comment-id="{{ $comment['id'] }}">
+    <article class="comment-content" data-comment-id="{{ $comment['id'] }}">
         <header class="vcard author entry-title">
             <h3>{{ $comment['author'] }}</h3>
         </header>
