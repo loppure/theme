@@ -23,9 +23,11 @@ export default class Article extends React.Component {
             title: this.props.card.title.rendered,
             showOverlay: false,
             like: localStorage['love'] ? JSON.parse(localStorage['love']).list.length : '0',
+            open: false,
         };
         this.hide_show = this.hide_show.bind(this);
         this.sendLike = this.sendLike.bind(this);
+        this.open_close_comments_wrapper = this.open_close_comments_wrapper.bind(this);
     }
     render() {
         return (
@@ -41,13 +43,18 @@ export default class Article extends React.Component {
                 sourceLarge = {this.state.sourceLarge}
                 style = {this.state.style}
                 hide_show = {this.hide_show}
+                sendLike = {this.sendLike}
+                like = {this.state.like}
+                comments_number = {this.state.comments_number}
+                open_close_comments_wrapper = {this.open_close_comments_wrapper}
                 />
                 <Footer
                 id = {this.state.id}
                 comments = {this.state.comments}
-                comments_number = {this.state.comments_number}
-                like = {this.state.like}
-                sendLike = {this.sendLike}
+                open = {this.state.open}
+                // comments_number = {this.state.comments_number}
+                // like = {this.state.like}
+                // sendLike = {this.sendLike}
                 />
             </article>
         );
@@ -151,7 +158,17 @@ export default class Article extends React.Component {
             }
         }
         xhr.send(data);
+    }
 
-
+    open_close_comments_wrapper() {
+        if (this.state.open == false) {
+            this.setState({
+                open: true,
+            });
+        } else {
+            this.setState({
+                open: false,
+            });
+        }
     }
 }
