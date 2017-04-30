@@ -80,6 +80,8 @@ class Controller extends \Theine\Controller\Controller
                 array(
                     "name"    => "city",
                     "closure" => function ($id) {
+                        $terms = get_the_terms($id, 'citta');
+                        $terms = is_array($terms) ? $terms : [];
                         return array_map(
                             function ($term) {
                                 $t = new StdClass();
@@ -88,7 +90,7 @@ class Controller extends \Theine\Controller\Controller
                                 $t->link = get_term_link($term);
                                 return $t;
                             },
-                            get_the_terms($id, 'citta')
+                            $terms
                         );
                     }
                 ),
