@@ -35,9 +35,6 @@
 							@include('Widget/Single/Citta/index')
 							{{--{{ dynamic_sidebar('sidebar-single') }}--}}
 					</section> <!-- .widget-area -->
-
-				</div> <!-- .entry-content-wrapper -->
-      </div> <!-- .entry-content -->
 		</section> <!-- .single-content-wrapper -->
 
 			  <footer class="footer-single">
