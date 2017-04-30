@@ -349,6 +349,26 @@
   background-color: bianco
   border: 0.08rem solid grigio-intermedio
 
+// Widget image
+.widget-image
+  width: auto
+  padding: 10px 0 20px
+  background-color: bianco
+  border: 0.08rem solid grigio-intermedio
+
+  h3
+    margin: 20px auto
+    margin-top: 0
+    padding: 0
+    font-size: 15px
+    text-align: center
+
+  img
+    width: 50%
+    height: auto
+    display: block
+    margin: 0 auto
+
 //Widget-altro - città
 .widget-altro
   height: auto
@@ -366,7 +386,7 @@
 
     &:hover
       color: colore-loppure
-      background: none
+      background: colore-loppure
 
       a
         text-decoration: underline
@@ -386,6 +406,14 @@
       background-color: #40484c;
 
 
+// Widget single - content
+.widget-item-single
+  margin: 40px auto
+
+  h3
+    margin: 10px auto
+    font-size: 20px
+    border-bottom: 2px solid colore-loppure
 
 // Widget single - lista generica
 .widget-item-list-single
@@ -396,11 +424,20 @@
     border-bottom: 2px solid colore-loppure
 
   .item
-    width: 100%
-    margin: 5px auto
+    width: 40%
+    margin: 0 2%
+    margin-bottom: 5px
+    margin-top: 5px
+    padding: 3px 5px
+    float: left
+    border: 1px solid colore-loppure
+    color: colore-loppure
 
-.widget-item-single
-  h3
-    margin: 10px auto
-    font-size: 20px
-    border-bottom: 2px solid colore-loppure
+    a
+      color: colore-loppure
+
+    &:hover
+      background-color: colore-loppure
+
+      a
+        color: bianco

@@ -30,8 +30,8 @@
 
 					<section class="widget-area sidebar-single" role="complementary">
 							<!-- widget Last article -->
-							@include('Widget/Single/Categorie/index')
 							@include('Widget/Single/Porta-citta/index')
+							@include('Widget/Single/Categorie/index')
 							@include('Widget/Single/Citta/index')
 							{{--{{ dynamic_sidebar('sidebar-single') }}--}}
 					</section> <!-- .widget-area -->

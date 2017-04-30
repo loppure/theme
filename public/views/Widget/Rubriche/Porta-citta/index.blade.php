@@ -1,4 +1,4 @@
-<div class="widget-text porta-citta">
+<div class="widget-image porta-citta">
   <img src="{{ get_template_directory_uri() }}/public/assets/src/img/icone-generiche/porta-loppure.svg" >
   <h3>Porta L'oppure nella tua città</h3>
   <div class="content-button">

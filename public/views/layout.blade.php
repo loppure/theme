@@ -39,11 +39,14 @@
                     </div> <!-- #primary -->
                 </section> <!-- #content -->
 
-                <div class="content-assistent">
+                <div class="content-assistant">
                   <span class="novita">Novità</span>
-                  <button class="assistent"></button>
+                  <button class="assistant"></button>
                   <h6>Cerbero</h6>
                   <span>la tua guida</span>
+                </div>
+                <div class="views-assistent">
+                  @include('Assistant.assistant')
                 </div>
                 <button class="scroll_up" id="scroll_up"></button>
 

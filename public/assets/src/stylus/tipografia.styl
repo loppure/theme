@@ -1,7 +1,7 @@
 body
-  font-family: "robotoregular", "arial", "sans-serif"
+  font-family: "Montserrat", "robotoregular", "arial", "sans-serif"
   color: #000
-  font-size: 1em
+  font-size: 15px
   line-height: 1.5
 
 
@@ -14,65 +14,284 @@ p
   margin: 0 0 0.75em
 
 a
-  color: rgba(0, 0, 0, 0.5)
-  text-decoration: none
+  color: colore-loppure
+  text-decoration: underline
   transition: color 0.1s linear
-
-a:active, a:focus, a:hover
-  color: #1d2122
-
-a:active, a:focus
   outline: none
 
-ul
-  list-style-type: disc
+  &:visited, &:focus
+    text-decoration: underline
 
-/* titoli articoli */
-.title-article-post h3 a
-  font-family: "gentium_basicbold", "georgia", serif
-  font-weight: bold
-  letter-spacing: 0.2px
-  font-size: 16px
-  color: #000
+  &:active, &:focus, &:hover
+    text-decoration: none
+    color: grigio-scuro
 
-  &:hover
+ul li
+  list-style-type: none
+
+//Tipografia single
+.single .content-text
+
+  //Tipografia single: testo articolo
+  p
+    font-size: 16px
+    font-family: "Merriweather", serif
+    font-weight: 400
+
+    strong
+      font-weight: 700
+
+    bold
+      font-weight: 700
+
+  //Tipografia single: testo articolo: link
+  a
     color: #000
+    text-decoration: none
+    transition: color 0.1s linear
+    border-bottom: 1px solid #FFF176
+    box-shadow: inset 0 -2px 0 #FFF176
+    color: inherit
 
-.post .entry-header h1
-  font-family: "gentium_basicregular", "georgia" serif
-  font-weight: normal
+    &:visited, &:focus
+      outline: none
 
-/* testo articoli*/
-.content-text .text
-  font-family: "gentium_basicregular", "georgia" serif
-  font-size: 17px
-  text-align: justify
-  color: #000
+    &:active, &:focus, &:hover
+      color: #1d2122
+      -webkit-transition: background 0.15s cubic-bezier(0.33, 0.66, 0.66, 1)
+      transition: background 0.15s cubic-bezier(0.33, 0.66, 0.66, 1)
+      background-color: #FFF176
 
-/* link articoli*/
-.content-text .text a
-  border-bottom: 2px solid #FFF176
-  box-shadow: inset 0 -5px 0 #FFF176
-  color: inherit
+  //lista non numerata
+  ul
+    display: block
+    margin: 15px auto
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
-  &:hover
-    -webkit-transition: background 0.15s cubic-bezier(0.33, 0.66, 0.66, 1)
-    transition: background 0.15s cubic-bezier(0.33, 0.66, 0.66, 1)
-    background-color: #FFF176
 
-/* citazioni - articoli */
-.content-text blockquote
-  padding-left: 15%
-  padding-top: 10px
-  padding-bottom: 10px
-  padding-right: 5%
-  margin: 0px
-  background-repeat: no-repeat
-  text-indent: 23px
-  background-size: 50px
-  background-position: 0% 0%
-  background-image: url("img/svg/citazione.svg")
+    li::before
+      width: 7px
+      height: 7px
+      content: " "
+      display: block
+      margin: 7px auto
+      margin-right: 7px
+      float: left
+      background-color: colore-loppure
+      border-radius: 50%
 
-/* liste articoli */
-.content-text ul
-  list-style-image: url(img/png/list.png)
+
+  //Lista numerata
+  ol
+    display: block
+    margin: 15px auto
+    list-style: none
+    counter-reset: li
+    margin-left: 13px
+
+    li
+      counter-increment: li
+
+      &::before
+        content: counter(li)
+        color: colore-loppure
+        display: inline-block
+        width: 1em
+        margin-left: -1em
+
+
+  //Tipografia articolo: citazioni
+  blockquote
+    display:block;
+    background: #fff
+    padding: 15px 20px 15px 65px
+    margin: 20px auto
+    position: relative
+    font-size: 19px
+    line-height: 23px
+    color: colore-loppure
+    text-align: justify
+    border-left: 7px solid colore-loppure
+
+    &::before
+      content: "\201C"
+      font-family: 'Merriweather', serif
+      font-size: 60px
+      font-weight: bold
+      color: colore-loppure
+      position: absolute
+      left: 10px
+      top: 25px
+
+    &::after
+      content: ""
+
+  // Tipografia single: linea divisione
+  hr
+    border: 1px solid colore-loppure
+
+//Tipografia articolo Colore
+
+//Tipografia articolo Colore - Gusti della terra
+.single .category-gusti-della-terra .content-text
+  //Colore citazioni
+  blockquote
+    color: color-gusti-della-terra
+    border-color: color-gusti-della-terra
+
+    &::before
+      color: color-gusti-della-terra
+
+  //Colore link
+  a
+    border-color: color-gusti-della-terra
+    box-shadow: inset 0 -2px 0 color-gusti-della-terra
+
+    &:active, &:focus, &:hover
+      color: #fff
+      transition: background 0.15s cubic-bezier(0.33, 0.66, 0.66, 1)
+      background-color: color-gusti-della-terra
+
+  //lista no-numerica
+  ul li::before
+    background-color: color-gusti-della-terra
+
+  //lista numerica
+  ol li::before
+    color: color-gusti-della-terra
+
+  // Tipografia single: linea divisione
+  hr
+    border-color: color-gusti-della-terra
+
+
+//Tipografia articolo Colore - voli sul terriotorio
+.signle .category-voli-sul-terriotorio .content-text
+  //Colore citazioni
+  blockquote
+    color: color-voli-sul-territorio
+    border-color: color-voli-sul-territorio
+
+    &::before
+      color: color-voli-sul-territorio
+
+  //Colore link
+  a
+    border-color: color-voli-sul-territorio
+    box-shadow: inset 0 -2px 0 color-voli-sul-territorio
+
+    &:active, &:focus, &:hover
+      color: #fff
+      transition: background 0.15s cubic-bezier(0.33, 0.66, 0.66, 1)
+      background-color: color-voli-sul-territorio
+
+  //lista no-numerica
+  ul li::before
+    background-color: color-voli-sul-territorio
+
+  //lista numerica
+  ol li::before
+    color: color-voli-sul-territorio
+
+  // Tipografia single: linea divisione
+  hr
+    border-color: color-voli-sul-territorio
+
+
+//Tipografia articolo Colore - Radici nel tempo
+.signle .category-radici-nel-tempo .content-text
+  //Colore citazioni
+  blockquote
+    color: color-radici-nel-tempo
+    border-color: color-radici-nel-tempo
+
+    &::before
+      color: color-radici-nel-tempo
+
+  //Colore link
+  a
+    border-color: color-radici-nel-tempo
+    box-shadow: inset 0 -2px 0 color-radici-nel-tempo
+
+    &:active, &:focus, &:hover
+      color: #fff
+      transition: background 0.15s cubic-bezier(0.33, 0.66, 0.66, 1)
+      background-color: color-radici-nel-tempo
+
+  //lista no-numerica
+  ul li::before
+    background-color: color-radici-nel-tempo
+
+  //lista numerica
+  ol li::before
+    color: color-radici-nel-tempo
+
+  // Tipografia single: linea divisione
+  hr
+    border-color: color-radici-nel-tempo
+
+//Tipografia articolo Colore - pausa-caffe
+.signle .category-pausa-caffe .content-text
+  //Colore citazioni
+  blockquote
+    color: color-pausa-caffe
+    border-color: color-pausa-caffe
+
+    &::before
+      color: color-pausa-caffe
+
+  //Colore link
+  a
+    border-color: color-pausa-caffe
+    box-shadow: inset 0 -2px 0 color-pausa-caffe
+
+    &:active, &:focus, &:hover
+      color: #fff
+      transition: background 0.15s cubic-bezier(0.33, 0.66, 0.66, 1)
+      background-color: color-pausa-caffe
+
+  //lista no-numerica
+  ul li::before
+    background-color: color-pausa-caffe
+
+  //lista numerica
+  ol li::before
+    color: color-pausa-caffe
+
+  // Tipografia single: linea divisione
+  hr
+    border-color: color-pausa-caffe
+
+//Tipografia articolo Colore - pausa-caffe
+.signle .category-pensieri-tra-le-pagine .content-text
+  //Colore citazioni
+  blockquote
+    color: color-pensieri-tra-le-pagine
+    border-color: color-pensieri-tra-le-pagine
+
+    &::before
+      color: color-pensieri-tra-le-pagine
+
+  //Colore link
+  a
+    border-color: color-pensieri-tra-le-pagine
+    box-shadow: inset 0 -2px 0 color-pensieri-tra-le-pagine
+
+    &:active, &:focus, &:hover
+      color: #fff
+      transition: background 0.15s cubic-bezier(0.33, 0.66, 0.66, 1)
+      background-color: color-pensieri-tra-le-pagine
+
+  //lista no-numerica
+  ul li::before
+    background-color: color-pensieri-tra-le-pagine
+
+  //lista numerica
+  ol li::before
+    color: color-pensieri-tra-le-pagine
+
+  // Tipografia single: linea divisione
+  hr
+    border-color: color-pensieri-tra-le-pagine
