@@ -2,19 +2,12 @@
 // Elementi-loppure -> Rettagoli home: Scheletro
 .home-header .box-rettangolo-4
   col(3)
-  height: 100px
-  margin-bottom: 10px
+  width: 23.9%
+  margin: 0 0.1%
+  height: 60px
+  padding: 5px
+  margin-bottom: 3px
   background-color: red
-
-  &::before
-    width: 35px
-    height: 35px
-    margin: 10px
-    display: block
-    content: ' '
-    background-position: center
-    background-repeat: no-repeat
-    background-size: contain
 
   @media (max-width: tablet)
     height: 100px
@@ -44,21 +37,33 @@
     font-weight: 700
 
   a
-    width: 100%
-    display: block
+    width: auto
+    display: inline-block
     clear: both
-    margin: 10px
-    margin-top: 20px
-    font-size: 20px
-    line-height: 20px
+    margin: 10px 5px
+    font-size: 18px
+    line-height: 35px
     color: bianco
     font-family: 'Montserrat', sans-serif
-    font-weight: 700
+    font-weight: 400
+
+    &::before
+      width: 35px
+      height: 35px
+      margin: 0
+      margin-right: 10px
+      padding: 0
+      display: block
+      content: ' '
+      float: left
+      background-position: center
+      background-repeat: no-repeat
+      background-size: contain
 
 .home-header .box-rettangolo-4.prossimamente
   a
     position: relative
-    top: 22px
+    top: 15px
     color: grigio-medio
 
 // Elementi-loppure -> Rettagoli home: colori e icone
@@ -67,49 +72,49 @@
 .home-header .gusti-della-terra
   background-color: color-gusti-della-terra
 
-  &::before
+  a::before
     background-image: img-gusti-della-terra-bianco
 
 // Elementi-loppure -> Rettagoli home: voli sul territorio
 .home-header .voli-sul-territorio
   background-color: color-voli-sul-territorio
 
-  &::before
+  a::before
     background-image: img-voli-sul-territorio-bianco
 
 // Elementi-loppure -> Rettagoli home: radici nel tempo
 .home-header .radici-nel-tempo
   background-color: color-radici-nel-tempo
 
-  &::before
+  a::before
     background-image: img-radici-nel-tempo-bianco
 
 // Elementi-loppure -> Rettagoli home: a parole nostre
 .home-header .parole-nostre
   background-color: color-parole-nostre
 
-  &::before
+  a::before
     background-image: img-parole-nostre-bianco
 
 // Elementi-loppure -> Rettagoli home: pausa caffe
 .home-header .pausa-caffe
   background-color: color-pausa-caffe
 
-  &::before
+  a::before
     background-image: img-pausa-caffe-bianco
 
 // Elementi-loppure -> Rettagoli home: pensieri tra le pagine
 .home-header .pensieri-tra-le-pagine
   background-color: color-pensieri-tra-le-pagine
 
-  &::before
+  a::before
     background-image: img-pensieri-tra-le-pagine-bianco
 
 // Elementi-loppure -> Rettagoli home:  prossimamente
 .home-header .prossimamente
   background-color: colore-loppure
 
-  &::before
+  a::before
     display: none
 
 // Elementi-loppure -> Rettagoli home: gusti-della-terra Hover
@@ -117,7 +122,7 @@
   background-color: bianco
   box-shadow: ombra-box-gusti-della-terra
 
-  &::before
+  a::before
     background-image: img-gusti-della-terra
 
 .home-header div:hover.gusti-della-terra a
@@ -131,7 +136,7 @@
   background-color: bianco
   box-shadow: ombra-box-voli-sul-territorio
 
-  &::before
+  a::before
     background-image: img-voli-sul-territorio
 
 .home-header div:hover.voli-sul-territorio a
@@ -145,7 +150,7 @@
   background-color: bianco
   box-shadow: ombra-box-radici-nel-tempo
 
-  &::before
+  a::before
     background-image: img-radici-nel-tempo
 
 .home-header div:hover.radici-nel-tempo a
@@ -159,7 +164,7 @@
   background-color: bianco
   box-shadow: ombra-box-parole-nostre
 
-  &::before
+  a::before
     background-image: img-parole-nostre
 
 .home-header div:hover.parole-nostre a
@@ -173,7 +178,7 @@
   background-color: bianco
   box-shadow: ombra-box-pausa-caffe
 
-  &::before
+  a::before
     background-image: img-pausa-caffe
 
 .home-header div:hover.pausa-caffe a
@@ -187,7 +192,7 @@
   background-color: bianco
   box-shadow: ombra-box-pensieri-tra-le-pagine
 
-  &::before
+  a::before
     background-image: img-pensieri-tra-le-pagine
 
 .home-header div:hover.pensieri-tra-le-pagine a

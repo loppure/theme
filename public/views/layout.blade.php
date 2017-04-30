@@ -39,12 +39,17 @@
                     </div> <!-- #primary -->
                 </section> <!-- #content -->
 
+                <div class="content-assistent">
+                  <span class="novita">Novità</span>
+                  <button class="assistent"></button>
+                  <h6>Cerbero</h6>
+                  <span>la tua guida</span>
+                </div>
+                <button class="scroll_up" id="scroll_up"></button>
+
                 <footer id="colophon" class="site-footer" role="contentinfo">
                     @include('Footer.footer')
                 </footer>
-
-                <div class="scroll_up" id="scroll_up"></div>
-                <div class="assistent">
 
             </div> <!-- #page -->
 

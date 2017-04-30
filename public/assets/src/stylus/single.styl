@@ -37,20 +37,26 @@
     float: right
     background-color: colore-loppure
 
-    h1
-      max-width: 100%
-      margin 20px 10px 10px
+    &::before
+      width: 50px
+      height: 50px
+      content: ' '
       float: left
-      font-size: 1.75rem
-      color: bianco
+      margin: 15px
+      background-size: contain
+      background-repeat: no-repeat
+      background-position: center
 
-      &::before
-        width: 50px
-        height: 50px
-        content: ' '
-        float: left
-        margin-right: 20px
-        border-right: 2px solid bianco
+    h1
+      min-height: 50px
+      max-width: 100%
+      margin 15px 10px 15px 0
+      padding-left: 15px
+      float: left
+      font-size: 25px
+      color: bianco
+      font-weight: 400
+      border-left: 2px solid bianco
 
 
 /*Single - Image*/
@@ -68,14 +74,14 @@
   background-color: colore-loppure
 
   .text
-    width: 91%
+    max-width: 91%
     display: block
     float: left
     margin: 0 auto
-    padding: 20px 30px
+    padding: 20px 40px
     background-color: bianco
 
-    font-size: 1rem
+    font-size: 15px
     text-align: justify
 
     font-family: 'Merriweather', serif;
@@ -175,75 +181,99 @@
 
     .author-bio
       padding: 20px 10px
-/*Single - colori*/
-/*Single - colori: gusti della terra*/
+
+
+/*Single - colori e icone*/
+/*Single - colori-icone: gusti della terra*/
 .category-gusti-della-terra
+  //Colore content title
   .content-title
     background-color: color-gusti-della-terra
 
+    //Icona content title
+    &::before
+      background: img-gusti-della-terra-bianco
+
+  //Colore content text
   .content-text
     background-color: color-gusti-della-terra
 
+    //Colore bordo content fonti
     .content-fonti
       border-color: color-gusti-della-terra
 
-/*Single - colori: voli sul territorio*/
+
+/*Single - colori-icone: voli sul territorio*/
 .category-voli-sul-terriotorio
+  // Colore content-title
   .content-title
     background-color: color-voli-sul-territorio
 
+    //Icona content title
+    &::before
+      background: img-voli-sul-territorio-bianco
+
+  // Colore content-text
   .content-text
     background-color: color-voli-sul-territorio
 
-/*Single - colori: radici nel tempo*/
+    //Colore bordo content fonti
+    .content-fonti
+      border-color: color-voli-sul-territorio
+
+/*Single - colori-icone: radici nel tempo*/
 .category-radici-nel-tempo
   .content-title
     background-color: color-radici-nel-tempo
+    //Icona content title
+    &::before
+      background: img-radici-nel-tempo-bianco
 
+  //Colore content-text
   .content-text
     background-color: color-radici-nel-tempo
 
-/*Single - colori: Pausa caffe*/
+    //Colore bordo content fonti
+    .content-fonti
+      border-color: color-radici-nel-tempo
+
+
+/*Single - colori-icone: Pausa caffe*/
 .category-pausa-caffe
+  //Colore content-title
   .content-title
     background-color: color-pausa-caffe
 
+    //Icona content title
+    &::before
+      background: img-pausa-caffe
+
+  //Colore content-text
   .content-text
     background-color: color-pausa-caffe
 
-/*Single - colori: pensieri tra le pagine*/
+    //Colore bordo content fonti
+    .content-fonti
+      border-color: color-pausa-caffe
+
+/*Single - colori-icone: pensieri tra le pagine*/
 .category-pausa-caffe
+  //Colore content-title
   .content-title
     background-color: color-pensieri-tra-le-pagine
 
+    //Icona content title
+    &::before
+      background: img-pensieri-tra-le-pagine-bianco
+
+  //Colore content-text
   .content-text
     background-color: color-pensieri-tra-le-pagine
 
-/*Single - icon TODO VANNO BIANCHE*/
-/*Single - icon: gusti della terra*/
-.category-gusti-della-terra
-  .content-title h1::before
-    background: img-gusti-della-terra-bianco
+    //Colore bordo content fonti
+    .content-fonti
+      border-color: color-pensieri-tra-le-pagine
 
-/*Single - colori: voli sul territorio*/
-.category-voli-sul-territorio
-  .content-title h1::before
-    background-color: img-voli-sul-territorio-bianco
-
-/*Single - colori: radici nel tempo*/
-.category-radici-nel-tempo
-  .content-title h1::before
-    background-color: img-radici-nel-tempo-bianco
-
-/*Single - colori: Pausa caffe*/
-.category-pausa-caffe
-  .content-title h1::before
-    background-color: img-pausa-caffe-bianco
-
-/*Single - colori: pensieri tra le pagine*/
-.category-pausa-caffe
-  .content-title h1::before
-    background-color: img-pensieri-tra-le-pagine-bianco
 
 //Single - commenti
 .comments-area
