@@ -13,19 +13,22 @@ export default class Article extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            id: this.props.card.id,
-            content: this.props.card.content.rendered,
             category_name: "",
             category_slug: "",
             category_link: "",
             city_name: "",
             city_slug: "",
             city_link: "",
+
+            media_slug: "",
+            media_link: "",
+            media_medium_large: "",
+            media_full: "",
+
             comments: [],
+
             date: this.props.card.date,
             // featured_media:(this.props.card.featured_media != 0) ? this.props.card.featured_media : null,
-            link: this.props.card.link,
-            title: this.props.card.title.rendered,
             showOverlay: false,
             like: localStorage['love'] ? JSON.parse(localStorage['love']).list.length : '0',
             open: false,
@@ -37,9 +40,8 @@ export default class Article extends React.Component {
     render() {
         return (
             <article
-            className={"post card category-" + this.state.category_slug}
-            data-id={this.state.id}
-            >
+            className={"post card type-post format-standard hentry category-" + this.state.category_slug}
+            data-id={this.props.card.id} >
                 <Header
                 date={this.state.date}
                 category_name={this.state.category_name}
@@ -47,14 +49,19 @@ export default class Article extends React.Component {
                 city_name={this.state.city_name}
                 />
                 <Section
-                link ={this.state.link}
-                title ={this.state.title}
-                content = {this.state.content}
-                media = {this.state.featured_media}
-                mediaURL = {this.state.mediaURL}
-                sourceMedium = {this.state.sourceMedium}
-                sourceLarge = {this.state.sourceLarge}
-                style = {this.state.style}
+                link ={this.props.card.link}
+                title ={this.props.card.title.rendered}
+                content = {this.props.card.excerpt.rendered}
+
+                media_medium_large = {this.state.media_medium_large}
+                media_full = {this.state.media_full}
+
+
+                // mediaURL = {this.state.mediaURL}
+                // sourceMedium = {this.state.sourceMedium}
+                // sourceLarge = {this.state.sourceLarge}
+                // style = {this.state.style}
+
                 hide_show = {this.hide_show}
                 sendLike = {this.sendLike}
                 like = {this.state.like}
@@ -74,45 +81,30 @@ export default class Article extends React.Component {
     }
 
     componentDidMount() {
-        // /* prende i riferimenti dell'immagine (media) */
-        // if (this.state.featured_media) {
-        //     fetch(URL.media_id(this.state.featured_media))
-        //     .then( response => response.json())
-        //     .then( media => {
-        //         this.setState({
-        //             mediaURL: URL.media_id(this.state.featured_media),
-        //             sourceMedium: media.media_details.sizes.medium.source_url,
-        //             sourceLarge : media.media_details.sizes.large.source_url,
-        //             style: {
-        //                 backgroundImage: 'url(' + media.media_details.sizes.medium.source_url + ')'
-        //             }
-        //         });
-        //     });
-        // }
         // prende i commenti
-        fetch(URL.comments_post_id(this.state.id))
-        .then( response => response.json())
-        .then( comments => {
-            let obj = [];
-            for (let comment of comments) {
-                let commenti = {
-                    comment_id: comment.id,
-                    comment_author_name: comment.author_name,
-                    comment_content: comment.content.rendered
-                };
-                obj.push(commenti);
-            }
-            this.setState({
-                comments_number: comments.length,
-                comments: obj,
-            });
-        });
+        // fetch(URL.comments_post_id(this.state.id))
+        // .then( response => response.json())
+        // .then( comments => {
+        //     let obj = [];
+        //     for (let comment of comments) {
+        //         let commenti = {
+        //             comment_id: comment.id,
+        //             comment_author_name: comment.author_name,
+        //             comment_content: comment.content.rendered
+        //         };
+        //         obj.push(commenti);
+        //     }
+        //     this.setState({
+        //         comments_number: comments.length,
+        //         comments: obj,
+        //     });
+        // });
     }
 
     componentWillReceiveProps (nextProps) {
         // FIND CATEGORY DATE BY THE CATEGORIES LIST
-        if (this.props.categories.length > 0) {
-            let obj = this.props.categories.find( n => n.id == this.props.card.categories[0] );
+        if (nextProps.categories.length > 0) {
+            let obj = nextProps.categories.find( n => n.id == this.props.card.categories[0] );
             this.setState({
                 category_name: obj.name,
                 category_slug: obj.slug,
@@ -121,12 +113,23 @@ export default class Article extends React.Component {
         }
 
         // FIND CITY DATE BY THE CITIES LIST
-        if (this.props.city.length > 0) {
-            let obj = this.props.city.find( n => n.id == this.props.card.citta[0] );
+        if (nextProps.city.length > 0) {
+            let obj = nextProps.city.find( n => n.id == this.props.card.citta[0] );
             this.setState({
                 city_name: obj.name,
                 city_slug: obj.slug,
                 city_link: obj.link,
+            });
+        }
+
+        // FIND MEDIA DATE BY THE MEDIA LIST
+        if (nextProps.media.length > 0) {
+            let obj = nextProps.media.find( n => n.id == this.props.card.featured_media );
+            this.setState({
+                media_slug: obj.slug,
+                media_link: obj.link,
+                media_medium_large: obj.media_details.sizes.medium_large.source_url,
+                media_full: obj.media_details.sizes.full.source_url,
             });
         }
     }

@@ -47,7 +47,6 @@ export default class Application extends React.Component {
         .then( response => response.json())
         .then( categories => {
             this.setState({categories: categories});
-            console.log(this.state.categories);
         });
 
         /*----TAKE MEDIA JSON----*/
@@ -55,7 +54,6 @@ export default class Application extends React.Component {
         .then( response => response.json())
         .then( media => {
             this.setState({media: media});
-            console.log(this.state.media);
         });
 
         /*----TAKE CITY JSON----*/
@@ -63,7 +61,6 @@ export default class Application extends React.Component {
         .then( response => response.json())
         .then( city => {
             this.setState({city: city});
-            console.log(this.state.city);
         });
     }
 

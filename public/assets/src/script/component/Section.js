@@ -6,6 +6,7 @@ export default class Section extends React.Component {
         this.state = {
             content: this.props.content.split(" "),
             more: false,
+            style: { backgroundImage: 'url(' + this.props.media_medium_large + ')' }
         };
         this.showMore = this.showMore.bind(this);
     }
@@ -22,8 +23,8 @@ export default class Section extends React.Component {
                     <a className="altro" onClick={this.showMore}>{!this.state.more ? 'Altro' : 'Chiudi'}</a>
                 </div>
                 <div className="img-post"
-                    style={this.props.style}
-                    data-image-url={this.props.sourceLarge}
+                    style={this.state.style}
+                    data-image-url={this.props.media_full}
                     // onClick={this.props.media
                     // ? this.props.hide_show
                     // : log}
@@ -42,6 +43,13 @@ export default class Section extends React.Component {
             </section>
         );
     }
+
+    componentWillReceiveProps (nextProps) {
+        this.setState({
+            style: { backgroundImage: 'url(' + nextProps.media_medium_large + ')' }
+        });
+    }
+
 
     funzione() {
         this.props.hide_show();
