@@ -27,8 +27,6 @@ export default class Article extends React.Component {
 
             comments: [],
 
-            date: this.props.card.date,
-            // featured_media:(this.props.card.featured_media != 0) ? this.props.card.featured_media : null,
             showOverlay: false,
             like: localStorage['love'] ? JSON.parse(localStorage['love']).list.length : '0',
             open: false,
@@ -43,7 +41,6 @@ export default class Article extends React.Component {
             className={"post card type-post format-standard hentry category-" + this.state.category_slug}
             data-id={this.props.card.id} >
                 <Header
-                date={this.state.date}
                 category_name={this.state.category_name}
                 category_link={this.state.category_link}
                 city_name={this.state.city_name}
@@ -146,7 +143,6 @@ export default class Article extends React.Component {
 
             sourceLarge = {this.state.sourceLarge}
             content = {this.state.content}
-            date={this.state.date}
             categories={this.state.categories}
             overlay_mark = {this.props.overlay_mark}
             /> , this.props.overlay_mark

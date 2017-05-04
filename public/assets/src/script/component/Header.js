@@ -20,10 +20,4 @@ export default class Header extends React.Component {
             </header>
         );
     }
-
-    converDate() {
-        moment.locale('it');
-        return moment(this.props.date).format('LL');
-    }
-
 }
