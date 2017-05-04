@@ -9,7 +9,7 @@ export default class Comment extends React.Component {
     }
     render() {
         return (
-            <article data-comment-id= {this.props.comment_id}>
+            <article data-comment-id= {this.props.comment_id} className="comment-content">
                 <header className="vcard author entry-title">
                     <h3>{this.props.comment_author_name}</h3>
                 </header>
@@ -26,6 +26,10 @@ export default class Comment extends React.Component {
                 </footer>
             </article>
         );
+    }
+
+    componentWillReceiveProps(nextProps) {
+        console.log(nextProps);
     }
 
     open_close() {

@@ -23,16 +23,15 @@ export default class Article extends React.Component {
             media_link: "",
             media_medium_large: "",
             media_full: "",
+            comments: new Array(),
+            open_footer: false,
 
-
-            comments: [],
             showOverlay: false,
             like: localStorage['love'] ? JSON.parse(localStorage['love']).list.length : '0',
-            open: false,
         };
         this.hide_show = this.hide_show.bind(this);
         this.sendLike = this.sendLike.bind(this);
-        this.open_close_comments_wrapper = this.open_close_comments_wrapper.bind(this);
+        this.switch_footer = this.switch_footer.bind(this);
     }
     render() {
         return (
@@ -48,22 +47,22 @@ export default class Article extends React.Component {
                 link ={this.props.card.link}
                 title ={this.props.card.title.rendered}
                 content = {this.props.card.excerpt.rendered}
-
                 media_medium_large = {this.state.media_medium_large}
                 media_full = {this.state.media_full}
+                comments_number = {this.state.comments_number}
+                switch_footer = {this.switch_footer}
 
 
                 hide_show = {this.hide_show}
                 sendLike = {this.sendLike}
                 like = {this.state.like}
-                comments_number = {this.state.comments_number}
-                open_close_comments_wrapper = {this.open_close_comments_wrapper}
                 />
                 <Footer
-                id = {this.state.id}
+                card_id= {this.props.card.id}
+                switch_footer = {this.switch_footer}
+                open_footer = {this.state.open_footer}
                 comments = {this.state.comments}
-                open = {this.state.open}
-                // comments_number = {this.state.comments_number}
+                comments_number = {this.state.comments_number}
                 // like = {this.state.like}
                 // sendLike = {this.sendLike}
                 />
@@ -72,24 +71,15 @@ export default class Article extends React.Component {
     }
 
     componentDidMount() {
-        // prende i commenti
-        // fetch(URL.comments_post_id(this.state.id))
-        // .then( response => response.json())
-        // .then( comments => {
-        //     let obj = [];
-        //     for (let comment of comments) {
-        //         let commenti = {
-        //             comment_id: comment.id,
-        //             comment_author_name: comment.author_name,
-        //             comment_content: comment.content.rendered
-        //         };
-        //         obj.push(commenti);
-        //     }
-        //     this.setState({
-        //         comments_number: comments.length,
-        //         comments: obj,
-        //     });
-        // });
+        /*----TAKE COMMENTS JSON----*/
+        fetch(URL.comments_post_id(this.props.card.id))
+        .then( response => response.json())
+        .then( comments => {
+            this.setState({
+                comments: comments,
+                comments_number: comments.length,
+            });
+        });
     }
 
     componentWillReceiveProps (nextProps) {
@@ -123,6 +113,13 @@ export default class Article extends React.Component {
                 media_full: obj.media_details.sizes.full.source_url,
             });
         }
+    }
+
+    /* OPEN AND CLOSE THE FOOTER*/
+    switch_footer() {
+        this.setState({
+            open_footer: !this.state.open_footer,
+        });
     }
 
     hide_show() {
@@ -162,7 +159,7 @@ export default class Article extends React.Component {
 
         console.log(data)
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', this.props.like_url, true);
+        xhr.footer('GET', this.props.like_url, true);
         xhr.onreadystatechange = function() {
             if(xhr.readyState == 4 && xhr.status == 200) {
                 // do something
@@ -170,17 +167,5 @@ export default class Article extends React.Component {
             }
         }
         xhr.send(data);
-    }
-
-    open_close_comments_wrapper() {
-        if (this.state.open == false) {
-            this.setState({
-                open: true,
-            });
-        } else {
-            this.setState({
-                open: false,
-            });
-        }
     }
 }

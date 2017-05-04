@@ -3,5 +3,5 @@ import React from "react"
 
 document.addEventListener('DOMContentLoaded', () => {
     var load= new Load();
-    load.load();
+    load.load(); 
 });

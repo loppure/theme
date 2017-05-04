@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactHtmlParser from 'react-html-parser';
 
 export default class Section extends React.Component {
     constructor(props) {
@@ -17,9 +18,11 @@ export default class Section extends React.Component {
                     <h3>
                         <a href={this.props.link}>{this.props.title}</a>
                     </h3>
-                    <p>{ !this.state.more ?
+                    { ReactHtmlParser(
+                        !this.state.more ?
                         this.state.content.slice(0, 40).join(" ") :
-                        this.state.content.slice(0, 100).join(" ")}</p>
+                        this.state.content.slice(0, 100).join(" ")
+                    )}
                     <a className="altro" onClick={this.showMore}>{!this.state.more ? 'Altro' : 'Chiudi'}</a>
                 </div>
                 <div className="img-post"
@@ -31,15 +34,15 @@ export default class Section extends React.Component {
                     >
                 </div>
                 <button className="button-like-post" onClick={this.props.sendLike} data-love="0">{this.props.like + " ♥"}</button>
-                <button className="comments-button" onClick={this.props.open_close_comments_wrapper}>
-                {(() => {
-                    switch (this.props.comments_number) {
-                    case 0:     return "Commenta";
-                    case 1:     return this.props.comments_number + " commento";
-                    default:    return this.props.comments_number + " commenti";
-                }
-            })()}
-            </button>
+                <button className="comments-button" onClick={this.props.switch_footer}>
+                    {(() => {
+                        switch (this.props.comments_number) {
+                        case 0:     return "Commenta";
+                        case 1:     return this.props.comments_number + " commento";
+                        default:    return this.props.comments_number + " commenti";
+                        }
+                    })()}
+                </button>
             </section>
         );
     }
@@ -50,15 +53,16 @@ export default class Section extends React.Component {
         });
     }
 
-
-    funzione() {
-        this.props.hide_show();
-    }
-
+    /* SHOW MORE OR LESS TEXT IN THE EXCERPT*/
     showMore() {
         this.setState({
             more: !this.state.more,
         });
     }
+
+    // funzione() {
+    //     this.props.hide_show();
+    // }
+
 
 }
