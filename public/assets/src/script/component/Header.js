@@ -9,13 +9,14 @@ export default class Header extends React.Component {
             <header>
                 <span className="img-category-post"></span>
                 <ul className="post-categories">
-                {this.props.categories.map((category, index) => (
-                    <Header_Categories key={index}
-                    category={category}
-                    />
-                ))}
+                    <li>
+                        <a href={this.props.category_link}
+                            rel="category tag">
+                            {this.props.category_name}
+                        </a>
+                    </li>
                 </ul>
-                    <span className="text-name-città">{this.converDate()}</span>
+                    <span className="text-name-citta">{this.props.city_name}</span>
             </header>
         );
     }

@@ -10,9 +10,9 @@ export default class Header_Categories extends React.Component {
     render() {
         return(
                 <li>
-                    <a href={(URL.category(this.props.category))}
+                    <a href={(URL.base + "rubriche/" + this.props.category.slug)}
                        rel="category tag">
-                        {this.props.category}
+                        {this.props.category.name}
                     </a>
                 </li>
         );

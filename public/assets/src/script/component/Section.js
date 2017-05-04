@@ -12,21 +12,22 @@ export default class Section extends React.Component {
     render() {
         return (
             <section>
-                <div className="tex-card">
+                <div className="text-card">
                     <h3>
                         <a href={this.props.link}>{this.props.title}</a>
                     </h3>
                     <p>{ !this.state.more ?
-                        this.state.content.slice(0, 4).join(" ") :
-                        this.state.content.slice(0, 9).join(" ")}</p>
-                    <a onClick={this.showMore}>{!this.state.more ? 'Altro' : 'Chiudi'}</a>
+                        this.state.content.slice(0, 40).join(" ") :
+                        this.state.content.slice(0, 100).join(" ")}</p>
+                    <a className="altro" onClick={this.showMore}>{!this.state.more ? 'Altro' : 'Chiudi'}</a>
                 </div>
                 <div className="img-post"
                     style={this.props.style}
                     data-image-url={this.props.sourceLarge}
-                    onClick={this.props.media
-                    ? this.props.hide_show
-                    : log}>
+                    // onClick={this.props.media
+                    // ? this.props.hide_show
+                    // : log}
+                    >
                 </div>
                 <button className="button-like-post" onClick={this.props.sendLike} data-love="0">{this.props.like + " ♥"}</button>
                 <button className="comments-button" onClick={this.props.open_close_comments_wrapper}>

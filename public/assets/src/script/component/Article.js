@@ -15,10 +15,15 @@ export default class Article extends React.Component {
         this.state = {
             id: this.props.card.id,
             content: this.props.card.content.rendered,
-            categories: [],
+            category_name: "",
+            category_slug: "",
+            category_link: "",
+            city_name: "",
+            city_slug: "",
+            city_link: "",
             comments: [],
             date: this.props.card.date,
-            featured_media:(this.props.card.featured_media != 0) ? this.props.card.featured_media : null,
+            // featured_media:(this.props.card.featured_media != 0) ? this.props.card.featured_media : null,
             link: this.props.card.link,
             title: this.props.card.title.rendered,
             showOverlay: false,
@@ -31,8 +36,16 @@ export default class Article extends React.Component {
     }
     render() {
         return (
-            <article className="post card" data-id={this.state.id}>
-                <Header date={this.state.date} categories={this.state.categories}/>
+            <article
+            className={"post card category-" + this.state.category_slug}
+            data-id={this.state.id}
+            >
+                <Header
+                date={this.state.date}
+                category_name={this.state.category_name}
+                category_link={this.state.category_link}
+                city_name={this.state.city_name}
+                />
                 <Section
                 link ={this.state.link}
                 title ={this.state.title}
@@ -61,21 +74,21 @@ export default class Article extends React.Component {
     }
 
     componentDidMount() {
-        /* prende i riferimenti dell'immagine (media) */
-        if (this.state.featured_media) {
-            fetch(URL.media_id(this.state.featured_media))
-            .then( response => response.json())
-            .then( media => {
-                this.setState({
-                    mediaURL: URL.media_id(this.state.featured_media),
-                    sourceMedium: media.media_details.sizes.medium.source_url,
-                    sourceLarge : media.media_details.sizes.large.source_url,
-                    style: {
-                        backgroundImage: 'url(' + media.media_details.sizes.medium.source_url + ')'
-                    }
-                });
-            });
-        }
+        // /* prende i riferimenti dell'immagine (media) */
+        // if (this.state.featured_media) {
+        //     fetch(URL.media_id(this.state.featured_media))
+        //     .then( response => response.json())
+        //     .then( media => {
+        //         this.setState({
+        //             mediaURL: URL.media_id(this.state.featured_media),
+        //             sourceMedium: media.media_details.sizes.medium.source_url,
+        //             sourceLarge : media.media_details.sizes.large.source_url,
+        //             style: {
+        //                 backgroundImage: 'url(' + media.media_details.sizes.medium.source_url + ')'
+        //             }
+        //         });
+        //     });
+        // }
         // prende i commenti
         fetch(URL.comments_post_id(this.state.id))
         .then( response => response.json())
@@ -89,7 +102,6 @@ export default class Article extends React.Component {
                 };
                 obj.push(commenti);
             }
-
             this.setState({
                 comments_number: comments.length,
                 comments: obj,
@@ -98,16 +110,23 @@ export default class Article extends React.Component {
     }
 
     componentWillReceiveProps (nextProps) {
-        /* analizza le categorie e gli assegna un nome */
-        let array = [];
-        //per ogni categoria persente nelle card
-        for (let category of this.props.card.categories){
-            // se la suddetta categoria è presente nell'elenco di categorie
-            if (nextProps.categories.hasOwnProperty(category)) {
-                array.push(nextProps.categories[category]);
-            }
+        // FIND CATEGORY DATE BY THE CATEGORIES LIST
+        if (this.props.categories.length > 0) {
+            let obj = this.props.categories.find( n => n.id == this.props.card.categories[0] );
             this.setState({
-                categories: array
+                category_name: obj.name,
+                category_slug: obj.slug,
+                category_link: obj.link,
+            });
+        }
+
+        // FIND CITY DATE BY THE CITIES LIST
+        if (this.props.city.length > 0) {
+            let obj = this.props.city.find( n => n.id == this.props.card.citta[0] );
+            this.setState({
+                city_name: obj.name,
+                city_slug: obj.slug,
+                city_link: obj.link,
             });
         }
     }

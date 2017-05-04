@@ -2,27 +2,27 @@ import React from "react"
 import ReactDOM from "react-dom"
 import Application from "../component/Application";
 
+import {URL} from '../scripts/config.js'
+
 // render the Application component into .section-cont-article
 export default class Load {
     constructor(locationHost) {
         this.cards= [];
         this.container =  document.getElementsByClassName('section-cont-article');
-        this.url = window.location.protocol + '//' + window.location.host + '/loppure/wp-json/wp/v2/posts'
     }
     load() {
-        console.log(this.url);
-        fetch(this.url)
+        console.log(URL.posts());
+        fetch(URL.posts())
         .then( response => response.json()
         )
         .then(
             obj => {
                 for (let card of obj) {
-                    this.cards.push(card) 
+                    this.cards.push(card)
                 }
                 ReactDOM.render(
                     <Application
-                    initialCards={this.cards}
-                    initialURL = {this.url}/>, document.querySelector('.section-cont-article'));
+                    initialCards={this.cards}/>, document.querySelector('.section-cont-article'));
             }
         )
     }

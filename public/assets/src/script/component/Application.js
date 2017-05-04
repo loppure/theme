@@ -9,14 +9,14 @@ export default class Application extends React.Component {
         super(props);
         this.state = {
             page: 1,
-            cardsURL: this.props.initialURL,
             cards: this.props.initialCards,
-            categoriesURL: URL.post_categories(),
-            categories: [],
-            overlay_mark: document.getElementById('overlay_mark'),
+            categories: new Array(),
+            media: new Array(),
+            city: new Array(),
             like_url : document.querySelector('#ajax-url').value,
             myID: localStorage['love'] ? JSON.parse(localStorage['love']).myID : 'none',
             nonce: document.getElementById('love-nonce').value,
+            overlay_mark: document.getElementById('overlay_mark'),
         };
         this.onLoad = this.onLoad.bind(this);
     }
@@ -28,11 +28,12 @@ export default class Application extends React.Component {
                     <Article key={index}
                              card={card}
                              categories = {this.state.categories}
-                             overlay_mark = {this.state.overlay_mark}
+                             media = {this.state.media}
+                             city = {this.state.city}
                              like_url = {this.state.like_url}
-                             like = {this.state.like}
                              myID = {this.state.myID}
                              nonce = {this.state.nonce}
+                             overlay_mark = {this.state.overlay_mark}
                     />
                 ))}
                 <a onClick={this.onLoad}>Pagina successiva »</a>
@@ -41,19 +42,28 @@ export default class Application extends React.Component {
     }
 
     componentDidMount() {
-        //Prende l'elenco di tutte le categorie
-        let obj = [];
-        fetch(this.state.categoriesURL)
-        .then( response => response.json() )
+        /*----TAKE CATEGORIES JSON----*/
+        fetch(URL.post_categories())
+        .then( response => response.json())
         .then( categories => {
-            for (let category of categories) {
-                let id = category.id;
-                let name = category.name;
-                obj[id] = name;
-            }
-            this.setState({
-                categories: obj
-            });
+            this.setState({categories: categories});
+            console.log(this.state.categories);
+        });
+
+        /*----TAKE MEDIA JSON----*/
+        fetch(URL.media())
+        .then( response => response.json())
+        .then( media => {
+            this.setState({media: media});
+            console.log(this.state.media);
+        });
+
+        /*----TAKE CITY JSON----*/
+        fetch(URL.city())
+        .then( response => response.json())
+        .then( city => {
+            this.setState({city: city});
+            console.log(this.state.city);
         });
     }
 
