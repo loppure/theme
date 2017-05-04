@@ -19,14 +19,13 @@ export default class Article extends React.Component {
             city_name: "",
             city_slug: "",
             city_link: "",
-
             media_slug: "",
             media_link: "",
             media_medium_large: "",
             media_full: "",
 
-            comments: [],
 
+            comments: [],
             showOverlay: false,
             like: localStorage['love'] ? JSON.parse(localStorage['love']).list.length : '0',
             open: false,
@@ -53,11 +52,6 @@ export default class Article extends React.Component {
                 media_medium_large = {this.state.media_medium_large}
                 media_full = {this.state.media_full}
 
-
-                // mediaURL = {this.state.mediaURL}
-                // sourceMedium = {this.state.sourceMedium}
-                // sourceLarge = {this.state.sourceLarge}
-                // style = {this.state.style}
 
                 hide_show = {this.hide_show}
                 sendLike = {this.sendLike}

@@ -4,9 +4,9 @@ export default class Section extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            style: { backgroundImage: 'url(' + this.props.media_medium_large + ')' },
             content: this.props.content.split(" "),
             more: false,
-            style: { backgroundImage: 'url(' + this.props.media_medium_large + ')' }
         };
         this.showMore = this.showMore.bind(this);
     }

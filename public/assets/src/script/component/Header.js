@@ -1,7 +1,4 @@
 import React from 'react';
-import moment from 'moment';
-import 'moment/locale/it';
-import Header_Categories from './Header_Categories';
 
 export default class Header extends React.Component {
     render() {
