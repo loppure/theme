@@ -15,29 +15,36 @@ export default class Footer extends React.Component {
     render() {
         return(
             <footer>
-                <Collapse isOpened={this.props.open_footer} className="comments-wrapper">
+                <Collapse
+                isOpened={this.props.open_footer}
+                theme={{collapse: 'card-footer', content: 'comments-wrapper'}}
+                hasNestedCollapse={true}>
                     <button className={"close_comments"} onClick={this.props.switch_footer}></button>
                     {this.props.comments.map( (comment, index) => (
                         <Comment
-                            key = {index}
+                            key={index}
                             chiave = {index}
-                            id = {comment.card_id}
                             comment_id = {comment.id}
                             comment_author_name = {comment.author_name}
                             comment_content = {comment.content.rendered}
-
                             showResults_Comment = {this.state.showResults_Comment}
-                            open_close_respond = {this.open_close_respond}/>
+                            open_close_respond = {this.open_close_respond}
+                            id = {this.props.id}
+                        />
                     ))}
-                    {
-                        ((this.props.comments_number != 0 && this.props.open_footer == true)
-                        ? <button className="comments-button" onClick={this.open_close_respond.bind(null,-1, this.state.showResults_Comment)}>Commenta</button>
-                        : null)
-                    }
-                    { (this.state.showResults_Comment == -1)
-                        ? <Respond comment_id = {this.props.id}
-                                   comment_parent = "0" />
-                        : null }
+
+                    { ((this.props.comments_number != 0)
+                        ? <button
+                            className="comments-button"
+                            onClick={this.open_close_respond.bind(null,-1, this.state.showResults_Comment)}>Commenta</button>
+                        : null) }
+
+                    {/* { (this.state.showResults_Comment == -1)
+                        ? <Respond comment_id = {this.props.id} comment_parent = "0" />
+                        : null } */}
+                    <Collapse isOpened={this.state.showResults_Comment == -1}>
+                        <Respond comment_id = {this.props.id} comment_parent = "0" />
+                    </Collapse>
                 </Collapse>
             </footer>
         );

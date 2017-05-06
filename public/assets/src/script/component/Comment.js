@@ -1,5 +1,7 @@
 import React from 'react';
+import Collapse from 'react-collapse';
 import ReactHtmlParser from 'react-html-parser';
+
 import Respond from './Respond';
 
 export default class Comment extends React.Component {
@@ -18,11 +20,16 @@ export default class Comment extends React.Component {
                 </section>
                 <footer className="rispondi">
                     <button className="reply-anchor" onClick={this.open_close}>rispondi</button>
-                    {(this.props.chiave == this.props.showResults_Comment)
+                    <Collapse isOpened={this.props.chiave == this.props.showResults_Comment}>
+                        <Respond
+                        comment_id = {this.props.id}
+                        comment_parent = {this.props.comment_id}/>
+                    </Collapse>
+                    {/* {(this.props.chiave == this.props.showResults_Comment)
                         ? <Respond
                         comment_id = {this.props.id}
                         comment_parent = {this.props.comment_id}/>
-                        : null}
+                        : null} */}
                 </footer>
             </article>
         );
