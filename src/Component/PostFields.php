@@ -27,7 +27,7 @@ class PostFields extends customPostFields
                 'name'         => 'description_2',
                 'title'        => 'Descrizione',
                 'description'  => 'Descrizione del post',
-                'type'         => 'text',
+                'type'         => 'wysiwyg',
                 'scope'        =>  array( 'post', 'loppure_image' ),
                 'capability'   => 'edit_post'
             ),

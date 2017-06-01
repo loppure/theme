@@ -155,8 +155,8 @@ abstract class customPostFields extends View
      */
     public function saveCustomFields($post_id, $post)
     {
-        if (!isset($_POST['my-custom-fields_nonce'])
-            || !wp_verify_nonce($_POST['my-custom-fields_nonce'], 'my-custom-fields')
+        if (!isset($_POST['my-custom-fields_wpnonce'])
+            || !wp_verify_nonce($_POST['my-custom-fields_wpnonce'], 'my-custom-fields')
             || !current_user_can('edit_post', $post_id)
             || !in_array($post->post_type, $this->post_types)) {
             return;
