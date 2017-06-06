@@ -18,10 +18,10 @@
         "symfony/var-dumper": "^3.0",
         "psy/psysh": "^0.8.2"
     },
-		"autoload": {
-				"psr-4": {
-						"Theine\\": "app/Theine",
-						"Loppure\\": "src/"
-				}
-		}
+    "autoload": {
+        "psr-4": {
+            "Theine\\": "app/Theine",
+            "Loppure\\": "src/"
+        }
+    }
 }
