@@ -30,8 +30,13 @@
                         (function($){
                             $(document).ready(function() {
                                 $("#{{$prefix}}{{$custom_field['name']}}").addClass('mceEditor');
-                                if (typeof(tinyMCE) == 'object' && typeof(tinyMCE.execCommand) == 'function') {
-                                    tinyMCE.execCommand('mceAddControl', false, "{{$prefix}}{{$custom_field['name']}}");
+                                if (typeof(tinyMCE) == 'object' && typeof(tinyMCE.init) == 'function') {
+                                    tinyMCE.init({
+                                        selector: "#{{$prefix}}{{$custom_field['name']}}",
+                                        height: 100,
+                                        menubar: false,
+                                        toolbar: 'undo redo | insert | bold italic | bullist numlist | link image',
+                                    })
                                 }
                             });
                         })(jQuery);
