@@ -1,13 +1,31 @@
+.home-header nav
+  display flex
+  flex-direction row
+  justify-content space-around
+  flex-wrap wrap
+
 // Elementi-loppure -> Rettagoli home
 // Elementi-loppure -> Rettagoli home: Scheletro
 .home-header .box-rettangolo-4
-  col(3)
-  width: 23.9%
+  display: flex;
+  flex-direction row
+  justify-content flex-start
+  align-items center
+
+  box-sizing border-box
+
+  width: 24.5%
   margin: 0 0.1%
-  height: 60px
-  padding: 5px
+  height: 90px
+  padding 5px 7px
   margin-bottom: 3px
   background-color: red
+  text-decoration none
+  color: bianco
+
+  @media (max-width: smartphone)
+    width: 49%
+    margin-bottom: 5px
 
   @media (max-width: tablet)
     height: 100px
@@ -19,14 +37,6 @@
     height: 100px
     margin-bottom: 5px
 
-  @media (max-width: smartphone)
-    col(6)
-    margin-bottom: 5px
-    height: 120px
-
-// Elementi-loppure -> Rettagoli home: tipografia
-.home-header .box-rettangolo-4
-  color: bianco
 
   .date
     margin: 10px
@@ -36,35 +46,34 @@
     font-family: 'Montserrat', sans-serif
     font-weight: 700
 
-  a
+  span
+    display inline-block
     width: auto
-    display: inline-block
     clear: both
     margin: 10px 5px
     font-size: 18px
-    line-height: 35px
     color: bianco
     font-family: 'Montserrat', sans-serif
     font-weight: 400
 
-    &::before
+  .img
+      display: inline-block
+      vertical-align: middle
       width: 35px
       height: 35px
       margin: 0
       margin-right: 10px
       padding: 0
-      display: block
-      content: ' '
-      float: left
       background-position: center
       background-repeat: no-repeat
       background-size: contain
 
-.home-header .box-rettangolo-4.prossimamente
-  a
-    position: relative
-    top: 15px
-    color: grigio-medio
+  &.prossimamente
+    display: inline-block // FIXME: we overwrite display:flex until 'prossimamente' is ready
+    a
+      position: relative
+      top: 15px
+      color: grigio-medio
 
 // Elementi-loppure -> Rettagoli home: colori e icone
 
@@ -72,92 +81,100 @@
 .home-header .gusti-della-terra
   background-color: color-gusti-della-terra
 
-  a::before
+  .img
     background-image: img-gusti-della-terra-bianco
+
+  &:hover
+    background-color: bianco
+    box-shadow: ombra-box-gusti-della-terra
+
+    span
+      color: color-gusti-della-terra
+
+    .img
+      background-image: img-gusti-della-terra
+
 
 // Elementi-loppure -> Rettagoli home: voli sul territorio
 .home-header .voli-sul-territorio
   background-color: color-voli-sul-territorio
 
-  a::before
+  .img
     background-image: img-voli-sul-territorio-bianco
+
+  &:hover
+    background-color: bianco
+    box-shadow: ombra-box-voli-sul-territorio
+    span
+      color: color-voli-sul-territorio
+
+    .img
+      background-image: img-voli-sul-territorio
 
 // Elementi-loppure -> Rettagoli home: radici nel tempo
 .home-header .radici-nel-tempo
   background-color: color-radici-nel-tempo
 
-  a::before
+  .img
     background-image: img-radici-nel-tempo-bianco
+
+  &:hover
+    background-color: bianco
+    box-shadow: ombra-box-radici-nel-tempo
+
+    span
+      color: color-radici-nel-tempo
+
+    .img
+      background-image: img-radici-nel-tempo
 
 // Elementi-loppure -> Rettagoli home: a parole nostre
 .home-header .parole-nostre
   background-color: color-parole-nostre
 
-  a::before
+  .img
     background-image: img-parole-nostre-bianco
 
 // Elementi-loppure -> Rettagoli home: pausa caffe
 .home-header .pausa-caffe
   background-color: color-pausa-caffe
 
-  a::before
+  .img
     background-image: img-pausa-caffe-bianco
+
+  &:hover
+    background-color: bianco
+    box-shadow: ombra-box-pausa-caffe
+
+    span
+      color: color-pausa-caffe
+
+    .img
+      background-image: img-pausa-caffe
 
 // Elementi-loppure -> Rettagoli home: pensieri tra le pagine
 .home-header .pensieri-tra-le-pagine
   background-color: color-pensieri-tra-le-pagine
 
-  a::before
+  .img
     background-image: img-pensieri-tra-le-pagine-bianco
+
+  &:hover
+    background-color: bianco
+    box-shadow: ombra-box-pensieri-tra-le-pagine
+
+    span
+      color: color-pensieri-tra-le-pagine
+
+    .img
+      background-image: img-pensieri-tra-le-pagine
 
 // Elementi-loppure -> Rettagoli home:  prossimamente
 .home-header .prossimamente
   background-color: colore-loppure
 
-  a::before
+  .img
     display: none
-
-// Elementi-loppure -> Rettagoli home: gusti-della-terra Hover
-.home-header div:hover.gusti-della-terra
-  background-color: bianco
-  box-shadow: ombra-box-gusti-della-terra
-
-  a::before
-    background-image: img-gusti-della-terra
-
-.home-header div:hover.gusti-della-terra a
-  color: color-gusti-della-terra
-
-  &:hover, &:active, &:focus
-    color: color-gusti-della-terra
-
-// Elementi-loppure -> Rettagoli home: voli-sul-territorio Hover
-.home-header div:hover.voli-sul-territorio
-  background-color: bianco
-  box-shadow: ombra-box-voli-sul-territorio
-
-  a::before
-    background-image: img-voli-sul-territorio
-
-.home-header div:hover.voli-sul-territorio a
-  color: color-voli-sul-territorio
-
-  &:hover, &:active, &:focus
-    color: color-voli-sul-territorio
-
-// Elementi-loppure -> Rettagoli home: radici-nel-tempo Hover
-.home-header div:hover.radici-nel-tempo
-  background-color: bianco
-  box-shadow: ombra-box-radici-nel-tempo
-
-  a::before
-    background-image: img-radici-nel-tempo
-
-.home-header div:hover.radici-nel-tempo a
-  color: color-radici-nel-tempo
-
-  &:hover, &:active, &:focus
-    color: color-radici-nel-tempo
 
 // Elementi-loppure -> Rettagoli home: parole-nostre Hover
 .home-header div:hover.parole-nostre
@@ -173,34 +190,6 @@
   &:hover, &:active, &:focus
     color: color-parole-nostre
 
-// Elementi-loppure -> Rettagoli home: pausa-caffe Hover
-.home-header div:hover.pausa-caffe
-  background-color: bianco
-  box-shadow: ombra-box-pausa-caffe
-
-  a::before
-    background-image: img-pausa-caffe
-
-.home-header div:hover.pausa-caffe a
-  color: color-pausa-caffe
-
-  &:hover, &:active, &:focus
-    color: color-pausa-caffe
-
-// Elementi-loppure -> Rettagoli home: pensieri-tra-le-pagine Hover
-.home-header div:hover.pensieri-tra-le-pagine
-  background-color: bianco
-  box-shadow: ombra-box-pensieri-tra-le-pagine
-
-  a::before
-    background-image: img-pensieri-tra-le-pagine
-
-.home-header div:hover.pensieri-tra-le-pagine a
-  color: color-pensieri-tra-le-pagine
-
-  &:hover, &:active, &:focus
-    color: color-pensieri-tra-le-pagine
-
 // Elementi-loppure -> Rettagoli home: prossimamente Hover
 .home-header div:hover.prossimamente
   background: none
@@ -212,8 +201,3 @@
 
   &:hover, &:active, &:focus
     color: #fff
-
-// Elementi-loppure -> Rettagoli home: progetti Hover
-
-
-// Elementi-loppure -> Rettagoli home: reportage Hover
