@@ -4,38 +4,48 @@
 
     <header class="page-header home-header">
         <nav class="wrapper-box wrapper-categories">
-            <a href="{{ esc_url( home_url( '/rubriche' )) }}/gusti-della-terra" class="box-rettangolo-4 gusti-della-terra">
-                <span class="img"></span>
-                <span>Gusti della Terra</span>
-            </a>
-            <a href="{{ esc_url( home_url( '/rubriche' )) }}/voli-sul-territorio" class="box-rettangolo-4 voli-sul-territorio">
-                <span class="img"></span>
-                <span>Voli sul territorio</span>
-            </a>
-            <a href="{{ esc_url( home_url( '/rubriche' )) }}/radici-nel-tempo" class="box-rettangolo-4 radici-nel-tempo">
-                <span class="img"></span>
-                <span>Radici nel tempo</span>
-            </a>
-            <div class="box-rettangolo-4 parole-nostre prossimamente">
-                <span class="date">Prossimamente</span>
-                <a href="{{ esc_url( home_url( '/' )) }}/prossimamente"> A parole nostre </a>
-            </div>
-            <a href="{{ esc_url( home_url( '/rubriche' )) }}/gusti-della-terra" class="box-rettangolo-4 pausa-caffe">
-                <span class="img"></span>
-                <span>Pausa caffè</span>
-            </a>
-            <a href="{{ esc_url( home_url( '/rubriche' )) }}/pensieri-tra-le-pagine" class="box-rettangolo-4 pensieri-tra-le-pagine">
-                <span class="img"></span>
-                <span>Pensieri tra le pagine</span>
-            </a>
-            <div class="box-rettangolo-4 reportage prossimamente">
-                <span class="date">Prossimamente</span>
-                <a href="{{ esc_url( home_url( '/' )) }}/prossimamente"> Reportage </a>
-            </div>
-            <div class="box-rettangolo-4 progetti prossimamente">
-                <span class="date">Prossimamente</span>
-                <a href="{{ esc_url( home_url( '/' )) }}/prossimamente"> Progetti </a>
-            </div>
+          <ul>
+            <li class="box-rettangolo-4 gusti-della-terra">
+              <a href="{{ esc_url( home_url( '/rubriche' )) }}/gusti-della-terra">
+                Gusti della Terra
+              </a>
+            </li>
+            <li class="box-rettangolo-4 voli-sul-territorio">
+              <a href="{{ esc_url( home_url( '/rubriche' )) }}/voli-sul-territorio">
+                Voli sul territorio
+              </a>
+            </li>
+            <li class="box-rettangolo-4 radici-nel-tempo">
+              <a href="{{ esc_url( home_url( '/rubriche' )) }}/radici-nel-tempo">
+                Radici nel tempo
+              </a>
+            </li>
+            <li class="box-rettangolo-4 parole-nostre prossimamente">
+              <a href="{{ esc_url( home_url( '/' )) }}/prossimamente">
+                A parole nostre
+              </a>
+            </li>
+            <li class="box-rettangolo-4 pausa-caffe">
+              <a href="{{ esc_url( home_url( '/rubriche' )) }}/gusti-della-terra">
+                Pausa caffè
+              </a>
+            </li>
+            <li class="box-rettangolo-4 pensieri-tra-le-pagine">
+              <a href="{{ esc_url( home_url( '/rubriche' )) }}/pensieri-tra-le-pagine">
+                Pensieri tra le pagine
+              </a>
+            </li>
+            <li class="box-rettangolo-4 reportage prossimamente">
+              <a href="{{ esc_url( home_url( '/' )) }}/prossimamente">
+                Reportage
+              </a>
+            </li>
+            <li class="box-rettangolo-4 progetti prossimamente">
+              <a href="{{ esc_url( home_url( '/' )) }}/prossimamente">
+                Progetti
+              </a>
+            </li>
+          </ul>
         </nav>
     </header>
 

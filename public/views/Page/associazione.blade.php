@@ -7,7 +7,7 @@
 		<h1 class="title-page">{{ the_title() }}</h1>
 	</header>
 
-	<section>
+	<section class="content-page-text">
 		<h2>I nostri intenti</h2>
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

@@ -3,23 +3,33 @@
   gs("fluid")
 
 .content-single
-  col(9)
+  width: 67%
+  height: auto
+  overflow: hidden
+  display: block
+  float: left
   margin 0 auto
 
   @media (max-width: mini-tablet)
-    col(8)
-
-  @media (max-width: smartphone)
-    col(12)
+    width: 85%;
+    float: none
 
 .sidebar-single
-  col(3)
+  width: 30%
+  height: auto
+  overflow: hidden
+  display: block
+  float: right
+  margin: 0 auto
 
   @media (max-width: mini-tablet)
-    col(4)
+    width: 64%
+    display: block
+    float: none
 
   @media (max-width: smartphone)
-    col(12)
+    width: 80%
+    margin-bottom: 30px
 
 .sidebar-single-mobile
   display: none
@@ -36,11 +46,18 @@
 
 /*Single - header*/
 .single-header
-  col(9)
+  width: 67%
   height: auto
+  overflow: hidden
+  display: block
+  float: left
   margin: 0 auto
   padding: 0
   padding-top: 50px
+
+  @media (max-width: mini-tablet)
+    width: 100%
+    float: none
 
   .content-title
     width: 100%
@@ -81,12 +98,25 @@
 
 /*Single - Content text */
 .content-text
-  width: 82%
+  width: 80%
+  height: auto
+  overflow: hidden
   float: right
   background-color: colore-loppure
 
+  @media (max-width: medium)
+    width: 75%
+
+  @media (max-width: mini-tablet)
+    width: 100%
+    display: block
+    margin: 0 auto
+    float: none
+
   .text
-    max-width: 91%
+    width: 86%
+    height: auto
+    overflow: hidden
     display: block
     float: left
     margin: 0 auto
@@ -97,6 +127,26 @@
     text-align: justify
 
     font-family: 'Merriweather', serif;
+
+    @media (max-width: max)
+      width: 83.5%
+
+    @media (max-width: tablet)
+      width: 82%
+
+    @media (max-width: medium)
+      width: 87%
+      padding: 20px
+
+    @media (max-width: mini-tablet)
+      width: 90%
+      padding: 10px 20px
+      float: none
+
+    @media (max-width: smartphone)
+      width: 100%
+      max-width: 100%
+      padding: 10px
 
 /*Single - Content text - content-fonti*/
 
@@ -137,7 +187,8 @@
   overflow: hidden
 
   .informativa
-    width: 1200px
+    width: 100%
+    max-width: 1200px
     height: auto
     overflow: hidden
     display: block
@@ -145,11 +196,24 @@
     margin-bottom: 20px
     clear: both
 
+
     article
-      col(9)
-      margin: 0;
+      width: 67%
+      height: auto
+      overflow: hidden
+      float: left
+      display: block
+      margin: 0 auto
       background-color: colore-loppure
       color: bianco
+
+      @media (max-width: mini-tablet)
+        width: 90%
+        float: none
+
+      @media (max-width: smartphone)
+        width: 100%
+
 
       &::after
         width: 30px
@@ -177,6 +241,17 @@
     margin: 20px auto
     padding 20px 10px
     background-color: grigio-intermedio
+
+    @media (max-width: medium)
+      width: 80%
+
+    @media (max-width: smartphone)
+      width: 90%
+
+    @media (max-width: min-smartphone)
+      width: 100%
+
+
 
     img
       width: 100px
@@ -293,6 +368,12 @@
   display: block
   margin: 30px auto
 
+  @media (max-width: medium)
+    width: 80%
+
+  @media (max-width: smartphone)
+    width: 100%
+
   .show-hide-img
     width: 50px
     height: 50px
@@ -329,6 +410,10 @@
       font-size: 14px
       background-color: grigio-intermedio
       border-radius: 20px
+
+      @media (max-width: smartphone)
+        max-width: 100%
+        width: 100%
 
       header
         height: auto
@@ -377,6 +462,10 @@
       color: #000
       outline: none
 
+      @media (max-width: smartphone)
+        width: 90%
+
+
     .form-submit
       text-align: center
 
@@ -397,12 +486,18 @@
       border-radius: 10px
       color: #000
 
+      @media (max-width: smartphone)
+        width: 90%
+
     .comment-notes
       width: 300px
       display: block
       margin: 0 auto
       font-size: 12.5px
       text-align: center
+
+      @media (max-width: min)
+        width: 90%
 
 
 

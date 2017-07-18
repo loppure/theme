@@ -26,7 +26,7 @@
 		</div>
 
 	</section>
-	<section>
+	<!--<section>
 		<div class="content-box-attivita">
 			<article class="box-attivita-2">
 				<figure></figure>
@@ -47,7 +47,7 @@
 					<a href="#"> Scarica la presentazione</a>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 	<section class="content-box-slim">
 		<div class="box-slim associazione">

@@ -7,7 +7,7 @@
 		<h1 class="title-page">{{ the_title() }}</h1>
 	</header>
 
-	<section class="content-porta-loppure">
+	<section class="content-page-text">
 		<article class="card-porta-loppure">
 			<header>
 				<h3>Titolo step</h3>
@@ -105,7 +105,7 @@
 		</article>
 
 		<div class="content-form">
-			
+
 		</div>
 	</section>
 </div>

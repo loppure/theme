@@ -1,27 +1,76 @@
 /*Page - Home*/
 .widget-sx
-  col(2)
+  width: 19%
+  height: auto
+  overflow: hidden
+  display: block
+  float: left
+  margin-right: 0.5%
+
+  @media (max-width: medium)
+    width: 25%
+    margin-right 1%
 
   @media (max-width: mini-tablet)
-    col(3)
+    width: 40%
+    float: none
+    display: block
+    margin: 10px auto
 
-  @media (max-width: min-smartphone)
-    col(12)
+  @media (max-width: min-smartphon)
+    width: 80%
+
+  @media (max-width: min)
+    width: 90%
 
 .section-cont-article
-  col(6)
+  width: 48%
+  height: auto
+  overflow: hidden
+  display: block
+  float: left
+  margin: 0 0.5%
+
+  @media (max-width: medium)
+    width: 70%
+    margin: 0 auto
+    float: right
+    margin-left: 1%
 
   @media (max-width: mini-tablet)
-    col(9)
+    width: 85%
+    float: none
+    display: block
+    margin: 0 auto
 
   @media (max-width: min-smartphone)
-    col(12)
+    width: 90%
+
+  @media (max-width: min)
+    width: 100%
 
 .widget-dx
-  col(4)
+  width: 29%
+  height: auto
+  overflow: hidden
+  display: block
+  float: left
+  margin-left: 0.5%
 
-  @media (max-width: mini-tablet)
-    col(12)
+  @media (max-width: medium)
+    width: 50%
+    float: none
+    margin: 10px auto
+    display: block
+
+  @media (max-width: smartphone)
+    width: 75%
+
+  @media (max-width: min-smartphone)
+    width: 85%
+
+  @media (max-width: min)
+    width: 95%
 
 .home-section
   margin-top: 0px
@@ -100,6 +149,9 @@
     display: block
     margin 0 auto
 
+    @media (max-width: smartphone)
+      width: 100%
+
   .payoff
     width: 600px
     height: auto
@@ -108,6 +160,15 @@
     margin 0 auto
     background-color: grigio-intermedio
     text-align: center
+
+    @media (max-width: medium)
+      width: 80%
+
+    @media (max-width: smartphone)
+      width: 90%
+
+    @media (max-width: min)
+      width: 100%
 
     span
       font-size: 40px;
@@ -119,12 +180,25 @@
 /* Page - Contatti */
 
 .page-template-contatti
+
+  .content-contanti
+    display: block
+    text-align: center
+
   .card-contatti
     width: auto
-    height: 120px
+    height: 150px
+    overflow: hidden
     padding: 20px 10px
     text-align: center
     border: 1px solid colore-loppure
+
+    @media (max-width: medium)
+      height: 180px
+
+    @media (max-width: smartphone)
+      height: auto
+
 
     h3
       font-size: 18px
@@ -162,6 +236,15 @@
     margin: 0 auto
     border-top: 2px solid colore-loppure
     text-align: center
+
+    @media (max-width: mini-tablet)
+      width: 80%
+
+    @media (max-width: min-smartphone)
+      width: 90%
+
+    @media (max-width: min)
+      width: 95%
 
     h3
 

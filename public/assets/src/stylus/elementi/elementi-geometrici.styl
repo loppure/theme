@@ -24,13 +24,31 @@
 //    height: 80px
 
 .box-rettangolo-3
-  col(4)
+  width: 31.33%
+  height: auto
+  overflow: hidden
+  display: inline-block
+  margin: 5px
+
+
 
   @media (max-width: medium)
-    col(6)
+    width: 48%
+
+  @media (max-width: mini-tablet)
+    width: 50%
+    display:block
+    margin: 10px auto
+    float: none
+
+  @media (max-width: smartphone)
+    width: 60%
+
+  @media (max-width: min-smartphone)
+    width: 75%
 
   @media (max-width: min)
-    col(12)
+    width: 90%
 
 //box-slim
 .content-box-slim

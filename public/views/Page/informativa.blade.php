@@ -7,7 +7,7 @@
 		<h1 class="title-page">{{ the_title() }}</h1>
 	</header>
 
-	<section class="content-informative">
+	<section class="content-page-text">
 
 		<article>
 			<h3>Informativa Cookie</h3>

@@ -5,19 +5,41 @@
   max-width: 100%
 
 .box-team-max
-  col(4)
   width: 30.33%
   height: 450px
+  overflow: hidden
+  float: left
   padding: 7px 5px
   margin: 0 0.5%
   margin-bottom: 10px
   border: 2px solid colore-loppure
   border-radius: 10px
 
+  @media (max-width: max)
+    height: 550px
+
+  @media (max-width: medium)
+    width: 46%
+    height: 500px
+
+  @media (max-width: smartphone)
+    width: 70%
+    height: auto
+    float: none
+    display: block
+    margin: 15px auto
+
+  @media (max-width: smartphone)
+    width: 85%
+
+  @media (max-width: min)
+    width: 95%
+
   header
     height: auto
     padding-bottom: 10px
     overflow: hidden
+
 
     img
       width: 85px
