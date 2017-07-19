@@ -53,7 +53,7 @@
             </div>
             <div class="content-author-single">
                 <article class="author-single">
-                    <img src="#" /> <!--#TODO Immagine autore qui -->
+                    {{ $author->thumb }}
                     <h4>{{ the_author_posts_link() }}</h4>
                     <p class="author-bio">{{ get_the_author_meta( 'description' ) }}</p>
                 </article>

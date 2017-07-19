@@ -79,7 +79,17 @@
   height: 25px
   width: 25px
   cursor: pointer
-  background-image: url("img/svg/close.svg")
+  background-image: url("../../src/img/icone-generiche/close-nero.svg")
+  background-repeat: no-repeat
+  background-position: center
+  background-size: 60%
+
+  &:visited
+    background-image: url("../../src/img/icone-generiche/close-nero.svg")
+
+  &:hover, &:active, &:focus
+    background-image: url("../../src/img/icone-generiche/close-bianco.svg")
+
 
 .section-cont-article .comments-wrapper header.vcard.author.entry-title, .form-nested .comments-wrapper header.vcard.author.entry-title
   margin: 0

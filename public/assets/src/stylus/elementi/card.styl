@@ -52,6 +52,7 @@
   .img-post
     height: 210px
     border-top: 0.08rem solid grigio-intermedio
+    background-color: grigio-chiaro
 
     button
       height: 30px
@@ -78,8 +79,20 @@
       height: 25px
       display: block
       float: left
-      background-color: red
+      background-color: #fff
+      border: 1px solid #000
       border-radius: 50%
+      background-image: url("../../src/img/icone-generiche/close-nero.svg")
+      background-position: center
+      background-repeat: no-repeat
+      background-size: 60%
+
+      &:visited
+        background-image: url("../../src/img/icone-generiche/close-nero.svg")
+
+      &:hover, &:active, &:focus
+        background-image: url("../../src/img/icone-generiche/close-bianco.svg")
+
 
     //Contenitore commento
     .comment-content
@@ -136,10 +149,22 @@
       margin: 10px auto
       padding: 3px 5px
       font-size: 16px
-      border: 2px solid colore-loppure
+      border: 1px solid colore-loppure
       border-radius: 5px
-      color: #000
+      color: colore-loppure
       outline: none
+
+      &:hover, &:focus, &:active
+        width: 150px
+        display: block
+        margin: 10px auto
+        padding: 3px 5px
+        font-size: 16px
+        border: 1px solid colore-loppure
+        background-color: colore-loppure
+        border-radius: 5px
+        color: #fff
+        outline: none
 
     .form-submit
       text-align: center
@@ -159,9 +184,10 @@
       margin: 10px auto
       padding: 3px 5px
       font-size: 14px
-      border: 2px solid colore-loppure
+      border: 1px solid #000
       border-radius: 10px
       color: #000
+      outline: none
 
     .comment-notes
       width: 300px

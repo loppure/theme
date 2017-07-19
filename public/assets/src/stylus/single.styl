@@ -94,7 +94,7 @@
   height: 300px
   float: right
   clear: both
-  background-color: red
+  background-color: grigio-chiaro
 
 /*Single - Content text */
 .content-text
@@ -170,14 +170,18 @@
       margin-right: 10px
       content: ' '
       float: left
-      background-color red
 
     &:nth-child(2)::before
-      background-color: green
+      background-image: url(../../src/img/icone-generiche/icona-foto-fonte-nera.svg)
+      background-size: 80%
+      background-repeat: no-repeat
+      background-position: center
 
     &:nth-child(3)::before
-      background-color: blue
-
+      background-image: url(../../src/img/icone-generiche/icona-docuemnti-nera.svg)
+      background-size: 80%
+      background-repeat: no-repeat
+      background-position: center
 
 /*Single - Footer*/
 
@@ -222,7 +226,10 @@
         margin: 20px auto
         content: ' '
         float: right
-        background-color: red
+        background-image: url(../../src/img/icone-generiche/info-bianco.svg)
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
 
       p
         width: 60%
@@ -365,8 +372,11 @@
 //Single - commenti
 .comments-area
   width: 700px
+  height: auto
   display: block
+  overflow: hidden
   margin: 30px auto
+  padding: 30px 0;
 
   @media (max-width: medium)
     width: 80%
@@ -383,11 +393,13 @@
     border-radius: 50%
 
   .comments-show-hide
-    background-color: red
+    background: none
 
   //contenitore wrapper
   .comments-wrapper
+    padding: 15px
     border: 1px solid colore-loppure
+    background-color: bianco
 
     //Elemento di chiusura dei commenti
     .close_comments
@@ -395,8 +407,18 @@
       height: 25px
       display: block
       float: left
-      background-color: red
       border-radius: 50%
+      background-image: url("../../src/img/icone-generiche/close-nero.svg")
+      background-repeat: no-repeat
+      background-position: center
+      background-size: 60%
+
+      &:visited
+        background-image: url("../../src/img/icone-generiche/close-nero.svg")
+
+      &:hover, &:active, &:focus
+        background-image: url("../../src/img/icone-generiche/close-bianco.svg")
+
 
     //Contenitore commento
     .comment-content
