@@ -4,7 +4,7 @@
 
 	<header class="page-header header-category">
 		<h1>{{ $category }}</h1>
-		<a class="info" href="#">Informazioni</a>
+		<!-- TODO <a class="info" href="#">Informazioni</a> -->
 	</header>
 
 	<section class="page-gray page-category">

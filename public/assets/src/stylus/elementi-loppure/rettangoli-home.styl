@@ -26,9 +26,13 @@
   @media (max-width: mini-tablet)
     width: 45%
 
-  @media (max-width: min)
+  @media (max-width: min-smartphone)
     width: 90%
+    height: 80px
+    margin: 0 auto
+    display: block
     margin-bottom: 5px
+    text-align: center
 
   &::before
     content: ' '
@@ -40,14 +44,19 @@
     padding: 0
     background-position: center
     background-repeat: no-repeat
-    background-size: contain
+    background-size: 100%
+
+    @media (max-width: min-smartphone)
+      height: 80px
+      float: left
 
   a
     display: block
     width: auto
-    clear: both
     float: left
-    margin: 10px 5px
+    clear: both
+    margin: 10px auto
+    margin-top: 30px
     font-size: 18px
     line-height: 19px
     text-align: left
@@ -55,6 +64,16 @@
     font-family: 'Montserrat', sans-serif
     font-weight: 700
     text-decoration: none;
+
+    @media (max-width: min-smartphone)
+      clear: none
+      font-size: 23px
+      line-height: 22px
+
+
+    @media (max-width: min)
+      font-size: 18px
+      line-height: 19px
 
 .home-header .box-rettangolo-4.prossimamente
 
@@ -120,11 +139,11 @@
       background-image: img-radici-nel-tempo
 
 // Elementi-loppure -> Rettagoli home: a parole nostre
-.home-header .parole-nostre
-  background-color: color-parole-nostre
+//.home-header .parole-nostre
+//  background-color: color-parole-nostre
 
-  &::before
-    background-image: img-parole-nostre-bianco
+//  &::before
+//    background-image: img-parole-nostre-bianco
 
 // Elementi-loppure -> Rettagoli home: pausa caffe
 .home-header .pausa-caffe
@@ -168,18 +187,18 @@
     display: none
 
 // Elementi-loppure -> Rettagoli home: parole-nostre Hover
-.home-header div:hover.parole-nostre
-  background-color: bianco
-  box-shadow: ombra-box-parole-nostre
+//.home-header div:hover.parole-nostre
+//  background-color: bianco
+//  box-shadow: ombra-box-parole-nostre
 
-  a::before
-    background-image: img-parole-nostre
+//  a::before
+//    background-image: img-parole-nostre
 
-.home-header div:hover.parole-nostre a
-  color: color-parole-nostre
+//.home-header div:hover.parole-nostre a
+//  color: color-parole-nostre
 
-  &:hover, &:active, &:focus
-    color: color-parole-nostre
+//  &:hover, &:active, &:focus
+//    color: color-parole-nostre
 
 // Elementi-loppure -> Rettagoli home: prossimamente Hover
 .home-header div:hover.prossimamente

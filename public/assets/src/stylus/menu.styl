@@ -10,15 +10,16 @@
     display: none
 
     @media (max-width: 599px)
+      display: block
       padding: 0 0 0 0
       width: 40px
       height: 40px
-      margin-top: 25%
+      margin-top: 5px
       background-color: transparent
       background-position: center
       background-size: 60%
       background-repeat: no-repeat
-      border: 2px solid rgba(0, 0, 0, 0.5)
+      border: 2px solid #000
       border-radius: 50%
       background-image: url("img/svg/icon-menu.svg") /*rivedere*/
 
@@ -32,6 +33,9 @@
       overflow: hidden
       text-align: center
 
+      @media (max-width: 599px)
+        display: none;
+
       li
         display: inline-block
         margin: 0 5px
@@ -39,7 +43,9 @@
         a
           display: inline-block
           padding: 15px 10px
+          text-decoration: none
 
           &:hover, &:focus, &:active
             color: bianco
             background-color: colore-loppure
+            text-decoration: none

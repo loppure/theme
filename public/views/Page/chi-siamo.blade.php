@@ -26,7 +26,7 @@
 		</div>
 
 	</section>
-	<!--<section>
+	<!-- TODO <section>
 		<div class="content-box-attivita">
 			<article class="box-attivita-2">
 				<figure></figure>
