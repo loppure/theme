@@ -76,11 +76,15 @@
       line-height: 19px
 
 .home-header .box-rettangolo-4.prossimamente
+  a
+    @media (max-width: min-smartphone)
+      float: none
 
   &::before
     content: 'prossimamente'
     display: block
     width: auto
+    height: 35px
     float: left
     text-align: center
 

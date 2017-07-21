@@ -1,4 +1,5 @@
 <div class="widget-item widget-altro altre-citta">
+  <h6>Scegli la città</h6>
   <ul>
     <li class="item citta-item pordenone">
       <a href="{{ esc_url( home_url( '/sezione' )) }}/pordenone" title="Carica gli articoli della città di Pordenone">
