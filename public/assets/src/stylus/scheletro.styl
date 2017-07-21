@@ -66,22 +66,24 @@ div, section
 /*Scheletro - Page-gray */
 .page-gray
   gs("fluid")
-  width: 96%
+  width: 100%
+  display: block
+  height: auto
+  overflow: hidden
   clear: both
   margin: 0 auto
   margin-top: -145px
   padding: 0 20px
 
   @media (max-width: max)
-    padding: 40px 10px
+    padding: 0px 10px
 
   @media (max-width: smartphone)
     width: 100%;
     margin-top: -120px
-    padding: 20px 10px
 
-  @media (max-width: min)
-    padding: 20px 5px
+  @media (max-width: smartphone)
+    padding: 0
 
   p
     color: rgba(0, 0, 0, 0.5)
