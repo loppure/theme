@@ -1,4 +1,5 @@
 <div class="widget-item timeline">
+  <h6>Gli ultimi mesi</h6>
   <ul>
     <li class="item archive-item">
       <a href="#" title="Archivio per il mese di maggio">
@@ -22,8 +23,8 @@
     </li>
   </ul>
   <div class="content-button-widget">
-    <a class="button" href="#" title="Pagina archivio">
+    <!-- TODO PAGE ARCHIVIO TUTTI ARTICOLI <a class="button" href="#" title="Pagina archivio">
       Archivio
-    </a>
+    </a> -->
   </div>
 </div>
