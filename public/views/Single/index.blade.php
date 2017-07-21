@@ -41,13 +41,16 @@
             <div class="informativa">
                 <article>
                     <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                    in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                    sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                    mollit anim id est laborum.
+                      I contenuti di questo sito sono realizzati da studenti e giovani
+                      appassionati del proprio territorio. Questo progetto non persegue
+                      nessuno scopo di lucro. Pertanto se sono presenti errori o imprecisioni
+                      vi preghiamo di contattarci: qualsiasi feedback ci è utile per migliorare.
+                      I contenuti testuali sono di proprietà dell'Associazione "L'oppure",
+                      ad eccezione delle citazioni o delle trascrizioni di testi altrui.
+                      Chi intenda utilizzarli per scopi non commerciali può farlo citando
+                      come fonte l'Associazione "L'oppure". Qualora si voglia riprodurli
+                      per scopi commerciali, vi preghiamo di contattarci alla mail
+                      <a href="mailto:info@loppure.it"info@loppure.it</a>.
                     </p>
                 </article>
             </div>

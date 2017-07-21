@@ -56,10 +56,6 @@
 
             {{--{{ dynamic_sidebar('sidebar-sx') }}--}}
         </div>
-        <div id="container"></div>
-        <div class="widget-area" role="complementary">
-            {{--{{ dynamic_sidebar('sidebar-dx') }}--}}
-        </div>
 
         <div class="section-cont-article">
             @if( $posts )
