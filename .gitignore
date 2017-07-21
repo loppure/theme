@@ -12,3 +12,4 @@ public/cache/
 ! public/cache/parsed/.gitkeep
 
 public/assets/dist/
+package-lock.json
