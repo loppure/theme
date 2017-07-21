@@ -17,7 +17,14 @@
 
     <section class="page-gray content-post-citta">
         <div class="widget-sx" role="complementary">
-            @include('Widget/Tax-citta/Timeline/index')
+
+    <section class="page-gray">
+        <div class="widget-sx" role="complementary">
+    <?php
+    // TODO: temporary
+    (new Loppure\Component\Widgets\TimelineWidget())->widget('', '');
+    ?>
+    
             @include('Widget/Tax-citta/Sostienici/index')
 
             {{--{{ dynamic_sidebar('sidebar-sx') }} --}}

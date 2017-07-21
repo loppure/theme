@@ -19,7 +19,11 @@
 
     <section class="page-gray">
         <div class="widget-sx" role="complementary">
-            @include('Widget/Timeline/index')
+    <?php
+    // TODO: temporary
+    (new Loppure\Component\Widgets\TimelineWidget())->widget('', '');
+    ?>
+    
             @include('Widget/Sostienici/index')
 
             {{ dynamic_sidebar('sidebar-sx') }}
