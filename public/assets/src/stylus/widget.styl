@@ -1,27 +1,45 @@
 // Widget - lista
 .widget-item
-  padding: 20px 0 30px
+  padding: 0
+  margin: 10px auto
+  text-align: center
+  border-top: 0.125rem solid colore-loppure
+  border-bottom: 0.125rem solid colore-loppure
+
+  h6
+    margin: 3px auto
+    margin-bottom: 7px
+    padding: 5px 0
+    font-size: 18px
+    text-align: center
+    color: bianco
+    background-color: colore-loppure
 
   ul
-    margin-top: 20px
-    border-top: 0.125rem solid colore-loppure
+    margin: 0 auto
+    padding: 0
 
   // Widget - lista
   .item
-    width: 48%
-    height: 40px
+    width: 125px
+    height: 35px
     overflow: hidden
     display: inline-block
-    margin: 5px auto
-    padding: 5px 2px
+    margin: 2px
+    padding: 3px
     text-align: center
     background-color: bianco
+
+    @media (max-width: min-smartphone)
+      width: 100%
+      height: auto
+      display: block
 
     a
       display: block
       padding: 0
       margin: 0
-      line-height: 40px
+      line-height: 35px
       float: left
       text-decoration: none
       color: colore-loppure
@@ -32,9 +50,9 @@
         font-size: 18px
 
       &::before
-        height: 20px
-        width: 20px
-        margin: 10px
+        height: 15px
+        width: 15px
+        margin: 10px 5px
         margin-right: 10px
         content: " "
         display: block
@@ -96,7 +114,6 @@
   display: block
   height: auto
   overflow: hidden
-  margin: 0 auto
   text-align: center
 
   .archive-item
@@ -117,6 +134,16 @@
     @media (max-width: min-smartphone)
       width: 100%
       text-align: center
+
+
+// widget lista - Città
+.widget-item.citta
+  .item
+    @media (max-width: tablet)
+      width: 100%
+
+    @media (max-width: medium)
+      max-width: 48%
 
 
 // widget lista - Categorie
