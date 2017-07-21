@@ -11,7 +11,7 @@ class TimelineWidget extends AbstractWidget
     {
         $this->class_name = __CLASS__;
         $arg = array('classname' => 'timeline', 'description' => 'Visualizza dei link per gli archivi');
-        parent::__construct('Widget.Timeline.index', 'timeline', 'Timeline', $arg);
+        parent::__construct('Widget.Home.Timeline.index', 'timeline', 'Timeline', $arg);
     }
 
     /**
@@ -46,7 +46,7 @@ class TimelineWidget extends AbstractWidget
         }, $archives);
 
         $this->data['archives'] = $archives;
-        
+
         $this->render();
     }
 
