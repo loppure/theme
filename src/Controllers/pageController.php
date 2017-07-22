@@ -57,7 +57,7 @@ class pageController extends Controller
                 $a = new StdClass();
                 $a->name = $user->data->display_name;
                 $a->bio  = get_the_author_meta('description', $user->ID);
-                $a->url  = get_author_posts_link($user->ID),
+                $a->url  = get_author_posts_link($user->ID);
                 $users[] = $a;
             }
         }
