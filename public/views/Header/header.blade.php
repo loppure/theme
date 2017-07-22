@@ -62,4 +62,24 @@
           <script type="text/javascript" language="javascript" src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script type="text/javascript" language="javascript" src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
       <![endif]>-->
+
+
+      <!-- Opera Speed Dial Favicon -->
+        <link rel="icon" type="image/png" href="/speeddial-160px.png" />
+
+      <!-- Standard Favicon -->
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+      <!-- For iPhone 4 Retina display: -->
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png">
+
+      <!-- For iPad: -->
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png">
+
+      <!-- For iPhone: -->
+        <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-57x57-precomposed.png">
+        <link rel="icon" type="image/x-icon" href="http://example.com/favicon.ico" />
+        <link rel="icon" type="image/png" href="http://example.com/favicon.png" />
+        <link rel="icon" type="image/gif" href="http://example.com/favicon.gif" />
+
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|Merriweather:400,400i,700,700i" rel="stylesheet">

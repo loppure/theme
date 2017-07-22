@@ -65,12 +65,12 @@
             @if( $posts )
                 @include('shared.general_loop', ['show_city' => true])
 
-                {{ next_posts_link() }}
             @else
                 @include('shared.empty')
             @endif
 
             <button class="load-more" id="load-more">Carica altro</button>
+
             <div class="link_to_next_page" hidden>
                 <?php next_posts_link(); ?>
             </div>

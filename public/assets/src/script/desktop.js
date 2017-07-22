@@ -14,7 +14,7 @@ import $ from 'jquery';
 document.addEventListener('DOMContentLoaded', () => {
     // TODO: remove!
     window.debug_card          = [];
-    window.max_length          = 30;
+    window.max_length          = 500;
     window.tolerance           = 10;
     window.comments_tolerance  = 1;
     window.ax_length           = 30;

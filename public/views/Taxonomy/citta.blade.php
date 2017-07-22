@@ -17,15 +17,10 @@
 
     <section class="page-gray content-post-citta">
         <div class="widget-sx" role="complementary">
-
-    <section class="page-gray">
-        <div class="widget-sx" role="complementary">
     <?php
     // TODO: temporary
     (new Loppure\Component\Widgets\TimelineWidget())->widget('', '');
     ?>
-    
-            @include('Widget/Tax-citta/Sostienici/index')
 
             {{--{{ dynamic_sidebar('sidebar-sx') }} --}}
         </div>
@@ -34,10 +29,16 @@
           @if( $posts )
               @include('shared.general_loop')
 
-              {{ next_posts_link() }}
           @else
               @include('shared.empty')
           @endif
+
+          <button class="load-more" id="load-more">Carica altro</button>
+
+          <div class="link_to_next_page" hidden>
+              <?php next_posts_link(); ?>
+          </div>
+
         </div>
 
         <div class="widget-dx" role="complementary">
@@ -48,7 +49,7 @@
         </div>
     </section>
 
-    <section class="altre-citta">
-        @include('Widget/Tax-citta/Citta/index')
-    </section>
+    <!-- TODO <section class="altre-citta">
+        {{--@include('Widget/Tax-citta/Citta/index')--}}
+    </section> -->
 @endsection

@@ -21,8 +21,8 @@
 
                         <div class="content-fonti">
                             <h6>Fonti:</h6>
-                            <span>Foto presa da Wikipedia</span>
-                            <span>Informazioni presa da Wikipedia, sito 1, sito 2 e sito 3</span>
+                            <span>Foto:</span>
+                            <span>Informazioni presa da:</span>
                         </div>
                     </div> <!-- .text -->
                 </div> <!-- .content-text -->
