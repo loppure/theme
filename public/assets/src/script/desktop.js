@@ -6,7 +6,7 @@
 //     load.load();
 // });
 
-import Card from './old-theme/Card';
+import More from './old-theme/LoadMore';
 import love from './old-theme/Love';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -20,4 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // initialize theme
     // start loving around
     love();
+
+    // load more
+    More();
 });
