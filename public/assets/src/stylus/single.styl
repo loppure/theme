@@ -1,4 +1,9 @@
 /*Single - Scheletro */
+.single .site-content
+  @media (max-width: mini-tablet)
+    padding-top: 0
+
+
 .single-content-wrapper
   gs("fluid")
 
@@ -29,7 +34,7 @@
 
   @media (max-width: smartphone)
     width: 80%
-    margin-bottom: 30px
+    margin: 30px auto
 
 .sidebar-single-mobile
   display: none
@@ -57,6 +62,7 @@
 
   @media (max-width: mini-tablet)
     width: 100%
+    padding-top: 0
     float: none
 
   .content-title
@@ -64,7 +70,14 @@
     height: auto
     overflow: hidden
     float: right
+    padding: 10px 0
     background-color: colore-loppure
+
+    @media (max-width: mini-tablet)
+      padding-top: 50px
+
+    @media (max-width: min-smartphone)
+      padding-top: 35px
 
     &::before
       width: 50px
@@ -79,20 +92,26 @@
 
       @media (max-width: min-smartphone)
         float: none
-        margin: 5px auto
+        margin: 0 auto
 
     h1
       min-height: 50px
-      max-width: 85%
+      max-width: 80%
       margin 15px 10px 15px 0
       padding-left: 15px
       float: left
       font-size: 25px
+      line-height: 26px
       color: bianco
       font-weight: 400
       border-left: 2px solid bianco
 
+      @media (max-width: medium)
+        max-width: 75%
+
       @media (max-width: min-smartphone)
+        width: 95%
+        max-width: 90%
         height: auto
         margin: 0 auto
         float: none
@@ -293,12 +312,27 @@
       border: 2px solid colore-loppure
 
     h4
-      margin: 20px auto
-      display: block
+      margin: 5px auto
       text-align: center
+      font-size: 18px
+      font-weight: 700
+
+      a
+        text-decoration: none
 
     .author-bio
-      padding: 20px 10px
+      width: 500px
+      height: auto
+      display: block
+      margin: 15px auto
+      text-align: justify
+
+      @media (max-width: smartphone)
+        width: 90%
+        text-align: left
+
+      @media (max-width: min)
+        width: 100%
 
 
 /*Single - colori e icone*/
@@ -322,7 +356,7 @@
 
 
 /*Single - colori-icone: voli sul territorio*/
-.category-voli-sul-terriotorio
+.category-voli-sul-territorio
   // Colore content-title
   .content-title
     background-color: color-voli-sul-territorio
@@ -364,7 +398,7 @@
 
     //Icona content title
     &::before
-      background-image: img-pausa-caffe
+      background-image: img-pausa-caffe-bianco
 
   //Colore content-text
   .content-text
@@ -375,7 +409,7 @@
       border-color: color-pausa-caffe
 
 /*Single - colori-icone: pensieri tra le pagine*/
-.category-pausa-caffe
+.category-pensieri-tra-le-pagine
   //Colore content-title
   .content-title
     background-color: color-pensieri-tra-le-pagine

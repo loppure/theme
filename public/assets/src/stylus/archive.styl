@@ -9,7 +9,8 @@ header.header-category
   h1
     text-align: center
     color: bianco
-    font-size: 20px
+    font-size: 30px
+    font-weight: 700
     margin: 0 auto
 
     &::before
@@ -73,7 +74,7 @@ header.header-category
       &::before
         background-color: color-gusti-della-terra
 
-.category-voli-sul-terriotorio header.header-category
+.category-voli-sul-territorio header.header-category
   background-color: color-voli-sul-territorio
 
   //Icona header categoria
@@ -174,9 +175,38 @@ header.header-category
 
   h1
     text-align: center
+    font-size: 18px
+    font-weight: 700
+
+    a
+      text-decoration: none
+
+  .author-bio
+    width: 720px
+    height: auto
+    display: block
+    margin: 15px auto
+    text-align: justify
+
+    @media (max-width: medium)
+      width: 80%
+      text-align: left
+
+    @media (max-width: smartphone)
+      width: 100%
+
 
 .section-author
   margin: 0 auto
 
-.post-author
-  col(12)
+  .section-cont-article
+    width: 100%
+    height: auto
+    hidden: overflow
+    display: block
+    margin: 20px auto
+    text-align: center
+
+    article
+      display: inline-block
+      margin: 5px

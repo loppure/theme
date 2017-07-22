@@ -51,7 +51,7 @@
   </ul>
 </div>
 <div class="col-footer">
-  <div class="list-social">
+  <div class="list-social-bianchi">
     <h6>@LoppureIT</h6>
     <span>Cercaci sui social tramite qusto nickname</span>
     <ul>

@@ -10,14 +10,15 @@
 	<section class="content-presentazione">
 
 		<div class="presentazione">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-				sed do eiusmod tempor incididunt ut labore et dolore magna
-				aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-				ullamco laboris nisi ut aliquip ex ea commodo consequat.
-				Duis aute irure dolor in reprehenderit in voluptate velit
-				esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-				occaecat cupidatat non proident, sunt in culpa qui officia
-				deserunt mollit anim id est laborum.
+			<p>
+				L’oppure è il nuovo modo di vivere il territorio, un progetto giovane
+				e dinamico che si pone l’obiettivo di raccontare il patrimonio culturale,
+				storico, artistico ed enogastronomico delle nostre terre.
+				L’arte, il cinema, la musica e la letteratura sono alcuni dei protagonisti
+				di questo racconto, assieme ai festival e alle manifestazioni che animano
+				le città in cui L’oppure è presente.
+				Operiamo con passione e creatività, cercando sempre di fornire contenuti
+				di qualità con uno stile fresco e innovativo.
 			</p>
 		</div>
 

@@ -148,13 +148,33 @@
 
 // widget lista - Categorie
 .list-categorie
+  display: block
+  margin: 0 auto
+  text-align:center
+
   .item
     width: auto
-    height: 50px;
+    height: 40px;
     display: block
-    padding: 7px
+    padding: 5px
     border: 5px solid colore-loppure
     background-color: colore-loppure
+
+    @media (max-width: medium)
+      height: 35px
+
+    @media (max-width: mini-tablet)
+      width: 150px
+      height: 100px
+      overflow: hidden
+      display: inline-block
+      margin: 5px
+
+    @media (max-width: min-smartphone)
+      width: 135px
+
+    @media (max-width: min)
+      width: 100%
 
     &:after
       display: none
@@ -163,25 +183,49 @@
       margin: 5px auto
       padding: 0
       float: left
-      font-size: 18px
-      line-height: 40px
+      font-size: 20px
+      line-height: 35px
       color: bianco
       text-decoration: none
-      
+
+      @media (max-width: medium)
+        line-height: 30px
+        font-size: 17px
+        letter-spacing: -1px
+
+      @media (max-width: mini-tablet)
+        float: none
+        text-align: center
+        letter-spacing: 0
+        font-size: 18px
+        line-height: 20px
+
 
       &::before
-        width: 40px
-        height: 40px
+        width: 35px
+        height: 35px
         content: ''
         display: block
         margin: 0 auto
-        margin-right: 20px
+        margin-right: 10px
         float: left
         border-radius: 0
         background: none
         background-position: center
         background-size: contain
         background-repeat: no-repeat
+
+        @media (max-width: medium)
+          width: 30px
+          height: 30px
+          margin-right: 5px
+
+        @media (max-width: mini-tablet)
+          width: 45px
+          height: 45px
+          display: block
+          margin: 5px auto
+          float: none
 
     &:hover
       background-color: bianco
