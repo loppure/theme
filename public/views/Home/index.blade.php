@@ -26,7 +26,7 @@
               </a>
             </li>
             <li class="box-rettangolo-4 pausa-caffe">
-              <a href="{{ esc_url( home_url( '/rubriche' )) }}/gusti-della-terra">
+              <a href="{{ esc_url( home_url( '/rubriche' )) }}/pausa-caffe">
                 Pausa caffè
               </a>
             </li>

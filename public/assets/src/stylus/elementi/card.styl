@@ -10,18 +10,27 @@
   background-color: bianco
   border: 0.08rem solid grigio-intermedio
   border-bottom: 7px solid colore-loppure
+  text-align: left
+
+  @media (max-width: min-smartphone)
+    max-width: 100%
+    width: 100%
 
   a, a:visited, a:hover, a:focus, a:active
     color: colore-loppure
     text-decoration: none
+    text-align: left
 
   p
     padding: 0
-    font-size: 0.875rem
+    font-size: 13.7px
+    line-height: 16px
+    text-align: left
 
   h3
     margin-bottom: 5px
-    font-size: 1.188rem
+    font-size: 18px
+    text-align: left
 
 //Elementi -> card: header
   header
@@ -46,8 +55,15 @@
       margin: 7px
 
   .text-card
-    height: 120px
+    height: 140px
+    overflow: hidden
     padding: 10px 20px
+    margin-bottom: 10px
+    font-size: 13.7px
+    line-height: 16px
+
+    @media (max-width: mini-tablet)
+      height: auto
 
   .img-post
     height: 210px
@@ -211,7 +227,7 @@
     background-image: img-gusti-della-terra
 
 // Card - Voli sul territorio
-.card.category-voli-sul-terriotorio
+.card.category-voli-sul-territorio
   border-color: color-voli-sul-territorio
 
   .img-category-post

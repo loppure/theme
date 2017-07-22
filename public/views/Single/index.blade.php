@@ -40,18 +40,17 @@
         <footer class="footer-single">
             <div class="informativa">
                 <article>
-                    <p>
-                      I contenuti di questo sito sono realizzati da studenti e giovani
-                      appassionati del proprio territorio. Questo progetto non persegue
-                      nessuno scopo di lucro. Pertanto se sono presenti errori o imprecisioni
-                      vi preghiamo di contattarci: qualsiasi feedback ci è utile per migliorare.
-                      I contenuti testuali sono di proprietà dell'Associazione "L'oppure",
-                      ad eccezione delle citazioni o delle trascrizioni di testi altrui.
-                      Chi intenda utilizzarli per scopi non commerciali può farlo citando
-                      come fonte l'Associazione "L'oppure". Qualora si voglia riprodurli
-                      per scopi commerciali, vi preghiamo di contattarci alla mail
-                      <a href="mailto:info@loppure.it"info@loppure.it</a>.
-                    </p>
+                  <p>
+            				I contenuti di questo sito sono realizzati da studenti e giovani
+            				appassionati del proprio territorio. Questo progetto non persegue
+            				nessuno scopo di lucro. Pertanto se sono presenti errori o imprecisioni
+            				vi preghiamo di contattarci: qualsiasi feedback ci è utile per migliorare.
+            				I contenuti testuali sono di proprietà dell'Associazione "L'oppure", ad eccezione
+            				delle citazioni o delle trascrizioni di testi altrui. Chi intenda utilizzarli per
+            				scopi non commerciali può farlo citando come fonte l'Associazione "L'oppure".
+            				Qualora si voglia riprodurli per scopi commerciali, vi preghiamo di contattarci
+            				alla mail info@loppure.it.
+            			</p>
                 </article>
             </div>
             <div class="content-author-single">
