@@ -9,6 +9,8 @@
 import More from './old-theme/LoadMore';
 import love from './old-theme/Love';
 
+import $ from 'jquery';
+
 document.addEventListener('DOMContentLoaded', () => {
     // TODO: remove!
     window.debug_card          = [];
@@ -23,4 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // load more
     More();
+
+    $('button.menu-toggle').on('click', e => {
+        // TODO togglare la classe
+    });
 });

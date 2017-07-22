@@ -27,7 +27,7 @@ class Controller extends \Theine\Controller\Controller
         if (is_single() || is_author()) {
             $this->data['author'] = new StdClass();
             $this->data['author']->name = get_the_author_meta('display_name');
-            $this->data['author']->thumb = get_avatar(get_the_author_meta('user_email'), $size=96);
+            $this->data['author']->thumb = get_wp_user_avatar(get_the_author_meta('ID'), 96);
             $this->data['author']->bio = get_the_author_meta('description');
         }
     }
