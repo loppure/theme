@@ -99,6 +99,9 @@
   &:last-child
     border: none
 
+  @media (max-width: tablet)
+    height: 350px
+
   @media (max-width: medium)
     width: 40%
     height: 300px
@@ -108,15 +111,14 @@
     border: none
 
     &:nth-child(odd)
-      text-align: right
       padding-right: 2rem
       border-right: .12rem solid bianco
 
     &:nth-child(even)
-      text-align: left
       padding-left: 2rem
 
-    &:last-child
+    &:nth-child(3)
+      margin-top: 15px
       border: none
       border-top: .12rem solid bianco
       text-align: center
@@ -126,7 +128,7 @@
     height: auto
     display: block
     margin: 0 auto
-    padding: 1.5rem 1rem
+    padding: 0
     float: none
     clear: none
     text-align: center
@@ -136,12 +138,12 @@
     &:nth-child(odd)
       text-align: center
       clear: none
-      padding: 1.5rem 1rem
+      padding: 0
       border-right: none
 
     &:nth-child(even)
       text-align: center
-      padding: 1.5rem 1rem
+      padding: 0
 
-    &:last-child
+    &:nth-child(3)
       border: none

@@ -147,33 +147,49 @@
 .page-template-chi-siamo
 
   .presentazione
-    width: 500px
+    width: 600px
+    height: auto
+    overflow: hidden
     display: block
-    margin 0 auto
+    margin 20px auto
+    padding: 50px 30px
+    background-color: bianco
+    border-top: 1px solid colore-loppure
+    border-bottom: 1px solid colore-loppure
 
-    @media (max-width: smartphone)
-      width: 100%
+    p
+      color: #000
+      font-size: 16px
+
+
+    @media (max-width: mini-tablet)
+      width: 95%
+      padding: 20px 10px
+      border: none
+      text-align: left
+
 
   .payoff
     width: 600px
     height: auto
     overflow: hidden
     display: block
-    margin 0 auto
-    background-color: grigio-intermedio
+    margin 10px auto
+    padding: 50px 30px
+    background-color: bianco
     text-align: center
+    border-top: 1px solid colore-loppure
+    border-bottom: 1px solid colore-loppure
 
-    @media (max-width: medium)
-      width: 80%
-
-    @media (max-width: smartphone)
+    @media (max-width: mini-tablet)
       width: 90%
-
-    @media (max-width: min)
-      width: 100%
+      padding: 20px 10px
 
     span
-      font-size: 40px;
+      font-size: 40px
+      line-height: 40px
+      font-weight: 700
+      color: colore-loppure
 
   // Page - chi siamo: box
 
@@ -305,6 +321,31 @@
   display: block
   overflow: hidden
   margin: 20px auto
+  padding: 20px
+  border: 1px solid colore-loppure
+  background: bianco
+
+  @media (max-width: medium)
+    width: 80%
+    padding: 10px
+
+  @media (max-width: min-smartphone)
+    width: 90%
+    padding: 10px
+    border: none
+    border-top: 1px solid colore-loppure
+    border-bottom: 1px solid colore-loppure
+
+  @media (max-width: min)
+    width: 100%
+    padding: 10px 0
+    border: none
+
+  h3
+    margin-bottom: 5px
+    text-align: center
+    font-size: 18px
+
 
 
 /* Page - porta città */

@@ -15,7 +15,9 @@
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 			</p>
-			<a class="button">Approfondisci</a>
+			<div class="content-button">
+				<a class="button">Approfondisci</a>
+			</div>
 		</article>
 
 		<article class="card-informativa">

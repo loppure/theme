@@ -23,7 +23,7 @@
 		</div>
 
 		<div class="payoff">
-			<span>Uno sgurardo sulla tua città, ovunque ti trovi</span>
+			<span>"Uno sgurardo sulla tua città, ovunque ti trovi."</span>
 		</div>
 
 	</section>
@@ -50,7 +50,7 @@
 		</div>
 	</section> -->
 
-	<section class="content-box-slim">
+<!-- TODO	<section class="content-box-slim">
 		<div class="box-slim associazione">
 			<a href="{{the_permalink()}}/associazione"> Associazione</a>
 		</div>
@@ -58,7 +58,7 @@
 		<div class="box-slim informativa">
 			<a href="{{the_permalink()}}/informativa"> Informative</a>
 		</div>
-	</section>
+	</section> -->
 
 
 </div>
