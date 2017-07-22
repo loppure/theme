@@ -110,6 +110,7 @@ const Card = (function() {
             return self.raw_comments = data;
         });
         console.log("commentWrapper: ", self.commentWrapper);
+
         if (self.commentWrapper) {
             return self.comment_system = new CommentSystem(self.commentWrapper);
         } else {

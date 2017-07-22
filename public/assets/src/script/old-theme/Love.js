@@ -1,8 +1,11 @@
-import Card       from './Card';
-import helpers    from './helpers';
+import Card          from './Card';
+import CommentSystem from './CommentSystem.js';
+import helpers       from './helpers';
+import services      from './services';
+import filters       from './filters';
 
-import jQuery     from 'jquery';
-import Handlebars from 'handlebars';
+import jQuery        from 'jquery';
+import Handlebars    from 'handlebars';
 
 const ready_to_love = function($) {
     var everywhere;
