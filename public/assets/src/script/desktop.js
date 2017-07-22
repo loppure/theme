@@ -7,6 +7,7 @@
 // });
 
 import Card from './old-theme/Card';
+import love from './old-theme/Love';
 
 document.addEventListener('DOMContentLoaded', () => {
     // TODO: remove!
@@ -17,5 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.ax_length           = 30;
 
     // initialize theme
-    Card.loop();
+    // start loving around
+    love();
 });
