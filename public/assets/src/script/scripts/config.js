@@ -1,6 +1,6 @@
 export const URL = {
     //  URL base
-    base: "http://localhost/loppure/",
+    base: "http://192.168.0.2/",
     //  WP JSON
     wp_json: function () {
         return  this.base + "wp-json/wp/v2/";

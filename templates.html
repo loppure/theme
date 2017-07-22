@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html><head></head><body>
+
+<script type="text/template" id="images-template">
+  {{#each images }}
+    <div class="images" data-id="{{@index}}">
+      {{#if this.url_low}}
+        <img class="gallery-item" src="{{this.url_low}}" alt="{{this.caption}}">
+      {{else if this.url_full}}
+        <img class="gallery-item" src="{{this.url_full}}" alt="{{this.caption}}">
+      {{/if}}
+    </div>
+  {{/each}}
+</script>
+
+<script type="text/template" id="tweets-template">
+  {{#each tweets }}
+    <div class="tweets" data-id="{{@index}}">
+      <p>{{this.caption}}</p>
+      {{#if this.url_full}}
+        <img class="gallery-item" src="{{this.url_full}}" alt="{{this.caption}}">
+      {{/if}}
+    </div>
+  {{/each}}
+</script>
+
+<script type="text/template" id="slider-template">
+  <div class="seq" id="overlay">
+    <span class="x"></span>
+    <ul class="seq-canvas">
+      <li>
+        {{#if post.url_full}}
+          <div class="image">
+            <!-- <span class="icon seq-prev"></span> -->
+            <div class="pseudo-image" style="background-image: url({{ post.url_full }})"></div>
+            <!-- <span class="icon seq-next"></span> -->
+          </div>
+        {{else if post.url_low}}
+          <div class="image">
+            <!-- <span class="icon seq-prev"></span> -->
+            <div class="pseudo-image" style="background-image: {{ post.url_low }}"></div>
+            <!-- <span class="icon seq-next"></span> -->
+          </div>
+        {{/if}}
+        <article class="body" data-id="{{post.id}}">
+          <header>
+            <h2>{{{ post.title }}}</h2>
+            <time>{{post.time}}</time>
+          </header>
+          <section>
+            <p>{{ post.caption }}</p> <!-- Testo del "post" -->
+
+            <!-- Se ci sono delle fonti le visualizziamo -->
+            <!-- aaltrimenti non stampiamo nulla -->
+            {{#if post.fonti}}
+              <p><a href="{{post.fonti.link}}">{{post.fonti.testo}}</a></p>
+            {{/if}}
+
+            <!-- E infine il link all'archivio dell'autore -->
+            <div class="author">
+            <a href="{{ post.author.link }}">
+            {{{post.author.image}}}
+            <p>{{ post.author.name }}</p>
+            </a>
+          </div>
+          </section>
+          <footer></footer>
+        </article>
+      </li>
+    </ul>
+  </div>
+</script>
+
+<script type="text/template" id="comments-template">
+  {{#each comments}}
+    <article data-comment-id="{{this.comment_ID}}" id="comment-{{ this.comment_ID }}"
+    {{#if this.sons}}
+      class="father"
+    {{/if}}>
+
+    	<header class="vcard author entry-title">
+    		<h3>{{this.comment_author}}</h3>
+    	</header>
+
+    	<section class="comment-body">
+    		<p>{{this.comment_content}}</p>
+    	</section>
+
+      {{#if this.sons}}
+        <section class="sons">
+          {{#each this.sons}}
+            <article data-comment-id="{{this.comment_ID}}" id="comment-{{ this.comment_ID }}" class="son">
+              <header class="vcard author entry-title">
+            		<h3>{{this.comment_author}}</h3>
+            	</header>
+
+            	<section class="comment-body">
+            		<p>{{this.comment_content}}</p>
+            	</section>
+            </article>
+          {{/each}}
+        </section>
+      {{/if}}
+
+      <div class="rispondi">
+        <button class="reply-anchor">rispondi</button>
+      </div>
+    </article>
+  {{/each}}
+</script>
+
+</body></html>

@@ -12,6 +12,8 @@ class pageController extends Controller
         $template_name = $this->getTemplateSlug();
         if ($template_name == '') {
             parent::__construct('Page:index');
+            $this->data['content'] = get_the_content();
+            $this->data['title']   = get_the_title();
         } else {
           parent::__construct('Page:'. $template_name);
         }
@@ -27,8 +29,11 @@ class pageController extends Controller
 
     private function getTemplateSlug() {
         $template_name = get_page_template_slug();
-        preg_match('/.*\/(.*)\.php/', $template_name, $template_name);
+        if ($template_name == '') {
+            return '';
+        }
 
+        preg_match('/.*\/(.*)\.php/', $template_name, $template_name);
         return $template_name[1];
     }
 

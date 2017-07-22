@@ -31,17 +31,18 @@
     "grunt-notify": "^0.4.5"
   },
   "dependencies": {
-    "kouto-swiss": "^0.14.0",
-    "react": "^15.6.1",
-    "react-collapse": "^4.0.2",
-    "react-height": "^2.1.1",
-    "react-html-parser": "^1.0.3",
-    "react-motion": "^0.4.8",
     "bean": "github:fat/bean",
     "component-ajax": "github:forbeslindesay/ajax",
     "es6-promise": "^3.3.1",
+    "handlebars": "^4.0.10",
     "jquery": "^2.2.4",
+    "kouto-swiss": "^0.14.0",
+    "react": "^15.6.1",
+    "react-collapse": "^4.0.2",
     "react-dom": "^15.6.1",
+    "react-height": "^2.1.1",
+    "react-html-parser": "^1.0.3",
+    "react-motion": "^0.4.8",
     "react-router": "^2.8.1"
   }
 }
