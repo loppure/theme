@@ -29,18 +29,25 @@ class TimelineWidget extends AbstractWidget
         $this->data['title'] = apply_filters('widget_title', $title);
 
         // the links
-        $slug = get_query_var('citta');
         $archives = array(
             $this->getMonth(0),
             $this->getMonth(1),
             $this->getMonth(2)
         );
 
-        $archives = array_map(function($item) use ($slug) {
+        if (is_tax('citta')) {
+            $suffix = '?=citta='. get_query_var('citta');
+        } else if (is_category()) {
+            $suffix = '?category'. get_query_var('cat');
+        } else {
+            $suffix = '';
+        }
+
+        $archives = array_map(function($item) use ($suffix) {
             $foo = new \StdClass();
 
             $foo->month = $item[2];
-            $foo->url = get_month_link($item[0], $item[1]) . '?citta=' . $slug;
+            $foo->url = get_month_link($item[0], $item[1]) . $suffix;
             
             return $foo;
         }, $archives);
