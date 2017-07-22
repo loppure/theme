@@ -69,6 +69,12 @@
             @else
                 @include('shared.empty')
             @endif
+
+            <button class="load-more" id="load-more">Carica altro</button>
+            <div class="link_to_next_page" hidden>
+                <?php next_posts_link(); ?>
+            </div>
+
         </div>
 
         <div class="widget-dx" role="complementary">
