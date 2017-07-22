@@ -1,7 +1,6 @@
 {{--
   Sarebbe da rivere questa parte poichè mettere una lista di `article' dentro un
   `footer' non è il massimo della semantica. Cambiarlo con una lista?
-  --}}
 
 @foreach( $post->comments as $comment )
 
@@ -34,3 +33,5 @@
     </article>
 
 @endforeach
+
+  --}}

@@ -39,7 +39,7 @@ $theme['last-article'] = new Loppure\Component\Widgets\LastArticle();
 $theme['custom-fields'] = new Loppure\Component\PostFields();
 
 // love
-$theme['love'] = new Loppure\API\Love();
+// $theme['love'] = new Loppure\API\Love();
 
 // città
 $theme['citta'] = new TaxCitta();
@@ -47,3 +47,7 @@ $theme['citta'] = new TaxCitta();
 $theme['image_type'] = new Loppure\Component\ImageType();
 
 $theme->run(); // lancia il tema ^^
+
+// old theme shit:
+require get_template_directory() . '/old-theme/custom-comment.php';
+require get_template_directory() . '/old-theme/custom-stat.php';

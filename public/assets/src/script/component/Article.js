@@ -33,11 +33,18 @@ export default class Article extends React.Component {
         this.sendLike = this.sendLike.bind(this);
         this.switch_footer = this.switch_footer.bind(this);
     }
+
+    redirectOnClick() {
+        console.log('clicked')
+    }
+
     render() {
         return (
             <article
-            className={"post card type-post format-standard hentry category-" + this.state.category_slug}
-            data-id={this.props.card.id} >
+              className={"post card type-post format-standard hentry category-" + this.state.category_slug}
+              data-id={this.props.card.id}
+              onClick=this.redirectOnClick.bind(this)
+              >
                 <Header
                 category_name={this.state.category_name}
                 category_link={this.state.category_link}
@@ -93,15 +100,16 @@ export default class Article extends React.Component {
             });
         }
 
-        // FIND CITY DATE BY THE CITIES LIST
-        if (nextProps.city.length > 0) {
-            let obj = nextProps.city.find( n => n.id == this.props.card.citta[0] );
-            this.setState({
-                city_name: obj.name,
-                city_slug: obj.slug,
-                city_link: obj.link,
-            });
-        }
+        // // FIND CITY DATE BY THE CITIES LIST
+        // if (nextProps.city.length > 0) {
+        //     let obj = nextProps.city.find( n => n.id == this.props.card.citta[0] );
+        //     console.log(nextProps.city, this.props.card.citta);
+        //     this.setState({
+        //         city_name: obj.name,
+        //         city_slug: obj.slug,
+        //         city_link: obj.link,
+        //     });
+        // }
 
         // FIND MEDIA DATE BY THE MEDIA LIST
         if (nextProps.media.length > 0) {

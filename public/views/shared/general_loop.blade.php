@@ -2,8 +2,9 @@
 
     <article class="{{ $post->css_class }}" data-id="{{ $post->id }}"
         @if( $post->source )
-            data-source="{{ json_encode($post->source) }}"
+            data-source='{{ json_encode(json_encode($post->source)) }}'
         @endif
+    data-url="{{ $post->permalink }}"
     >
 
         <header>
@@ -30,7 +31,7 @@
 
         <footer class="card-footer">
           <button class="button-like-post" data-love="{{ $post->love }}">{{ $post->love }} &#9829;</button>
-          <button>Commenta</button>
+          <button class="button-comments">Commenta</button>
             @include('shared.comment-form')
         </footer>
 

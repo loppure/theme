@@ -60,6 +60,9 @@
                 window.logged = {{ is_user_logged_in() ? 'true' : 'false' }};
             </script>
 
+            <input type="hidden" name="loppure-templates-uri" id="loppure-templates-uri" value="{{ get_template_directory_uri() }}/templates.html">
+            <input type="hidden" name="loppure-ajax-uri" id="loppure-ajax-uri" value="{{ admin_url('admin-ajax.php') }}">
+
             {{ wp_footer() }}
     </body>
 </html>
