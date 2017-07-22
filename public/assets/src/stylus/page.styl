@@ -120,18 +120,27 @@
 /* Page - Standard */
 
 .page-standard .header-page
-  height: 100px
+  height: 200px
   overflow: hidden
   padding: 0
   background-color: colore-loppure
   color: bianco
 
+  @media (max-width: smartphone)
+    height: 150px
+
   h1
     padding: 0
     margin: 0;
-    margin-top: 70px
+    margin-top: 150px
+    margin-left: 10px
     color: bianco
-    font-size: 30px
+    font-size: 40px
+    font-weight: 700
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.46)
+
+    @media (max-width: smartphone)
+      margin-top: 100px
 
 /* Page - Chi siamo*/
 
@@ -174,60 +183,73 @@
 
 .page-template-contatti
 
-  .content-contanti
+  .content-contatti
     display: block
     text-align: center
 
   .card-contatti
-    width: auto
+    width: 300px
     height: 150px
+    display: inline-block
     overflow: hidden
-    padding: 20px 10px
+    padding: 10px
+    margin: 10px
     text-align: center
     border: 1px solid colore-loppure
 
-    @media (max-width: medium)
-      height: 180px
+    &::before
+      width: 50px
+      height: 40px
+      content:' '
+      display: block
+      margin: 5px auto
+      float: none
+      background-image: ico-contatti-mail
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: center
 
-    @media (max-width: smartphone)
+    @media (max-width: min-smartphone)
       height: auto
+      display: block
+      margin: 10px auto
+
+    @media (max-width: min)
+      width: 90%
+      max-width: 90%
 
 
     h3
+      margin: 0 auto
       font-size: 18px
       font-weight: 400
-      text-align: left
-
-      &::before
-        width: 60px
-        height: 70px
-        content:' '
-        display: block
-        margin-right: 20px
-        float: left
-        background-image: ico-contatti-mail
-        background-repeat: no-repeat
-        background-size: contain
-        background-position: center
+      text-align: center
 
 
     span
-      height: 50px
+      height: auto
+      overflow: hidden
       display: block
+      margin: 0 auto
       font-size: 15px
-      text-align: left
+      text-align: center
       color: colore-loppure
 
     a
+      display: inline-block
+      margin-top: 10px
       text-align: center
       color: #000
       border-bottom: 2px solid colore-loppure
+      text-decoration: none
 
   .content-local
     width: 500px
     display: block
     margin: 0 auto
+    padding: 15px 0;
     border-top: 2px solid colore-loppure
+    border-bottom: 2px solid colore-loppure
     text-align: center
 
     @media (max-width: mini-tablet)
@@ -249,13 +271,19 @@
         margin-right: 10px
         float: left
         background-image: ico-local
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center
+
 
   .content-social
     width: 500px
     display: block
-    margin: 0 auto
-    border-top: 2px solid colore-loppure
+    margin: 20px auto
     text-align: center
+
+    @media (max-width: smartphone)
+      width: 90%
 
     h3
       text-align: center
@@ -268,6 +296,16 @@
 
       li
         display: inline-block
+
+/* Page - informativa */
+
+.card-informativa
+  width: 720px
+  height: auto
+  display: block
+  overflow: hidden
+  margin: 20px auto
+
 
 /* Page - porta città */
 .page-template-porta-citta

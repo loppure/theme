@@ -9,7 +9,7 @@
 
 	<section class="content-page-text">
 
-		<article>
+		<article class="card-informativa">
 			<h3>Informativa Cookie</h3>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -18,7 +18,7 @@
 			<a class="button">Approfondisci</a>
 		</article>
 
-		<article>
+		<article class="card-informativa">
 			<h3>Informativa sul uso dei contenti prodotti da L'oppure</h3>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -26,7 +26,7 @@
 			</p>
 		</article>
 
-		<article>
+		<article class="card-informativa">
 			<h3>Informativa sul uso del contenuto di terzi</h3>
 			<p>
 				I contenuti di questo sito sono realizzati da studenti e giovani

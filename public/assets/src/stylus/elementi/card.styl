@@ -14,7 +14,8 @@
 
   @media (max-width: min-smartphone)
     max-width: 100%
-    width: 100%
+    width: auto
+
 
   a, a:visited, a:hover, a:focus, a:active
     color: colore-loppure
@@ -39,9 +40,24 @@
     font-size: 0.9rem
     color: colore-loppure
 
+    @media (max-width: min-smartphone)
+      height: auto
+      overflow: hidden
+      padding: 15px
+      padding-bottom 0
+
     .post-categories
       display: inline-block
       margin: 7px
+      padding: 0
+
+      @media (max-width: min-smartphone)
+        display: block
+        width: 80%
+        float: left
+        margin: 0 5px
+        margin-top: 0
+
 
     .img-category-post
       width: 40px
@@ -53,6 +69,14 @@
     .text-name-citta
       float: right
       margin: 7px
+      padding: 0
+
+      @media (max-width: min-smartphone)
+        display: block
+        width: 80%
+        float: left
+        margin: 0 5px
+        margin-top: 0
 
   .text-card
     height: 140px
@@ -64,6 +88,9 @@
 
     @media (max-width: mini-tablet)
       height: auto
+
+    @media (max-width: min-smartphone)
+      padding: 15px
 
   .img-post
     height: 210px

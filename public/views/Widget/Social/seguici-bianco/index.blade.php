@@ -1,4 +1,4 @@
-<div class="widget-segui-social">
+<div class="list-social-bianchi">
   <h3>Seguici</h3>
   <span>@LoppureIT</span>
   <ul>

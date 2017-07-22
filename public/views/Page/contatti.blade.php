@@ -6,7 +6,7 @@
 	<header class="header-page">
 		<h1 class="title-page">{{ the_title() }}</h1>
 	</header>
-	<section class="content-contanti">
+	<section class="content-contatti">
 
 		<article class="card-contatti">
 			<h3>Hai bisogno di informazioni?</h3>
@@ -22,7 +22,6 @@
 	</section>
 
 	<section class="content-local">
-		<h3>Noi siamo qui</h3>
 		<a href="https://goo.gl/maps/2SrQkuw1csQ2">Via delle Valli, 2, 33081 Aviano PN</a>
 	</section>
 
