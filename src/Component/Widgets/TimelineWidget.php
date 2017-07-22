@@ -35,10 +35,11 @@ class TimelineWidget extends AbstractWidget
             $this->getMonth(2)
         );
 
+        // TODO: se si modifica qua cambiare anche su archiveController.
         if (is_tax('citta')) {
-            $suffix = '?=citta='. get_query_var('citta');
+            $suffix = '?citta='. get_query_var('citta');
         } else if (is_category()) {
-            $suffix = '?category'. get_query_var('cat');
+            $suffix = '?category='. get_query_var('cat');
         } else {
             $suffix = '';
         }

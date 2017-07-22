@@ -64,7 +64,8 @@ class Router
             'home'      => 'is_home',
             '404'       => 'is_404',
             'search'    => 'is_search',
-            'page'      => 'is_page'
+            'page'      => 'is_page',
+            'archive'   => 'is_archive'
         ];
     }
 
