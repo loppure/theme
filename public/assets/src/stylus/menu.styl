@@ -21,7 +21,10 @@
       background-repeat: no-repeat
       border: 2px solid #000
       border-radius: 50%
-      background-image: url("img/svg/icon-menu.svg") /*rivedere*/
+      background-image: url("../../src/img/icone-generiche/menu-nero.svg") /*rivedere*/
+      background-size: 70%
+      background-repeat: no-repeat
+      background-position: center
 
   .menu-menu-container
     max-width: 65%
@@ -49,3 +52,35 @@
             color: bianco
             background-color: colore-loppure
             text-decoration: none
+
+nav.toggle
+  width: 100vh
+  height: 100vh
+  display: block
+  background: bianco
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 99999
+
+  .menu-toggle
+    background-image: url("../../src/img/icone-generiche/close-nero.svg")
+    background-size: 80%
+
+
+  .menu-menu-container
+    max-width: 100%
+    float: none
+    margin: 0 auto
+
+    ul
+      display: block
+
+      li
+
+        display: block
+        float: none
+        margin: 10px auto
+        font-size: 20px
+        padding: 5px 0
+        border-bottom: 1px solid colore-loppure

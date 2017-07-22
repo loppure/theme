@@ -7,6 +7,7 @@
         <!-- TODO <a class="info" href="#">Informazioni</a> -->
     </header>
 
+
     <section class="page-gray page-category">
 
         <div class="widget-sx" role="complementary">
@@ -28,8 +29,9 @@
                 @include('shared.empty')
             @endif
 
-            <button class="load-more" id="load-more">Carica altro</button>
-
+            <div class="content-button">
+              <button class="load-more" id="load-more">Carica altro</button>
+            </div>
             <div class="link_to_next_page" hidden>
                 <?php next_posts_link(); ?>
             </div>

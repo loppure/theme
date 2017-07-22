@@ -27,6 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
     More();
 
     $('button.menu-toggle').on('click', e => {
-        // TODO togglare la classe
+        $('nav.main-navigation').toggleClass('toggle');
     });
 });
