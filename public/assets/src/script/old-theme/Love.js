@@ -90,7 +90,7 @@ const load_helper = function() {
             return first || second;
         });
     })(Handlebars);
-}
+};
 
 export default function run() {
     setTimeout(function() {

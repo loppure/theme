@@ -44,7 +44,7 @@ const Card = (function() {
         var description, new_description;
         description = $(this.elm).find('section p').text();
         $(this.elm).data('original-description', description);
-        if (description.length > (max_length + tolerance)) {
+        if (description.length > (max_length + tolerance) && $(this.elm).attr('class').indexOf('card') > -1) {
             new_description = (description.slice(0, max_length)) + " <span class='link more'> Altro... </span> <span class='hidden' hidden='hidden'> " + (description.slice(max_length, -1)) + " <span class='link close'> Chiudi </span> </span>";
             $(this.elm).find('section p').html(new_description);
             $(this.elm).find('.more').one('click', function(e) {
