@@ -2,13 +2,15 @@
 
 @section('content')
 
-	<header class="page-header">
-		<section>
-			<h1 class="cerchio-logo-page icon-archive">Archivio</h1>
-		</section>
-	</header> <!-- .page-header -->
-	
-	<section class="page-gray section-archivio">
+
+	<!-- TODO rivedere -->
+	<header class="page-header header-author">
+			<h1>Archivio</h1>
+			<!-- TODO <a class="info" href="#">Informazioni</a> -->
+	</header>
+
+	<!-- TODO rivedere -->
+	<section class="page-gray section-author">
 		<div class="section-cont-article post-archivio" id="section-cont-article">
 			@if( $posts )
 				@include('shared.general_loop')
@@ -17,5 +19,5 @@
 			@endif
 		</div> <!-- .section-cont-article -->
 	</section> <!-- .section-archivio -->
-	
+
 @endsection

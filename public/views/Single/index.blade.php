@@ -71,5 +71,5 @@
         </section> <!-- .widget-area -->
     </article>
 
-    @include('Single.comments')
+    {{--@include('Single.comments')--}}
 @endsection
