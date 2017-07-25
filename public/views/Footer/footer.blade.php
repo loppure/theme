@@ -44,10 +44,10 @@
 <div class="col-footer">
   <h6>Associazione L'oppure</h6>
   <span>Uno sguardo sul territorio<br/>ovunque tu ti trovi</span>
-  <ul>
-    <li>CF</li>
+  <ul class="contatti-footer">
+    <li>C.F. 91091430933</li>
     <li><a href="mailto:info@loppure.it">info@loppure.it</a></li>
-    <li>Indirizzo</li>
+    <li>Via Delle Valli, 2 33081 Aviano (PN)</li>
   </ul>
 </div>
 <div class="col-footer">
