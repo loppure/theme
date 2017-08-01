@@ -13,7 +13,7 @@
     </li>
     <li class="item categorie-item radici-nel-tempo">
       <a href="{{ esc_url( home_url( '/' )) }}/rubriche/radici-nel-tempo" title="Guarda gli articoli della rubrica della rubirca Radici nel tempo">
-          Radoci nel tempo
+          Radici nel tempo
       </a>
     </li>
     <li class="item categorie-item pausa-caffe">
