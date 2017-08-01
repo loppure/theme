@@ -1,6 +1,6 @@
 @foreach( $posts as $post)
 
-    <article class="{{ $post->css_class }}" data-id="{{ $post->id }}"
+    <article class="{{ $post->css_class }}" id="cardarticoli" data-id="{{ $post->id }}"
         @if( $post->source )
             data-source='{{ json_encode(json_encode($post->source)) }}'
         @endif
