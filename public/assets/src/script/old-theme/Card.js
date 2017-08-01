@@ -34,7 +34,7 @@ const Card = (function() {
     }
 
     Card.loop = function() {
-        return $("article[data-id]:not(.object-ished)").each(function(index, elm) {
+        return $("#cardarticoli article[data-id]:not(.object-ished)").each(function(index, elm) {
             $(this).addClass('object-ished');
             return debug_card.push(new Card(elm));
         });
