@@ -44,7 +44,7 @@ $theme['custom-fields'] = new Loppure\Component\PostFields();
 // città
 $theme['citta'] = new TaxCitta();
 
-$theme['image_type'] = new Loppure\Component\ImageType();
+//$theme['image_type'] = new Loppure\Component\ImageType();
 
 $theme->run(); // lancia il tema ^^
 
