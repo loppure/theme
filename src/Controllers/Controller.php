@@ -39,7 +39,7 @@ class Controller extends \Theine\Controller\Controller
                 array(
                     "name"    => "type",
                     "closure" => function($id) {
-                        return get_post_type() == "loppure_image" ? "image" : "normal";
+                        return get_post_type();
                     }
                 ),
                 array(
