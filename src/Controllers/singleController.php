@@ -6,7 +6,9 @@ class singleController extends Controller
 {
     public function __construct()
     {
-        parent::__construct('Single:index');
+        $type = get_post_type();
+
+        parent::__construct('Single:'. $type);
 
         $custom_filters = array(
             array(
