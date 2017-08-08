@@ -52,7 +52,7 @@ class Controller extends \Theine\Controller\Controller
                     "name"    => "love",
                     "closure" => function ($id) {
                         $love = get_post_meta($id, 'op_love');
-                        $love = empty($love) ? array(0) : $love;
+                        $love = empty($love) ? array("") : $love;
                         return $love[0];
                     }
                 ),

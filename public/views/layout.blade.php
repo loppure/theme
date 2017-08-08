@@ -21,6 +21,11 @@
                             </div>
                         </div><!-- .site-branding -->
 
+                        <!--menu funziona solo da mobile per la navigazione tra i seguvizi-->
+                        <nav id="control-navigation" class="menu">
+                          <button class="button-control-navigation"></button>
+                          @include('ControlNavigation.controlnavigation')
+                        </nav>
                         <nav id="site-navigation" class="main-navigation" role="navigation">
                             <button class="menu-toggle" aria-controls="menu-menu-1" aria-expanded="false"></button>
                             {{ wp_nav_menu( array( 'theme_location' => 'header-menu' ) ) }}
@@ -46,7 +51,7 @@
                   <span>la tua guida</span>
                 </div>
                 <div class="views-assistent">
-                  
+
                 </div>
                 <button class="scroll_up" id="scroll_up"></button> -->
 

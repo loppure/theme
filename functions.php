@@ -41,9 +41,12 @@ $theme['custom-fields'] = new Loppure\Component\PostFields();
 // love
 // $theme['love'] = new Loppure\API\Love();
 
-// città
+// Taxonomy -> Città
 $theme['citta'] = new TaxCitta();
+// Taxonomy -> Città
+$theme['progetti'] = new TaxProgetti();
 
+// Costum post Type -> Polaroid
 $theme['image_type'] = new Loppure\Component\PolaroidType();
 
 $theme->run(); // lancia il tema ^^
