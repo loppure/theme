@@ -10,7 +10,13 @@
 namespace Theine\View;
 
 use Theine\Theme;
-use Spatie\Blade\Blade;
+
+use Xiaoler\Blade\FileViewFinder;
+use Xiaoler\Blade\Factory;
+use Xiaoler\Blade\Compilers\BladeCompiler;
+use Xiaoler\Blade\Engines\CompilerEngine;
+use Xiaoler\Blade\Filesystem;
+use Xiaoler\Blade\Engines\EngineResolver;
 
 /**
  * Renderizza le view.
@@ -103,9 +109,42 @@ class View
 
         $this->setViewData();
 
-        $this->blade = new Blade($this->view_data['base_dir'], $this->view_data['cache']);
+        $this->blade = $this->setsUpBlade($this->view_data['base_dir'], $this->view_data['cache']);
         $this->parsePath();
         $this->render();
+    }
+
+    /**
+     * Sets up blade and load some directives
+     * @author Omar Polo <yum1096@gmail.com>
+     * @since 1.0.0 Introduced
+     * @param String $base_dir The directory that holds the views
+     * @param String $cache    The directory that holds the cache
+     * @return \Jenssegers\Blade\Blade The blade object with some directives loaded
+     */
+    protected function setsUpBlade($base_dir, $cache) {
+        $file = new Filesystem;
+        $compiler = new BladeCompiler($file, $cache);
+
+        $compiler->extend(function($value, $compiler)
+        {
+            $value = preg_replace('/(?<=\s)@switch\((.*)\)(\s*)@case\((.*)\)(?=\s)/', '<?php switch($1):$2case $3: ?>', $value);
+            $value = preg_replace('/(?<=\s)@endswitch(?=\s)/', '<?php endswitch; ?>', $value);
+            $value = preg_replace('/(?<=\s)@case\((.*)\)(?=\s)/', '<?php case $1: ?>', $value);
+            $value = preg_replace('/(?<=\s)@default(?=\s)/', '<?php default: ?>', $value);
+            $value = preg_replace('/(?<=\s)@break(?=\s)/', '<?php break; ?>', $value);
+            return $value;
+        });
+
+        $resolver = new EngineResolver;
+        $resolver->register('blade', function () use ($compiler) {
+            return new CompilerEngine($compiler);
+        });
+
+        // get an instance of factory
+        $factory = new Factory($resolver, new FileViewFinder($file, [$base_dir]));
+
+        return $factory;
     }
 
     /**
@@ -156,7 +195,7 @@ class View
     protected function render()
     {
         ob_start();
-        echo $this->blade->view()->make($this->path, $this->data);
+        echo $this->blade->make($this->path, $this->data);
         ob_end_flush();
     }
 }
