@@ -1,4 +1,4 @@
-<article class="{{ $post->css_class }}" id="cardteam" data-id="{{ $post->id }}"
+<article class="{{ $post->css_class }}" data-click-card data-id="{{ $post->id }}"
       @if( $post->source )
           data-source='{{ json_encode(json_encode($post->source)) }}'
       @endif
