@@ -7,15 +7,22 @@ import filters       from './filters';
 import jQuery        from 'jquery';
 import Handlebars    from 'handlebars';
 
+// data-seen is the data-attribute added to the 'card' to enable the
+// functionality
+//
+// click.love is the (old) name of the event
 const ready_to_love = function($) {
     var everywhere;
     everywhere = $;
-    $('.button-like-post').off('click.love');
-    return $('.button-like-post').on('click.love', function(e) {
+    $('[data-seen]').off('click.love');
+    return $('[data-seen]').on('click.love', function(e) {
+        if (e.target.tagName == "A" || e.target.tagName == "button") {
+            return;
+        }
+
         var post_id;
-        e.stopPropagation();
         post_id = $(e.target).parents('article').data('id');
-        return $.ajax({
+        $.ajax({
             url: $("#loppure-ajax-uri").val(),
             type: 'post',
             data: {
