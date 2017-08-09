@@ -10,6 +10,7 @@ use \Theine\Extras\Extras;
 use \Theine\PageTemplate\CustomPageTemplate;
 
 use \Loppure\Component\TaxCitta;
+use \Loppure\Component\TaxProgetti;
 
 $theme = Theme::getInstance();
 
