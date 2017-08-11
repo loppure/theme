@@ -48,7 +48,16 @@ $theme['citta'] = new TaxCitta();
 $theme['progetti'] = new TaxProgetti();
 
 // Costum post Type -> Polaroid
-$theme['image_type'] = new Loppure\Component\PolaroidType();
+$theme['polaroid_type'] = new Loppure\Component\PolaroidType();
+
+// Costum post Type -> Reportage
+$theme['reportage_type'] = new Loppure\Component\ReportageType();
+
+// Costum post Type -> Evento
+$theme['evento_type'] = new Loppure\Component\EventoType();
+
+// Costum post Type -> Team
+$theme['team_type'] = new Loppure\Component\TeamType();
 
 $theme->run(); // lancia il tema ^^
 
