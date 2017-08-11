@@ -10,13 +10,13 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "spatie/laravel-blade": "^1.0",
         "phpdocumentor/phpdocumentor": "2.*",
         "mobiledetect/mobiledetectlib": "^2.8",
         "symfony/yaml": "^3.3",
         "squizlabs/php_codesniffer": "^3.0",
         "symfony/var-dumper": "^3.3",
-        "psy/psysh": "^0.8.6"
+        "psy/psysh": "^0.8.6",
+        "xiaoler/blade": "^5.4"
     },
     "autoload": {
         "psr-4": {

@@ -61,6 +61,16 @@ $theme['team_type'] = new Loppure\Component\TeamType();
 
 $theme->run(); // lancia il tema ^^
 
+// load custom post type in home
+// TODO: add our custom post type
+add_filter('pre_get_posts', function($query) {
+    if (is_home() && $query->is_main_query()) {
+        $query->set('post_type', ['post']);
+    }
+
+    return $query;
+});
+
 // old theme shit:
 require get_template_directory() . '/old-theme/custom-comment.php';
 require get_template_directory() . '/old-theme/custom-stat.php';
