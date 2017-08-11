@@ -4,16 +4,16 @@ directory:
   views:  '/public/views/'
 
 routing:
-  single: '\Loppure\Controllers\singleController'
-  taxonomy: '\Loppure\Controllers\taxController'
-  category: '\Loppure\Controllers\categoryController'
-  home: '\Loppure\Controllers\homeController'
-  author: '\Loppure\Controllers\authorController'
-  archive: '\Loppure\Controllers\archiveController'
-  search: '\Loppure\Controllers\searchController'
-  page: '\Loppure\Controllers\pageController'
-  '404': '\Loppure\Controllers\PageNotFoundController'
-  default: '\Loppure\Controllers\indexController'
+  single:       '\Loppure\Controllers\singleController'
+  taxonomy:     '\Loppure\Controllers\taxController'
+  category:     '\Loppure\Controllers\categoryController'
+  home:         '\Loppure\Controllers\homeController'
+  author:       '\Loppure\Controllers\authorController'
+  archive:      '\Loppure\Controllers\archiveController'
+  search:       '\Loppure\Controllers\searchController'
+  page:         '\Loppure\Controllers\pageController'
+  '404':        '\Loppure\Controllers\PageNotFoundController'
+  default:      '\Loppure\Controllers\indexController'
 
 custom_page_template:
   'esempio-1': 'Primo esempio'
