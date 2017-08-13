@@ -278,3 +278,125 @@
   //icona colorata
   .img-category-post
     background-image: img-pensieri-tra-le-pagineo
+
+
+//Elementi -> card -> Post standard
+.card-post-standard
+  width: 450px
+  height: 450px
+  overflow: hidden
+  display: block
+  color: bianco
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.3)
+
+  header
+    height: auto
+    overflow: hidden
+    padding: 5px
+    border-bottom: 2px solid bianco
+    text-align: center
+
+    a, & a:visited, & a:hover, & a:focus, & a:active
+      color: bianco
+
+    .text-name-rubrica
+      float: none
+      display: inline-block
+
+      a, & a:visited, & a:hover, & a:focus, & a:active
+        color: bianco
+        font-size: 18px
+        font-weight: 700
+
+      &::before
+        width: 50px
+        height: 50px
+        content: ' '
+        display: block
+        margin: 0 auto
+        border: 2px solid bianco
+        border-radius: 50%
+        background-size: 80%
+        background-position: center
+        background-repeat: none
+
+
+    .text-name-citta
+      display: inline-block
+      padding: 5px
+      margin: 0 auto
+      float: right
+      margin-left: -100px
+      color: bianco
+      border: 1px solid bianco
+
+  .sfondo
+    max-width: 100%
+    width: auto
+    max-height: 100%
+    height: 100%
+    padding: 10px
+    display: block
+    background-image: radial-gradient( ellipse at center, rgba(64,72,76,0.25) 0%, rgba(64,72,76,1) 100% )
+
+    .content-text
+      width: 80%
+      height: 260px
+      overflow: hidden
+      display: block
+      margin: 0 auto
+      margin-top: 15px
+      background: none
+
+      h4, & a
+        color: bianco
+        font-size: 45px
+        line-height: 48px
+        text-align: center
+        font-weight: 700
+
+//Elementi -> card -> Post standard -> Colore per rubriche
+.category-gusti-della-terra.card-post-standard
+    .sfondo
+      background-image: radial-gradient( ellipse at center, rgba(206,107,107,0.25) 0%, rgba(206,107,107,1) 100% )
+
+    .text-name-rubrica::before
+      background-image: img-gusti-della-terra-bianco
+
+.category-voli-sul-territorio.card-post-standard
+    .sfondo
+      background-image: radial-gradient( ellipse at center, rgba(169,196,118,0.25) 0%, rgba(169,196,118,1) 100% )
+
+    .text-name-rubrica::before
+      background-image: img-voli-sul-territorio-bianco
+
+.category-radici-nel-tempo.card-post-standard
+    .sfondo
+      background-image: radial-gradient( ellipse at center, rgba(224,212,160,0.25) 0%, rgba(224,212,160,1) 100% )
+
+    .text-name-rubrica::before
+      background-image: img-radici-nel-tempo-bianco
+
+.category-parole-nostre.card-post-standard
+    .sfondo
+      background-image: radial-gradient( ellipse at center, rgba(169,205,219,0.25) 0%, rgba(169,205,219,1) 100% )
+
+    .text-name-rubrica::before
+      background-image: img-parole-nostre-bianco
+
+.category-pausa-caffe.card-post-standard
+    .sfondo
+      background-image: radial-gradient( ellipse at center, rgba(188,162,145,0.25) 0%, rgba(188,162,145,1) 100% )
+
+    .text-name-rubrica::before
+      background-image: img-pausa-caffe-bianco
+
+.category-pensieri-tra-le-pagine.card-post-standard
+    .sfondo
+      background-image: radial-gradient( ellipse at center, rgba(196,167,216,0.25) 0%, rgba(196,167,216,1) 100% )
+
+    .text-name-rubrica::before
+      background-image: img-pensieri-tra-le-pagine-bianco
