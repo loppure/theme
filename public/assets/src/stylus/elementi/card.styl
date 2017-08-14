@@ -286,11 +286,22 @@
   height: 450px
   overflow: hidden
   display: block
+  margin: 0 auto
+  margin-bottom: 40px
   color: bianco
   background-size: cover
   background-position: center
   background-repeat: no-repeat
   box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.3)
+
+  @media (max-width: fat-phone)
+    width: 350px
+    height: 350px
+
+  @media (max-width: min)
+    width: 300px
+    height: 300px
+    margin-bottom: 20px
 
   header
     height: auto
@@ -310,6 +321,7 @@
         color: bianco
         font-size: 18px
         font-weight: 700
+        text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4);
 
       &::before
         width: 50px
@@ -344,9 +356,10 @@
 
     .content-text
       width: 80%
-      height: 260px
+      height: 275px
       overflow: hidden
       display: block
+      float: none
       margin: 0 auto
       margin-top: 15px
       background: none
@@ -357,6 +370,13 @@
         line-height: 48px
         text-align: center
         font-weight: 700
+        text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
+
+    .card-footer
+      margin: 0 auto
+      height: 50px
+      display: block
+      text-align: center
 
 //Elementi -> card -> Post standard -> Colore per rubriche
 .category-gusti-della-terra.card-post-standard

@@ -10,6 +10,9 @@
 <div class="widget-action">
   <h6 class="dona"><a href="#">Prendi un caffè con noi</a></h6>
 </div>
+<div class="widget-action">
+  <h6 class="dona"><a href="#">Segnalaci imprecisioni</a></h6>
+</div>
 <div class="widget-mailinglist">
   <!-- richiamo del form -->
 </div>

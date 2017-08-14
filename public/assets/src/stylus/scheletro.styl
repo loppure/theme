@@ -1,9 +1,6 @@
-/* body - scheletro*/
-
+//Scheletro
 html
   font-family: sans-serif;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
 
 body
   margin: 0
@@ -24,10 +21,7 @@ div, section
   background-position: center
   background-repeat: no-repeat
 
-/*site-content - scheletro*/
-.site
-  height: 90%
-
+//Scheletro - site-content
 .site-content
   margin: 0 auto
   padding-top: 50px
@@ -56,24 +50,16 @@ div, section
   @media (max-width: min)
     padding: 0 0.5rem
 
-/* Scheletro - Colore conent page */
-.site-main
-  background-color: grigio-intermedio
-
-.page-gray
-  background-color: grigio-chiaro
-
-/*Scheletro - Page-gray */
-.page-gray
-  gs("fluid")
+//Scheletro - Content-page
+.content-page
   width: 100%
   display: block
   height: auto
   overflow: hidden
   clear: both
   margin: 0 auto
-  margin-top: -145px
   padding: 0
+  background-color: grigio-chiaro
 
   @media (max-width: smartphone)
     width: 100%;
@@ -113,21 +99,63 @@ div, section
     width: 95%
 
 
-//Scheletro -> Home 
+//Scheletro -> Home
 .block-sinistra
-  width: 25%
+  width: 22.5%
   display: block
   float: left
+
+  @media (max-width: tablet)
+    width: 100%
+    float: none
+    margin: 0 auto
 
 .bock-centrale
-  width: 45%
+  width: 50%
   display: block
   float: left
+  margin: 0 2%
+  border-left: 2px solid colore-loppure
+  border-right: 2px solid colore-loppure
 
-.bock-destra
-  width: 30%
+  @media (max-width: tablet)
+    width: 60%
+
+  @media (max-width: mini-tablet)
+    width: 70%
+    margin: 0 auto
+    border: none
+    border-right: 2px solid colore-loppure
+
+  @media (max-width: fat-phone)
+    width: 65%
+
+  @media (max-width: smartphone)
+    width: 100%
+    display: block
+    margin: 0 auto
+    float: none
+
+.block-destra
+  width: 22.5%
   display: block
   float: right
+
+  @media (max-width: tablet)
+    width: 35%
+    margin: 0 auto
+
+  @media (max-width: mini-tablet)
+    width: 28%
+
+  @media (max-width: fat-phone)
+    width: 30%
+
+  @media (max-width: smartphone)
+    width: 100%
+    display: block
+    margin: 0 auto
+    float: none
 
 /*extra provisorio - scheletro*/
 a.skip-link.screen-reader-text

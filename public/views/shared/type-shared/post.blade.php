@@ -19,7 +19,7 @@
     </div>
 
     <footer class="card-footer">
-      <button class="button-like-post" data-love="{{ $post->love }}">{{ $post->love }} &#9829;</button>
+      <button class="button-like-post" data-love="{{ $post->love }}">{{ $post->love }}</button>
     </footer>
 
 

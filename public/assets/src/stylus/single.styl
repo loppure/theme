@@ -1,69 +1,37 @@
-/*Single - Scheletro */
+//Single - scheletro
 .single .site-content
   @media (max-width: mini-tablet)
     padding-top: 0
 
-
-.single-content-wrapper
-  gs("fluid")
+.single article.post
+  width: 720px
+  height: auto
+  overflow: hidden
+  display: block
+  margin: 0 auto
+  float: none
 
 .content-single
-  width: 67%
+  width: 100%
   height: auto
   overflow: hidden
   display: block
-  float: left
+  float: none
   margin 0 auto
 
-  @media (max-width: mini-tablet)
-    width: 100%;
-    float: none
-
-.sidebar-single
-  width: 30%
-  height: auto
-  overflow: hidden
-  display: block
-  float: right
-  margin: 0 auto
-
-  @media (max-width: mini-tablet)
-    width: 64%
-    display: block
-    float: none
-
-  @media (max-width: smartphone)
-    width: 80%
-    margin: 30px auto
-
-.sidebar-single-mobile
-  display: none
-
-.single .content-area
-  padding: 0
-
-.single article.post
-  width: 100%
-  display: block
-  margin: 0 auto
-  padding: 0
-  background-color: grigio-chiaro
-
-/*Single - header*/
+//Single - header
 .single-header
-  width: 67%
+  width: 100%
   height: auto
   overflow: hidden
   display: block
-  float: left
+  float: none
   margin: 0 auto
   padding: 0
   padding-top: 50px
 
   @media (max-width: mini-tablet)
-    width: 100%
     padding-top: 0
-    float: none
 
   .content-title
     width: 100%
@@ -71,6 +39,8 @@
     overflow: hidden
     float: right
     padding: 10px 0
+    margin: 0 auto
+    color: bianco
     background-color: colore-loppure
 
     @media (max-width: mini-tablet)
@@ -102,7 +72,11 @@
       float: left
       font-size: 25px
       line-height: 26px
+      color: bianco 25px
+      line-height: 26px
       color: bianco
+      font-weight: 400
+      border-left: 2px solid biancopost
       font-weight: 400
       border-left: 2px solid bianco
 
@@ -133,15 +107,14 @@
   background-position: center
 
 /*Single - Content text */
-.content-text
-  width: 80%
+.content-single
+  width: 100%
   height: auto
   overflow: hidden
-  float: right
+  display: block
+  margin: 0 auto
+  float: none
   background-color: colore-loppure
-
-  @media (max-width: medium)
-    width: 75%
 
   @media (max-width: mini-tablet)
     width: 100%
@@ -149,39 +122,34 @@
     margin: 0 auto
     float: none
 
-  .text
-    width: 86%
+  .content-text
+    width: 98%
     height: auto
     overflow: hidden
     display: block
-    float: left
+    float: none
     margin: 0 auto
-    padding: 20px 40px
+    padding: 0
     background-color: bianco
 
-    font-size: 15px
-    text-align: justify
+    .text
+      width: 70%
+      height: auto
+      overflow: hidden
+      display: block
+      margin: 20px auto
 
-    font-family: 'Merriweather', serif;
+      font-size: 15px
+      text-align: justify
 
-    @media (max-width: max)
-      width: 83.5%
+      font-family: 'Merriweather', serif;
 
-    @media (max-width: tablet)
-      width: 82%
 
-    @media (max-width: medium)
-      width: 87%
-      padding: 20px
-
-    @media (max-width: mini-tablet)
-      width: 90%
+    @media (max-width: smartphone)
+      width: 100%
       padding: 10px 20px
       float: none
 
-    @media (max-width: min)
-      width: auto
-      padding: 10px
 
 /*Single - Content text - content-fonti*/
 
@@ -237,7 +205,7 @@
 
 
     article
-      width: 67%
+      width: 100%
       height: auto
       overflow: hidden
       float: left
@@ -268,8 +236,6 @@
         background-position: center
 
       p
-        width: 60%
-        float: right
         margin: 20px 100px 10px 20px;
         font-size: 13px
         text-align: justify
@@ -282,9 +248,9 @@
         @media (max-width: min-smartphone)
           margin: 20px
 
-/*Single - Footer - Author*/
+//Single - Footer - Author
 .content-author-single
-  border-top: 2px solid colore-loppure
+  background-color: bianco
 
   .author-single
     width: 720px
@@ -348,7 +314,7 @@
       background-image: img-gusti-della-terra-bianco
 
   //Colore content text
-  .content-text
+  .content-single
     background-color: color-gusti-della-terra
 
     //Colore bordo content fonti
@@ -366,8 +332,8 @@
     &::before
       background-image: img-voli-sul-territorio-bianco
 
-  // Colore content-text
-  .content-text
+  // Colore content-single
+  .content-single
     background-color: color-voli-sul-territorio
 
     //Colore bordo content fonti
@@ -382,8 +348,8 @@
     &::before
       background-image: img-radici-nel-tempo-bianco
 
-  //Colore content-text
-  .content-text
+  //Colore content-single
+  .content-single
     background-color: color-radici-nel-tempo
 
     //Colore bordo content fonti
@@ -401,8 +367,8 @@
     &::before
       background-image: img-pausa-caffe-bianco
 
-  //Colore content-text
-  .content-text
+  //Colore content-single
+  .content-single
     background-color: color-pausa-caffe
 
     //Colore bordo content fonti
@@ -419,8 +385,8 @@
     &::before
       background-image: img-pensieri-tra-le-pagine-bianco
 
-  //Colore content-text
-  .content-text
+  //Colore content-single
+  .content-single
     background-color: color-pensieri-tra-le-pagine
 
     //Colore bordo content fonti
