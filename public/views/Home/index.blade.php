@@ -2,41 +2,62 @@
 
 @section('content')
 
-    <header class="page-header home-header">
+  <section class="section-home">
+    <!-- TODO primo sezione home -->
+    <!-- Questo contine il menu di navigazione - Payoff - Input di ricerca -->
+
+    <div class="control-home">
       @include('ControlNavigation.controlnavigation')
-    </header>
+    </div>
+    <div class="payoff-home">
+      <h3>Uno sguardo sulla tua città ovvunque tu ti trovi</h3>
+      <!-- TODO inserire logo istituzionale -->
+    </div>
+    <div class="ricerca-home">
+      <!-- TODO aggiungere comandi di ricerca -->
+    </div>
 
-    <section class="content-page">
-      <div class="payoff-home">
-        <h3>Uno sguardo sulla tua città ovvunque tu ti trovi</h3>
-        <!-- TODO inserire logo istituzionale -->
-      </div>
-      <div class="block-sinistra" role="complementary">
-        @include('Widget/Home/HomeBlockSinistra/index')
-      </div>
+  </section>
 
-      <div class="bock-centrale">
+  <section class="section-home">
+    <!-- TODO seconda sezione home -->
+    <!-- Questa parte compare solo quando avviene la ricerca -->
 
-          @if( $posts )
-              @include('shared.general_loop', ['show_city' => true])
+    <div class="content-risultati-ricerca-home">
+      <!-- TODO stampare i risultati di ricerca -->
+    </div>
+  </section>
 
-          @else
-              @include('shared.empty')
-          @endif
+  <section class="section-home">
+    <!-- TODO terza sezione home -->
+    <!-- Questa parte contiene il loop della home -->
 
-          <div class="content-button">
-            <button class="load-more" id="load-more">Carica altro</button>
-          </div>
-          <div class="link_to_next_page" hidden>
-              <?php next_posts_link(); ?>
-          </div>
+    <div class="block-sinistra" role="complementary">
+      @include('Widget/Home/HomeBlockSinistra/index')
+    </div>
 
-      </div>
+    <div class="bock-centrale">
 
-      <div class="block-destra" role="complementary">
-          @include('Widget/Home/HomeBlockDestra/index')
-      </div>
+        @if( $posts )
+            @include('shared.general_loop', ['show_city' => true])
 
-    </section>
+        @else
+            @include('shared.empty')
+        @endif
+
+        <div class="content-button">
+          <button class="load-more" id="load-more">Carica altro</button>
+        </div>
+        <div class="link_to_next_page" hidden>
+            <?php next_posts_link(); ?>
+        </div>
+
+    </div>
+
+    <div class="block-destra" role="complementary">
+        @include('Widget/Home/HomeBlockDestra/index')
+    </div>
+
+  </section>
 
 @endsection

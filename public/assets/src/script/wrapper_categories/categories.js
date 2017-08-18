@@ -26,8 +26,7 @@ export class Category {
         }
         //end loop
 
-
     load_category() {
-        $(".page-gray").load("category/" + this.categoryName + " .section-cont-article.post-category");
+        $(".content-area").load("category/" + this.categoryName + " .bock-centrale.post-category");
     }
 }

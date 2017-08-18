@@ -10,7 +10,7 @@
 	</header>
 
 	<!-- TODO rivedere -->
-	<section class="page-gray section-author">
+	<section class="site-content section-author">
 		<div class="section-cont-article post-archivio" id="section-cont-article">
 			@if( $posts )
 				@include('shared.general_loop')

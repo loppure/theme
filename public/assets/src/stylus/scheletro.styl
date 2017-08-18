@@ -21,26 +21,35 @@ div, section
   background-position: center
   background-repeat: no-repeat
 
+section
+  clear: both
+
+//Scheletro - site-content FULL
+.site-full-content
+  width: 100%
+  height: auto
+  overflow: hidden
+  display: block
+  margin: 0 auto
+  padding: 0
+  float: none
+
 //Scheletro - site-content
 .site-content
+  width: 1200px
+  height: auto
+  overflow: hidden
+  display: block
   margin: 0 auto
   padding-top: 50px
-  width: 100%
-  max-width: 1200px
-  min-height: 100%
 
   @media (max-width: max)
     width: 95%
-    max-width: 100%
 
   @media (max-width: medium)
     width: 100%
-    max-width: 100%
 
-  @media (max-width: min)
-    width: 100%
-    max-width: 100%
-
+//Scheletro - content-area
 .content-area
   padding: 0 0.5rem
 
@@ -70,11 +79,11 @@ div, section
     text-align: justify
     padding: 0 20px
 
+//Scheletro - Page-standard
 .page-standard
-  width: 99%
+  width: auto
   margin-top: 0
   padding: 0
-
 
   section
     width: auto
@@ -86,7 +95,7 @@ div, section
     @media (max-width: smartphone)
       padding:  0
 
-
+//Scheletro - content-page-text
 .content-page-text
   width: 960px
   display: block
@@ -99,7 +108,7 @@ div, section
     width: 95%
 
 
-//Scheletro -> Home
+//Scheletro - Home
 .block-sinistra
   width: 22.5%
   display: block
@@ -157,6 +166,6 @@ div, section
     margin: 0 auto
     float: none
 
-/*extra provisorio - scheletro*/
+// TODO extra provisorio - scheletro
 a.skip-link.screen-reader-text
   display: none

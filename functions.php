@@ -11,6 +11,7 @@ use \Theine\PageTemplate\CustomPageTemplate;
 
 use \Loppure\Component\TaxCitta;
 use \Loppure\Component\TaxProgetti;
+use \Loppure\Component\TaxReportage;
 
 $theme = Theme::getInstance();
 
@@ -44,8 +45,10 @@ $theme['custom-fields'] = new Loppure\Component\PostFields();
 
 // Taxonomy -> Città
 $theme['citta'] = new TaxCitta();
-// Taxonomy -> Città
+// Taxonomy -> Progetti
 $theme['progetti'] = new TaxProgetti();
+// Taxonomy -> Reportage
+$theme['reportage'] = new TaxReportage();
 
 // Costum post Type -> Polaroid
 $theme['polaroid_type'] = new Loppure\Component\PolaroidType();

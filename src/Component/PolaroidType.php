@@ -27,7 +27,7 @@ class PolaroidType extends CustomPostType
         $args = array(
             'labels'        => $labels,
             'description'   => 'Holds our post polaroid and polaroid specific data',
-            'taxonomies'    => array( 'progetti', 'category' ),
+            'taxonomies'    => array( 'progetti', 'category', 'citta' ),
             'public'        => true,
             'menu_position' => 5,
             'supports'      => array( 'title', 'excerpt', 'thumbnail', 'comments', 'custom-fields', 'revisions' ),

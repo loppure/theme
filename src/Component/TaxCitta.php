@@ -8,7 +8,7 @@ class TaxCitta extends CustomTaxonomy
 {
     public function __construct()
     {
-        $post_type = array('post', 'loppure_image', 'loppure_video');
+        $post_type = array('post', 'loppure_reportage', 'loppure_polaroid');
 
         $labels = array(
             'name'                => _x( 'Città', 'taxonomy general name' ),

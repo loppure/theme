@@ -8,7 +8,7 @@
 		<p class="author-bio">{{ $author->bio }}</p>
 	</header>
 
-	<section class="page-gray section-author">
+	<section class="site-content section-author">
 		<div class="section-cont-article post-author">
 			@if( $posts )
 

@@ -2,46 +2,55 @@
 
 @section('content')
 
-    <header class="page-header header-category">
-        <h1>{{ $category }}</h1>
-        <!-- TODO <a class="info" href="#">Informazioni</a> -->
-    </header>
+<section>
+  <!-- TODO prima sezione rubrica - Presentazione della rubrica -->
+  <div>
+    <h1>{{ $category }}</h1>
+  </div>
+  <div>
+    <!-- stampa descrizione della rubrica -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+       nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+        reprehenderit in voluptate velit esse cillum dolore eu fugiat
+        nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+      sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+  </div>
+</section>
+
+<section>
+  <!-- TODO seconda sezione rubrica - loop Rubrica -->
+  <div class="block-sinistra">
+    <!-- Sidebar widget sinistra -->
+  </div>
+  
+  <div class="block-centrale post-category">
+    @if( $posts )
+        @include('shared.general_loop')
 
 
-    <section class="page-gray page-category">
+    @else
+        @include('shared.empty')
+    @endif
 
-        <div class="widget-sx" role="complementary">
-    <?php
-    // TODO: temporary
-    (new Loppure\Component\Widgets\TimelineWidget())->widget('', '');
-    ?>
-                {{-- @include('Widget/Sostienici/index') --}}
+    <div class="content-button">
+      <button class="load-more" id="load-more">Carica altro</button>
+    </div>
+    <div class="link_to_next_page" hidden>
+        <?php next_posts_link(); ?>
+    </div>
+  </div>
 
-             {{--{{ dynamic_sidebar('sidebar-sx') }}--}}
-        </div>
+  <div class="block-destra">
+    <!-- Sidebar widget destra -->
+  </div>
 
-        <div class="section-cont-article post-category">
-            @if( $posts )
-                @include('shared.general_loop')
+</section>
 
-
-            @else
-                @include('shared.empty')
-            @endif
-
-            <div class="content-button">
-              <button class="load-more" id="load-more">Carica altro</button>
-            </div>
-            <div class="link_to_next_page" hidden>
-                <?php next_posts_link(); ?>
-            </div>
-        </div>
-        <div class="widget-dx" role="complementary">
-                @include('Widget/Rubriche/Citta/index')
-                @include('Widget/Rubriche/Porta-citta/index')
-
-                {{--{{ dynamic_sidebar('sidebar-dx') }}--}}
-        </div>
-    </section>
+<section>
+  <!-- TODO terza sezione rubrica - altre rubriche -->
+</section>
 
 @endsection

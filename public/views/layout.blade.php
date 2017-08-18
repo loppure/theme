@@ -5,7 +5,7 @@
         @include('Header.header')
         {{ wp_head() }}
     </head>
-    <body {{ body_class() }}>
+    <body {{ body_class() }}  >
             <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
             <div id="overlay_mark"></div>
             <div id="page" class="hfeed site">
@@ -36,7 +36,7 @@
                     </div><!-- .header-wrapper -->
                 </header><!-- #masthead -->
 
-                <section id="content" class="site-content">
+                <section id="content" class="site-full-content">
                     <div id="primary" class="content-area">
                         <main id="main" class="site-main" role="main">
                             @yield('content')

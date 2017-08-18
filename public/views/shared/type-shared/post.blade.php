@@ -8,10 +8,10 @@
   <div class="sfondo">
     <header>
         @if ($post->category)
-            <span class="text-name-rubrica {{ $post->category[0]->name }}"><a href="{{ $post->category[0]->link }}">{{ $post->category[0]->name }}</a></span>
+            <span class="text-name-rubrica {{ $post->category[0]->slug }}"><a href="{{ $post->category[0]->link }}">{{ $post->category[0]->name }}</a></span>
         @endif
         @if ($post->city)
-            <span class="text-name-citta"><a href="{{ $post->city[0]->link }}">{{ $post->city[0]->name }}</a></span>
+            <span class="text-name-citta {{ $post->city[0]->slug }}"><a href="{{ $post->city[0]->link }}">{{ $post->city[0]->name }}</a></span>
         @endif
     </header>
     <div class="content-text">

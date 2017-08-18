@@ -17,13 +17,13 @@
 
     </header>
 
-    <section class="page-gray">
+    <section class="site-content">
         <div class="widget-sx" role="complementary">
     <?php
     // TODO: temporary
     (new Loppure\Component\Widgets\TimelineWidget())->widget('', '');
     ?>
-    
+
             @include('Widget/Sostienici/index')
 
             {{ dynamic_sidebar('sidebar-sx') }}
