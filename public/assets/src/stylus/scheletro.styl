@@ -49,15 +49,6 @@ section
   @media (max-width: medium)
     width: 100%
 
-//Scheletro - content-area
-.content-area
-  padding: 0 0.5rem
-
-  @media (max-width: medium)
-    padding: 0 1rem
-
-  @media (max-width: min)
-    padding: 0 0.5rem
 
 //Scheletro - Content-page
 .content-page
@@ -107,12 +98,52 @@ section
   @media (max-width: smartphone)
     width: 95%
 
+//Scheletro - section
+.section-page
+  min-height: 600px
+  height: auto
+  overflow: hidden
+  display: block
+  box-shadow: ombra-bottom-scura
+
+  &.ricerca
+    min-height: 100px
+    height: auto
+    overflow: hidden
+    position: relative
+    z-index: -99
+    background-color: red
+
+.section-blur
+  width: 100%
+  min-height: 600px
+  height: auto
+  overflow: hidden
+  display: block
+  background-image: img-esempio
+  filter: blur(2px)
+  position: absolute
+  z-index: -99
+  background-size: 100%
+  background-repeat: no-repeat
+  background-position: center
+
+.radian-blur
+  width: 100%
+  min-height: 600px
+  height: auto
+  overflow: hidden
+  display: block
+  background-image: radial-gradient( ellipse at center, rgba(255,255,255,0) 50%, rgba(255,255,255,0.7) 100% )
+
 
 //Scheletro - Home
 .block-sinistra
   width: 22.5%
   display: block
   float: left
+  padding: 20px 0
+  text-align: center
 
   @media (max-width: tablet)
     width: 100%
@@ -124,6 +155,8 @@ section
   display: block
   float: left
   margin: 0 2%
+  padding: 20px 0
+  text-align: center
   border-left: 2px solid colore-loppure
   border-right: 2px solid colore-loppure
 
@@ -148,7 +181,9 @@ section
 .block-destra
   width: 22.5%
   display: block
+  padding: 20px 0
   float: right
+  text-align: center
 
   @media (max-width: tablet)
     width: 35%

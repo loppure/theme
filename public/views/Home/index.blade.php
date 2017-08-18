@@ -2,10 +2,13 @@
 
 @section('content')
 
-  <section class="section-home">
+  <section class="section-page">
+
     <!-- TODO primo sezione home -->
     <!-- Questo contine il menu di navigazione - Payoff - Input di ricerca -->
-
+    <div class="section-blur">
+      <div class="radian-blur"></div>
+    </div>
     <div class="control-home">
       @include('ControlNavigation.controlnavigation')
     </div>
@@ -13,16 +16,15 @@
       <h3>Uno sguardo sulla tua città ovvunque tu ti trovi</h3>
       <!-- TODO inserire logo istituzionale -->
     </div>
-    <div class="ricerca-home">
-      <!-- TODO aggiungere comandi di ricerca -->
-    </div>
 
   </section>
 
-  <section class="section-home">
+  <section class="section-page ricerca">
     <!-- TODO seconda sezione home -->
     <!-- Questa parte compare solo quando avviene la ricerca -->
-
+    <div class="ricerca-home">
+      <!-- TODO aggiungere comandi di ricerca -->
+    </div>
     <div class="content-risultati-ricerca-home">
       <!-- TODO stampare i risultati di ricerca -->
     </div>
