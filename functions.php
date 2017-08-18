@@ -40,7 +40,7 @@ $theme['last-article'] = new Loppure\Component\Widgets\LastArticle();
 $theme['custom-fields'] = new Loppure\Component\PostFields();
 
 // love
-// $theme['love'] = new Loppure\API\Love();
+$theme['love'] = new Loppure\API\Love();
 
 // Taxonomy -> Città
 $theme['citta'] = new TaxCitta();
