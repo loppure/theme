@@ -1,69 +1,44 @@
-/*Single - Scheletro */
+//single
+.single
+  background-color: bianco
+
+//Single - scheletro
 .single .site-content
   @media (max-width: mini-tablet)
     padding-top: 0
 
-
-.single-content-wrapper
-  gs("fluid")
+.single article.post
+  width: 720px
+  height: auto
+  overflow: hidden
+  display: block
+  margin: 0 auto
+  margin-top: 30px
+  float: none
+  box-shadow: ombra-scura
+  border-left: 1px solid grigio-medio
+  border-right: 1px solid grigio-medio
 
 .content-single
-  width: 67%
+  width: 100%
   height: auto
   overflow: hidden
   display: block
-  float: left
+  float: none
   margin 0 auto
 
-  @media (max-width: mini-tablet)
-    width: 100%;
-    float: none
-
-.sidebar-single
-  width: 30%
-  height: auto
-  overflow: hidden
-  display: block
-  float: right
-  margin: 0 auto
-
-  @media (max-width: mini-tablet)
-    width: 64%
-    display: block
-    float: none
-
-  @media (max-width: smartphone)
-    width: 80%
-    margin: 30px auto
-
-.sidebar-single-mobile
-  display: none
-
-.single .content-area
-  padding: 0
-
-.single article.post
-  width: 100%
-  display: block
-  margin: 0 auto
-  padding: 0
-  background-color: grigio-chiaro
-
-/*Single - header*/
+//Single - header
 .single-header
-  width: 67%
+  width: 100%
   height: auto
   overflow: hidden
   display: block
-  float: left
+  float: none
   margin: 0 auto
   padding: 0
-  padding-top: 50px
 
   @media (max-width: mini-tablet)
-    width: 100%
     padding-top: 0
-    float: none
 
   .content-title
     width: 100%
@@ -71,6 +46,8 @@
     overflow: hidden
     float: right
     padding: 10px 0
+    margin: 0 auto
+    color: bianco
     background-color: colore-loppure
 
     @media (max-width: mini-tablet)
@@ -102,7 +79,11 @@
       float: left
       font-size: 25px
       line-height: 26px
+      color: bianco 25px
+      line-height: 26px
       color: bianco
+      font-weight: 400
+      border-left: 2px solid biancopost
       font-weight: 400
       border-left: 2px solid bianco
 
@@ -133,15 +114,14 @@
   background-position: center
 
 /*Single - Content text */
-.content-text
-  width: 80%
+.content-single
+  width: 100%
   height: auto
   overflow: hidden
-  float: right
+  display: block
+  margin: 0 auto
+  float: none
   background-color: colore-loppure
-
-  @media (max-width: medium)
-    width: 75%
 
   @media (max-width: mini-tablet)
     width: 100%
@@ -149,39 +129,34 @@
     margin: 0 auto
     float: none
 
-  .text
-    width: 86%
+  .content-text
+    width: 98%
     height: auto
     overflow: hidden
     display: block
-    float: left
+    float: none
     margin: 0 auto
-    padding: 20px 40px
+    padding: 0
     background-color: bianco
 
-    font-size: 15px
-    text-align: justify
+    .text
+      width: 70%
+      height: auto
+      overflow: hidden
+      display: block
+      margin: 20px auto
 
-    font-family: 'Merriweather', serif;
+      font-size: 15px
+      text-align: justify
 
-    @media (max-width: max)
-      width: 83.5%
+      font-family: 'Merriweather', serif;
 
-    @media (max-width: tablet)
-      width: 82%
 
-    @media (max-width: medium)
-      width: 87%
-      padding: 20px
-
-    @media (max-width: mini-tablet)
-      width: 90%
+    @media (max-width: smartphone)
+      width: 100%
       padding: 10px 20px
       float: none
 
-    @media (max-width: min)
-      width: auto
-      padding: 10px
 
 /*Single - Content text - content-fonti*/
 
@@ -218,97 +193,25 @@
       background-repeat: no-repeat
       background-position: center
 
-/*Single - Footer*/
-
-/*Single - Footer - informativa*/
-.footer-single
-  height: auto
-  overflow: hidden
-
-  .informativa
-    width: 100%
-    max-width: 1200px
-    height: auto
-    overflow: hidden
-    display: block
-    margin: 0 auto
-    margin-bottom: 20px
-    clear: both
-
-
-    article
-      width: 67%
-      height: auto
-      overflow: hidden
-      float: left
-      display: block
-      margin: 0 auto
-      background-color: colore-loppure
-      color: bianco
-
-
-      @media (max-width: mini-tablet)
-        width: 90%
-        float: none
-
-      @media (max-width: smartphone)
-        width: auto
-
-
-      &::after
-        width: 30px
-        height: 70px
-        display: block
-        margin: 20px auto
-        content: ' '
-        float: right
-        background-image: url(../../src/img/icone-generiche/info-bianco.svg)
-        background-repeat: no-repeat
-        background-size: cover
-        background-position: center
-
-      p
-        width: 60%
-        float: right
-        margin: 20px 100px 10px 20px;
-        font-size: 13px
-        text-align: justify
-
-        @media (max-width: mini-tablet)
-          width: 80%
-          margin: 30px;
-          margin-left: 10px
-
-        @media (max-width: min-smartphone)
-          margin: 20px
-
-/*Single - Footer - Author*/
+//Single - Footer
+//Single - Footer - Author
 .content-author-single
-  border-top: 2px solid colore-loppure
+  background-color: bianco
 
   .author-single
-    width: 720px
+    width: auto
     display: block
-    margin: 20px auto
-    padding 20px 10px
-    background-color: grigio-intermedio
-
-    @media (max-width: medium)
-      width: 80%
-
-    @media (max-width: smartphone)
-      width: 90%
-
-    @media (max-width: min-smartphone)
-      width: auto
-
-
+    margin: 0 auto
+    padding 30px 10px
+    background-color: colore-loppure
+    color: bianco
 
     img
       width: 100px
       height: 100px
       display: block
       margin: 0 auto
+      margin-bottom: 20px
       border-radius: 50%
       border: 2px solid colore-loppure
 
@@ -317,16 +220,20 @@
       text-align: center
       font-size: 18px
       font-weight: 700
+      color: bianco
 
       a
         text-decoration: none
+        color: bianco
 
     .author-bio
       width: 500px
       height: auto
       display: block
-      margin: 15px auto
+      margin: 5px auto
+      font-size: 14.5px
       text-align: justify
+      color: bianco
 
       @media (max-width: smartphone)
         width: 90%
@@ -335,6 +242,50 @@
       @media (max-width: min)
         width: 100%
 
+
+//Single informativa
+.informativa
+  width: 500px
+  height: auto
+  overflow: hidden
+  display: block
+  margin: 0 auto
+  margin-bottom: 20px
+  padding: 30px
+  clear: both
+  border: 1px solid colore-loppure
+  background-color: bianco
+  text-align: center
+
+  @media (max-width: mini-tablet)
+    width: 90%
+    float: none
+
+  @media (max-width: smartphone)
+    width: auto
+
+  h6
+    display: inline-block
+    margin: 15px auto
+    font-size: 18px
+    text-align: center
+
+    &::before
+      width: 20px
+      height: 20px
+      display: inline-block
+      margin: 0 auto
+      margin-right: 5px
+      content: ' '
+      float: none
+      border-right: 1px solid #000
+      background-image: ico-info-nera
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center
+
+  p
+    font-size: 12px
 
 /*Single - colori e icone*/
 /*Single - colori-icone: gusti della terra*/
@@ -348,7 +299,7 @@
       background-image: img-gusti-della-terra-bianco
 
   //Colore content text
-  .content-text
+  .content-single
     background-color: color-gusti-della-terra
 
     //Colore bordo content fonti
@@ -366,8 +317,8 @@
     &::before
       background-image: img-voli-sul-territorio-bianco
 
-  // Colore content-text
-  .content-text
+  // Colore content-single
+  .content-single
     background-color: color-voli-sul-territorio
 
     //Colore bordo content fonti
@@ -382,8 +333,8 @@
     &::before
       background-image: img-radici-nel-tempo-bianco
 
-  //Colore content-text
-  .content-text
+  //Colore content-single
+  .content-single
     background-color: color-radici-nel-tempo
 
     //Colore bordo content fonti
@@ -401,8 +352,8 @@
     &::before
       background-image: img-pausa-caffe-bianco
 
-  //Colore content-text
-  .content-text
+  //Colore content-single
+  .content-single
     background-color: color-pausa-caffe
 
     //Colore bordo content fonti
@@ -419,8 +370,8 @@
     &::before
       background-image: img-pensieri-tra-le-pagine-bianco
 
-  //Colore content-text
-  .content-text
+  //Colore content-single
+  .content-single
     background-color: color-pensieri-tra-le-pagine
 
     //Colore bordo content fonti

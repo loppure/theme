@@ -1,9 +1,6 @@
-/* body - scheletro*/
-
+//Scheletro
 html
   font-family: sans-serif;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
 
 body
   margin: 0
@@ -24,56 +21,45 @@ div, section
   background-position: center
   background-repeat: no-repeat
 
-/*site-content - scheletro*/
-.site
-  height: 90%
+section
+  clear: both
 
+//Scheletro - site-content FULL
+.site-full-content
+  width: 100%
+  height: auto
+  overflow: hidden
+  display: block
+  margin: 0 auto
+  padding: 0
+  float: none
+
+//Scheletro - site-content
 .site-content
+  width: 1200px
+  height: auto
+  overflow: hidden
+  display: block
   margin: 0 auto
   padding-top: 50px
-  width: 100%
-  max-width: 1200px
-  min-height: 100%
 
   @media (max-width: max)
     width: 95%
-    max-width: 100%
 
   @media (max-width: medium)
     width: 100%
-    max-width: 100%
 
-  @media (max-width: min)
-    width: 100%
-    max-width: 100%
 
-.content-area
-  padding: 0 0.5rem
-
-  @media (max-width: medium)
-    padding: 0 1rem
-
-  @media (max-width: min)
-    padding: 0 0.5rem
-
-/* Scheletro - Colore conent page */
-.site-main
-  background-color: grigio-intermedio
-
-.page-gray
-  background-color: grigio-chiaro
-
-/*Scheletro - Page-gray */
-.page-gray
-  gs("fluid")
+//Scheletro - Content-page
+.content-page
   width: 100%
   display: block
   height: auto
   overflow: hidden
   clear: both
   margin: 0 auto
-  margin-top: -145px
   padding: 0
+  background-color: grigio-chiaro
 
   @media (max-width: smartphone)
     width: 100%;
@@ -84,11 +70,11 @@ div, section
     text-align: justify
     padding: 0 20px
 
+//Scheletro - Page-standard
 .page-standard
-  width: 99%
+  width: auto
   margin-top: 0
   padding: 0
-
 
   section
     width: auto
@@ -100,7 +86,7 @@ div, section
     @media (max-width: smartphone)
       padding:  0
 
-
+//Scheletro - content-page-text
 .content-page-text
   width: 960px
   display: block
@@ -112,7 +98,109 @@ div, section
   @media (max-width: smartphone)
     width: 95%
 
+//Scheletro - section
+.section-page
+  min-height: 600px
+  height: auto
+  overflow: hidden
+  display: block
+  box-shadow: ombra-bottom-scura
 
-/*extra provisorio - scheletro*/
+  &.ricerca
+    min-height: 100px
+    height: auto
+    overflow: hidden
+    position: relative
+    z-index: -99
+    background-color: red
+
+.section-blur
+  width: 100%
+  min-height: 600px
+  height: auto
+  overflow: hidden
+  display: block
+  background-image: img-esempio
+  filter: blur(2px)
+  position: absolute
+  z-index: -99
+  background-size: 100%
+  background-repeat: no-repeat
+  background-position: center
+
+.radian-blur
+  width: 100%
+  min-height: 600px
+  height: auto
+  overflow: hidden
+  display: block
+  background-image: radial-gradient( ellipse at center, rgba(255,255,255,0) 50%, rgba(255,255,255,0.7) 100% )
+
+
+//Scheletro - Home
+.block-sinistra
+  width: 22.5%
+  display: block
+  float: left
+  padding: 20px 0
+  text-align: center
+
+  @media (max-width: tablet)
+    width: 100%
+    float: none
+    margin: 0 auto
+
+.bock-centrale
+  width: 50%
+  display: block
+  float: left
+  margin: 0 2%
+  padding: 20px 0
+  text-align: center
+  border-left: 2px solid colore-loppure
+  border-right: 2px solid colore-loppure
+
+  @media (max-width: tablet)
+    width: 60%
+
+  @media (max-width: mini-tablet)
+    width: 70%
+    margin: 0 auto
+    border: none
+    border-right: 2px solid colore-loppure
+
+  @media (max-width: fat-phone)
+    width: 65%
+
+  @media (max-width: smartphone)
+    width: 100%
+    display: block
+    margin: 0 auto
+    float: none
+
+.block-destra
+  width: 22.5%
+  display: block
+  padding: 20px 0
+  float: right
+  text-align: center
+
+  @media (max-width: tablet)
+    width: 35%
+    margin: 0 auto
+
+  @media (max-width: mini-tablet)
+    width: 28%
+
+  @media (max-width: fat-phone)
+    width: 30%
+
+  @media (max-width: smartphone)
+    width: 100%
+    display: block
+    margin: 0 auto
+    float: none
+
+// TODO extra provisorio - scheletro
 a.skip-link.screen-reader-text
   display: none

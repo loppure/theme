@@ -2,12 +2,13 @@
 
 @section('content')
 
-<div class="page-gray page-standard">
+<div class="site-content page-standard">
 	<header class="header-page">
 		<h1 class="title-page">{{ the_title() }}</h1>
 	</header>
 
 	<section class="content-page-text">
+	
 		<h2>I nostri intenti</h2>
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -20,6 +21,7 @@
 	</section>
 
 	<section class="content-box-team-medium">
+		<!-- TODO pensare a una carta degli intenti de L'oppure -->
 		<h2>Direttivo</h2>
 		<article class="box-team-medium">
 			<img src="#">
@@ -80,6 +82,7 @@
 	</section>
 
 	<section class="documenti-bilancio">
+
 		<h2>Bilancio</h2>
 
 		<div class="content-box-documento">

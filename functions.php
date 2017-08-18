@@ -11,6 +11,7 @@ use \Theine\PageTemplate\CustomPageTemplate;
 
 use \Loppure\Component\TaxCitta;
 use \Loppure\Component\TaxProgetti;
+use \Loppure\Component\TaxReportage;
 
 $theme = Theme::getInstance();
 
@@ -44,11 +45,22 @@ $theme['love'] = new Loppure\API\Love();
 
 // Taxonomy -> Città
 $theme['citta'] = new TaxCitta();
-// Taxonomy -> Città
+// Taxonomy -> Progetti
 $theme['progetti'] = new TaxProgetti();
+// Taxonomy -> Reportage
+$theme['reportage'] = new TaxReportage();
 
 // Costum post Type -> Polaroid
-$theme['image_type'] = new Loppure\Component\PolaroidType();
+$theme['polaroid_type'] = new Loppure\Component\PolaroidType();
+
+// Costum post Type -> Reportage
+$theme['reportage_type'] = new Loppure\Component\ReportageType();
+
+// Costum post Type -> Evento
+$theme['evento_type'] = new Loppure\Component\EventoType();
+
+// Costum post Type -> Team
+$theme['team_type'] = new Loppure\Component\TeamType();
 
 $theme->run(); // lancia il tema ^^
 

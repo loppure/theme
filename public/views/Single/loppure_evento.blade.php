@@ -2,74 +2,39 @@
 
 @section('content')
 
-    <article id="post-{{ $post->id }}" data-image="image here" data-id="{{ $post->id }}" {{ post_class() }}>
-        <header class="single-header">
-            <div class="content-title">
+<article id="post-{{ $post->id }}" data-image="image here" data-id="{{ $post->id }}" {{ post_class() }}>
+  <header class="single-header">
+    <figure class="single-image" style="background-image: url({{ $post->thumbnail }})">
+      <h1 class="entry-title">{{ $post->title }}</h1>
+    </figure>
+  </header>
+  <div class="info-evento">
+    <span class="orario">ora</span>
+    <span class="data">data</span>
+    <span class="indirizzo">indirizzo</span>
+  </div>
+  <div class="text-description">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+      reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+      pariatur. Excepteur sint occaecat cupidatat non proident,
+      sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+  </div>
+  <div class="content-curatore">
+    <!-- Evento tenuto da -->
+  </div>
+  <div class="maps-evento">
+    <!-- Cartina evento -->
+  </div>
 
-                <h1 class="entry-title">{{ $post->title }}</h1>
-            </div>
-        </header>
-        <section class="single-content-wrapper">
-            <div class="content-single">
-                <figure class="single-image" style="background-image: url({{ $post->thumbnail }})"></figure>
+  <footer class="content-social">
+    @include('Widget/Social/share/index')
+  </footer>
 
-                @include('Widget/Social/share/index')
-
-                <div class="content-text">
-                    <div class="text">
-                        {{ $post->content }}
-
-                        <div class="content-fonti">
-                            <h6>Fonti:</h6>
-                            <span>Foto:</span>
-                            <span>Informazioni presa da:</span>
-                        </div>
-                    </div> <!-- .text -->
-                </div> <!-- .content-text -->
-            </div> <!-- .content-single -->
-
-            <section class="widget-area sidebar-single" role="complementary">
-                <!-- widget Last article -->
-                @include('Widget/Single/Porta-citta/index')
-                @include('Widget/Single/Categorie/index')
-                @include('Widget/Single/Citta/index')
-                {{--{{ dynamic_sidebar('sidebar-single') }}--}}
-            </section> <!-- .widget-area -->
-        </section> <!-- .single-content-wrapper -->
-
-        <footer class="footer-single">
-            <div class="informativa">
-                <article>
-                  <p>
-            				I contenuti di questo sito sono realizzati da studenti e giovani
-            				appassionati del proprio territorio. Questo progetto non persegue
-            				nessuno scopo di lucro. Pertanto se sono presenti errori o imprecisioni
-            				vi preghiamo di contattarci: qualsiasi feedback ci è utile per migliorare.
-            				I contenuti testuali sono di proprietà dell'Associazione "L'oppure", ad eccezione
-            				delle citazioni o delle trascrizioni di testi altrui. Chi intenda utilizzarli per
-            				scopi non commerciali può farlo citando come fonte l'Associazione "L'oppure".
-            				Qualora si voglia riprodurli per scopi commerciali, vi preghiamo di contattarci
-            				alla mail info@loppure.it.
-            			</p>
-                </article>
-            </div>
-            <div class="content-author-single">
-                <article class="author-single">
-                    {{ $author->thumb }}
-                    <h4>{{ the_author_posts_link() }}</h4>
-                    <p class="author-bio">{{ get_the_author_meta( 'description' ) }}</p>
-                </article>
-            </div>
-        </footer>
-
-        <section class="widget-area sidebar-single-mobile" role="complementary">
-            <!-- widget Last article -->
-            @include('Widget/Single/Categorie/index')
-            @include('Widget/Single/Porta-citta/index')
-            @include('Widget/Single/Citta/index')
-            {{--{{ dynamic_sidebar('sidebar-single') }}--}}
-        </section> <!-- .widget-area -->
-    </article>
+</article>
 
     {{--@include('Single.comments')--}}
 @endsection

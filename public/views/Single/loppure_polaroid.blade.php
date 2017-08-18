@@ -2,74 +2,50 @@
 
 @section('content')
 
-    <article id="post-{{ $post->id }}" data-image="image here" data-id="{{ $post->id }}" {{ post_class() }}>
-        <header class="single-header">
-            <div class="content-title">
+<article id="post-{{ $post->id }}" data-image="image here" data-id="{{ $post->id }}" {{ post_class() }}>
+  <header class="single-header">
+    <h1 class="entry-title">{{ $post->title }}</h1>
+  </header>
+  <div class="content-polaroid">
+    <figure class="single-image" style="background-image: url({{ $post->thumbnail }})"></figure>
 
-                <h1 class="entry-title">{{ $post->title }}</h1>
-            </div>
-        </header>
-        <section class="single-content-wrapper">
-            <div class="content-single">
-                <figure class="single-image" style="background-image: url({{ $post->thumbnail }})"></figure>
+    <div class="text">
+        {{ $post->content }}
 
-                @include('Widget/Social/share/index')
+    </div> <!-- .text -->
+  </div>
 
-                <div class="content-text">
-                    <div class="text">
-                        {{ $post->content }}
+</article>
 
-                        <div class="content-fonti">
-                            <h6>Fonti:</h6>
-                            <span>Foto:</span>
-                            <span>Informazioni presa da:</span>
-                        </div>
-                    </div> <!-- .text -->
-                </div> <!-- .content-text -->
-            </div> <!-- .content-single -->
+<div class="content-extra">
+  <div class="author-single">
+      {{--{{ $author->thumb }} TODO sistemare--}}
 
-            <section class="widget-area sidebar-single" role="complementary">
-                <!-- widget Last article -->
-                @include('Widget/Single/Porta-citta/index')
-                @include('Widget/Single/Categorie/index')
-                @include('Widget/Single/Citta/index')
-                {{--{{ dynamic_sidebar('sidebar-single') }}--}}
-            </section> <!-- .widget-area -->
-        </section> <!-- .single-content-wrapper -->
 
-        <footer class="footer-single">
-            <div class="informativa">
-                <article>
-                  <p>
-            				I contenuti di questo sito sono realizzati da studenti e giovani
-            				appassionati del proprio territorio. Questo progetto non persegue
-            				nessuno scopo di lucro. Pertanto se sono presenti errori o imprecisioni
-            				vi preghiamo di contattarci: qualsiasi feedback ci è utile per migliorare.
-            				I contenuti testuali sono di proprietà dell'Associazione "L'oppure", ad eccezione
-            				delle citazioni o delle trascrizioni di testi altrui. Chi intenda utilizzarli per
-            				scopi non commerciali può farlo citando come fonte l'Associazione "L'oppure".
-            				Qualora si voglia riprodurli per scopi commerciali, vi preghiamo di contattarci
-            				alla mail info@loppure.it.
-            			</p>
-                </article>
-            </div>
-            <div class="content-author-single">
-                <article class="author-single">
-                    {{ $author->thumb }}
-                    <h4>{{ the_author_posts_link() }}</h4>
-                    <p class="author-bio">{{ get_the_author_meta( 'description' ) }}</p>
-                </article>
-            </div>
-        </footer>
+      <img src="http://0.gravatar.com/avatar/3d7b1f1a4908cbf92bcee0fb28291087?s=96&d=mm&r=g" width="96" height="96" alt="" class="avatar avatar-96wp-user-avatar wp-user-avatar-96 alignnone photo avatar-default" />
 
-        <section class="widget-area sidebar-single-mobile" role="complementary">
-            <!-- widget Last article -->
-            @include('Widget/Single/Categorie/index')
-            @include('Widget/Single/Porta-citta/index')
-            @include('Widget/Single/Citta/index')
-            {{--{{ dynamic_sidebar('sidebar-single') }}--}}
-        </section> <!-- .widget-area -->
-    </article>
+      <h4>{{ the_author_posts_link() }}</h4>
+      <p class="author-bio">{{ get_the_author_meta( 'description' ) }}</p>
+  </div>
+
+
+  @include('Widget/Social/share/index')
+
+  <div class="informativa">
+    <h6>Uso dei contenuti</h6>
+    <p>
+      I contenuti di questo sito sono realizzati da studenti e giovani
+      appassionati del proprio territorio. Questo progetto non persegue
+      nessuno scopo di lucro. Pertanto se sono presenti errori o imprecisioni
+      vi preghiamo di contattarci: qualsiasi feedback ci è utile per migliorare.
+      I contenuti testuali sono di proprietà dell'<span>Associazione L'oppure</span>, ad eccezione
+      delle citazioni o delle trascrizioni di testi altrui. Chi intenda utilizzarli per
+      scopi non commerciali può farlo citando come fonte <span>l'associazione L'oppure</span>.
+      Qualora si voglia riprodurli per scopi commerciali, vi preghiamo di contattarci
+      alla mail </span>info@loppure.it</span>.
+    </p>
+  </div>
+</div>
 
     {{--@include('Single.comments')--}}
 @endsection

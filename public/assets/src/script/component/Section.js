@@ -33,7 +33,7 @@ export default class Section extends React.Component {
                     // : log}
                     >
                 </div>
-                <button className="button-like-post" onClick={this.props.sendLike} data-love="0">{this.props.like + " ♥"}</button>
+                <button className="button-like-post" onClick={this.props.sendLike} data-love="0">{this.props.like}</button>
                 <button className="comments-button" onClick={this.props.switch_footer}>
                     {(() => {
                         switch (this.props.comments_number) {
