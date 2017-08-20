@@ -100,42 +100,33 @@ section
 
 //Scheletro - section
 .section-page
-  min-height: 600px
+  min-height: 550px
   height: auto
   overflow: hidden
   display: block
   box-shadow: ombra-bottom-scura
+  position: relative
 
-  &.ricerca
-    min-height: 100px
-    height: auto
-    overflow: hidden
-    position: relative
-    z-index: -99
-    background-color: red
+  &:nth-child(1)
+    z-index: 5
 
-.section-blur
-  width: 100%
-  min-height: 600px
-  height: auto
-  overflow: hidden
-  display: block
-  background-image: img-esempio
-  filter: blur(2px)
-  position: absolute
-  z-index: -99
-  background-size: 100%
-  background-repeat: no-repeat
-  background-position: center
+  &:nth-child(2)
+    z-index: 4
 
-.radian-blur
-  width: 100%
-  min-height: 600px
-  height: auto
-  overflow: hidden
-  display: block
-  background-image: radial-gradient( ellipse at center, rgba(255,255,255,0) 50%, rgba(255,255,255,0.7) 100% )
+  &:nth-child(3)
+    z-index: 3
 
+  &:nth-child(4)
+    z-index: 2
+
+  &:nth-child(5)
+    z-index: 1
+
+  &.loop-article
+    max-width: 960px
+    display: block
+    margin: 0 auto
+    box-shadow: none
 
 //Scheletro - Home
 .block-sinistra

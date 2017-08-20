@@ -6,31 +6,25 @@
 
     <!-- TODO primo sezione home -->
     <!-- Questo contine il menu di navigazione - Payoff - Input di ricerca -->
-    <div class="section-blur">
-      <div class="radian-blur"></div>
-    </div>
     <div class="control-home">
       @include('ControlNavigation.controlnavigation')
     </div>
-    <div class="payoff-home">
-      <h3>Uno sguardo sulla tua città ovvunque tu ti trovi</h3>
-      <!-- TODO inserire logo istituzionale -->
-    </div>
 
+    @include('Slideshow.slideshow-home')
   </section>
 
-  <section class="section-page ricerca">
+  <section class="section-page section-ricerca">
     <!-- TODO seconda sezione home -->
     <!-- Questa parte compare solo quando avviene la ricerca -->
-    <div class="ricerca-home">
-      <!-- TODO aggiungere comandi di ricerca -->
+    <div class="content-ricerca">
+      @include('shared.searchform')
     </div>
-    <div class="content-risultati-ricerca-home">
+    <div class="content-risultati-ricerca">
       <!-- TODO stampare i risultati di ricerca -->
     </div>
   </section>
 
-  <section class="section-home">
+  <section class="section-page loop-article">
     <!-- TODO terza sezione home -->
     <!-- Questa parte contiene il loop della home -->
 

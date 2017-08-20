@@ -31,8 +31,6 @@
                             {{ wp_nav_menu( array( 'theme_location' => 'header-menu' ) ) }}
                         </nav><!-- #site-navigation -->
 
-                        @include('shared.searchform')
-
                     </div><!-- .header-wrapper -->
                 </header><!-- #masthead -->
 
