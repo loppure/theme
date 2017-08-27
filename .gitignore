@@ -13,3 +13,6 @@ public/cache/
 
 public/assets/dist/
 package-lock.json
+
+log/*
+!log/.gitkeep
