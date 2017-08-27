@@ -48,14 +48,37 @@
 <section>
   <!-- TODO terza sezione città - ultimi aricoli delle rubriche -->
   <!-- creare un loop che carica 1 article per ogni rubrica e dentro article carichi l'ultimo articolo della rispettiva rubrica -->
-  <article>
+
+  <!-- Card citta rubrica Gusti della terra -->
+  <article class="card-citta-rubrica gusti-della-terra">
     <header>
-      <h6>Nome della rubrica</h6>
+      <h6>Gusti della terra</h6>
       <p>Presentazione rubrica</p>
     </header>
     <div class="content-fast-rubrica">
     </div>
   </article>
+
+  <!-- Card citta rubrica Voli sul territorio -->
+  <article class="card-citta-rubrica voli-sul-territorio">
+    <header>
+      <h6>Voli sul territorio</h6>
+      <p>Presentazione rubrica</p>
+    </header>
+    <div class="content-fast-rubrica">
+    </div>
+  </article>
+
+  <!-- Card citta rubrica Radici nel tempo -->
+  <article class="card-citta-rubrica radici-nel-tempo">
+    <header>
+      <h6>Radici nel tempo</h6>
+      <p>Presentazione rubrica</p>
+    </header>
+    <div class="content-fast-rubrica">
+    </div>
+  </article>
+
 </section>
 
 @endsection

@@ -1,0 +1,184 @@
+//slider - home
+
+.slide-home ul li .section-blur
+  width: 100%
+  min-height: 550px
+  height: auto
+  overflow: hidden
+  display: block
+  filter: blur(2px)
+  position: absolute
+  z-index: -99
+  background-size: 120%
+  background-repeat: no-repeat
+  background-position: center
+
+.slide-home ul li .radian-blur
+  width: 100%
+  min-height: 550px
+  height: auto
+  overflow: hidden
+  display: block
+  background-image: radial-gradient( ellipse at center, rgba(255,255,255,0) 50%, rgba(255,255,255,0.7) 100% )
+
+
+//pippo
+.payoff-slide-home
+	height: 200px
+	display: block
+	overflow: hidden
+	border-top: 1px solid bianco
+	border-bottom: 1px solid bianco
+	background-size: 120%
+	margin-top: 300px;
+	background-repeat: no-repeat;
+	background-position: center -300px;
+
+.payoff-slide-home h3
+  width: 500px
+  height: auto
+  overflow: hidden
+  display: block
+  margin: 0 auto
+  margin-top: 20px
+  font-size: 35px
+  text-align: center
+  color: bianco
+  font-weight: 700
+
+  &::after
+    width: 50px
+    height: 50px
+    content: ' '
+    display: block
+    margin: 20px auto
+    margin-bottom: 0
+    border: 1px solid bianco
+    border-radius: 50%
+
+
+/*style slider*/
+.slide-home
+	width: 100%
+	min-height: 550px
+	height: auto
+	overflow: hidden
+	display: block
+	position: absolute
+	top: 0
+	left:0
+	z-index: -99
+	background-size: 100%
+	background-repeat: no-repeat
+	background-position: center
+
+	ul
+		width: 100%
+		min-height: 550px
+		overflow: hidden
+		display: block
+		margin: 0
+		padding: 0
+		position: relative
+		z-index: -99
+
+.slide-home ul li
+	width: 100%
+	min-height: 550px
+	overflow: hidden
+	display: block
+	margin:0;
+	padding:0;
+	opacity:0;
+	position:absolute;
+	z-index: -99
+	top:0;
+	left:0;
+	-o-animation-name:slides_animation;
+	-o-animation-duration:120s;
+	-o-animation-timing-function: linear;
+	-o-animation-iteration-count: infinite;
+	-o-animation-delay: 0;
+	-o-animation-play-state: running;
+	-o-animation-fill-mode: forwards;
+	-webkit-animation-name:slides_animation;
+	-webkit-animation-duration:120s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-delay: 0;
+	-webkit-animation-play-state: running;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-name:slides_animation;
+	-moz-animation-duration:120s;
+	-moz-animation-timing-function: linear;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-delay: 0;
+	-moz-animation-play-state: running;
+	-moz-animation-fill-mode: forwards;
+	animation-name:slides_animation;
+	animation-duration:120s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-delay: 0;
+	animation-play-state: running;
+	animation-fill-mode: forwards;
+
+.slide-home ul li:nth-child(2){
+	-o-animation-delay:25s;
+	-webkit-animation-delay:25s;
+	-moz-animation-delay:25s;
+	animation-delay:25s
+}
+
+.slide-home ul li:nth-child(3){
+	-o-animation-delay:50s;
+	-webkit-animation-delay:50s;
+	-moz-animation-delay:50s;
+	animation-delay:50s
+}
+
+.slide-home ul li:nth-child(4){
+	-o-animation-delay:75s;
+	-webkit-animation-delay:75s;
+	-moz-animation-delay:75s;
+	animation-delay:75s
+}
+
+.slide-home ul li:nth-child(5){
+	-o-animation-delay:100s;
+	-webkit-animation-delay:100s;
+	-moz-animation-delay:100s;
+	animation-delay:100s
+}
+
+/*animation css3*/
+@-o-keyframes slides_animation{
+   0%{opacity:0;}
+   4%{opacity:1;}
+   16%{opacity:1;}
+   24%{opacity:0;}
+   100%{opacity:0;}
+}
+@-webkit-keyframes slides_animation{
+   0%{opacity:0;}
+   4%{opacity:1;}
+   16%{opacity:1;}
+   24%{opacity:0;}
+   100%{opacity:0;}
+}
+
+@-moz-keyframes slides_animation{
+   0%{opacity:0;}
+   4%{opacity:1;}
+   16%{opacity:1;}
+   24%{opacity:0;}
+   100%{opacity:0;}
+}
+
+@keyframes slides_animation{
+   0%{opacity:0;}
+   4%{opacity:1;}
+   16%{opacity:1;}
+   24%{opacity:0;}
+   100%{opacity:0;}
+}
