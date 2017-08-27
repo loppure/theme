@@ -16,7 +16,8 @@
         "squizlabs/php_codesniffer": "^3.0",
         "symfony/var-dumper": "^3.3",
         "psy/psysh": "^0.8.6",
-        "xiaoler/blade": "^5.4"
+        "xiaoler/blade": "^5.4",
+        "monolog/monolog": "^1.23"
     },
     "autoload": {
         "psr-4": {
