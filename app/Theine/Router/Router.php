@@ -168,10 +168,14 @@ class Router
         // in case, remove it
         $route = preg_replace('/!/', '', $route);
 
-        // let's see if $route contains a parameter
-        $par = preg_replace('/\w*\((.*)\)/i', '$1', $route);
-        // and remove it!
-        $route = preg_replace('/\(.*\)/i', '', $route);
+        if (strstr($route, '(') !== false) {
+            // let's see if $route contains a parameter
+            $par = preg_replace('/\w*\((.*)\)/i', '$1', $route);
+            // and remove it!
+            $route = preg_replace('/\(.*\)/i', '', $route);
+        } else {
+            $par = false;
+        }
 
         // now `$route` should contain ONLY the name of a route, $bang
         // should be a Boolean and $par should be either the empty
@@ -202,7 +206,7 @@ class Router
             if ($par) {
                 $matched = get_query_var('taxonomy', false) === $par;
             } else {
-                $matched = get_query_var('taxonomy', false);
+                $matched = get_query_var('taxonomy', false) !== false;
             }
             break;
 
