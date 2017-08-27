@@ -120,12 +120,14 @@ class Router
             }
         }
 
-        if ($controller == null && isset($this->routes['default'])) {
-            $theme->notice();
-            $controller = $this->execute($this->routes['default']);
-        } else {
-            $theme->critical("No route has matched \"$actual_link\"!");
-            new \Exception("no default route configured!");
+        if ($controller == null) {
+            if (isset($this->routes['default'])) {
+                $theme->notice();
+                $controller = $this->execute($this->routes['default']);
+            } else {
+                $theme['log']->critical("No route has matched \"$actual_link\"!");
+                throw new \Exception("no default route configured!");
+            }
         }
 
         return $controller;
