@@ -28,14 +28,7 @@ class Router
      *
      * @var array
      */
-    private $routes;
-
-    /**
-     * Contiene il controller che viene lanciato.
-     *
-     * @var \Theine\Controller\Controller
-     */
-    private $active_controller;
+    private $routes = [];
 
     /**
      * Contiene la configurazione iterna (le coppie `"nome route" =>
@@ -43,31 +36,21 @@ class Router
      *
      * @var array
      */
-    private $mapping;
-
-    /**
-     * Inizializza l'oggetto
-     */
-    public function __construct()
-    {
-        $this->routes = [];
-
-        $this->mapping = [
-            'author'    => 'is_author',
-            'category'  => 'is_category',
-            'taxonomy'  => 'is_tax',
-            'date'      => 'is_date',
-            'tag'       => 'is_tag',
-            'singular'  => 'is_singular',
-            'single'    => 'is_single',
-            'font_page' => 'is_front_page',
-            'home'      => 'is_home',
-            '404'       => 'is_404',
-            'search'    => 'is_search',
-            'page'      => 'is_page',
-            'archive'   => 'is_archive'
-        ];
-    }
+    private static $mapping = [
+        'author'    => 'is_author',
+        'category'  => 'is_category',
+        //'taxonomy'  => 'is_tax',
+        'date'      => 'is_date',
+        'tag'       => 'is_tag',
+        'singular'  => 'is_singular',
+        'single'    => 'is_single',
+        'font_page' => 'is_front_page',
+        'home'      => 'is_home',
+        '404'       => 'is_404',
+        'search'    => 'is_search',
+        'page'      => 'is_page',
+        'archive'   => 'is_archive'
+    ];
 
     /**
      * Permette all'utente di configurare le route da PHP
@@ -118,27 +101,144 @@ class Router
      * Dopo aver definito le route, sceglie quale controller far
      * partire.
      *
-     * @return void
+     * @return Theine\Controller\Controller
      */
     public function choose()
     {
-        $found = false;
+        $controller = null;
 
         foreach ($this->routes as $route => $controller) {
-            if (isset($this->mapping[$route]) && $this->mapping[$route]()) {
-                $found = true;
-                $this->active_controller = new $controller();
+            if (self::is($route)) {
+                $controller = $this->execute($controller);
                 break;
             }
         }
 
-        if (!$found && isset($this->routes['default'])) {
-            $this->active_controller = new $this->routes['default']();
+        if ($controller == null && isset($this->routes['default'])) {
+            $controller = $this->execute($this->routes['default']);
         } else {
-            // throw exception!
             new \Exception("no default route configured!");
         }
 
-        return $this->active_controller;
+        return $controller;
+    }
+
+    /**
+     * Execute a given controller and returns it
+     *
+     * @param String $controller A string that defines a controller to
+     * be executed. Could be a simple class name (with namespace) to
+     * be initializated or a class with a method to be called. REQUIRE
+     * not null and not empty.
+     * @return Theine\Controller\Controller
+     */
+    private function execute($controller)
+    {
+        if (strstr($controller, "::")) {
+            list($class, $method) = explode("::", $controller);
+            $c = new $class();
+            $c->$method();
+            return $c;
+        }
+
+        return new $controller();
+    }
+
+    /**
+     * Test a specific route
+     * @param $route a single route selector, see `Router::is`
+     * @return boolean true if the $route is matched
+     * @see Theine\Router\Router::is
+     */
+    private static function match($route)
+    {
+        // let's see if $route contains a bang
+        $bang = $route[0] == '!';
+        // in case, remove it
+        $route = preg_replace('/!/', '', $route);
+
+        // let's see if $route contains a parameter
+        $par = preg_replace('/\w*\((.*)\)/i', '$1', $route);
+        // and remove it!
+        $route = preg_replace('/\(.*\)/i', '', $route);
+
+        // now `$route` should contain ONLY the name of a route, $bang
+        // should be a Boolean and $par should be either the empty
+        // string or the parameter to the route
+
+        $matched = false;
+
+        switch ($route) {
+        case '*':
+            $matched = true;
+            break;
+
+        case "category":
+            if (is_category()) {
+                if ($par) {
+                    // TODO: check category name
+                    $matched = true;
+                } else {
+                    $matched = true;
+                }
+            }
+            break;
+
+        case "taxonomy" :
+            if (!is_archive()) {
+                break;
+            }
+            if ($par) {
+                $matched = get_query_var('taxonomy', false) === $par;
+            } else {
+                $matched = get_query_var('taxonomy', false);
+            }
+            break;
+
+        default:
+            $matched = isset(self::$mapping[$route]) && self::$mapping[$route]();
+            break;
+        }
+
+        return $bang ? !$matched : $matched;
+    }
+
+    /**
+     * A specification for a route, or more, is a simple string that
+     * can be generated by the following grammar:
+     *
+     * ```
+     * S -> s | !s | "S|S"
+     * ```
+     *
+     * where `s` is a selector. All spaces are ignored.
+     *
+     * A selector is the name of a route (e.g. "home", "single",
+     * "404", ...) and can, optionally, contain a parameter
+     * i.e. "taxonomy(foo)" is true only if the current taxonomy
+     * archive is for the taxonomy "foo".
+     *
+     * A bang (`!`) before a selector means that the selector is
+     * negated.
+     *
+     * The route '*' act as a wild-card, is always matched.
+     *
+     * The actual implementation of this method could accept a grammar
+     * that is a slightly more generic that the one
+     * specified. However, you are encouraged to follow the
+     * specification.
+     *
+     * @param string $route A specification of one or more routes.
+     * @return true if the given route (or one of the given routes)
+     * are matched by the current page.
+     */
+    public static function is($route)
+    {
+        $route = preg_replace('/\s+/i', '', $route);
+        $tokens = explode('|', $route);
+
+        return array_reduce($tokens, function ($matched, $token) {
+            return $matched or self::match($token);
+        }, false);
     }
 }
