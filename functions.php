@@ -13,6 +13,10 @@ use \Loppure\Component\TaxCitta;
 use \Loppure\Component\TaxProgetti;
 use \Loppure\Component\TaxReportage;
 
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
+use Monolog\Handler\FingersCrossedHandler;
+
 $theme = Theme::getInstance();
 
 $theme['name']      = "L'oppure";
@@ -21,6 +25,15 @@ $theme['extras']    = new Extras( [
     'generator' => false,
     'meta_next' => false
 ] );
+
+// setting up monolog
+$log = new Logger($theme['name']);
+$h = new StreamHandler(get_template_directory() . '/log/errors.log');
+$log->pushHandler(new FingersCrossedHandler($h, Logger::CRITICAL));
+// debug only
+$log->pushHandler(new StreamHandler(get_template_directory() . '/log/debug.log'));
+// end debug only
+$theme['log'] = $log;
 
 $theme['page_template'] = new CustomPageTemplate();
 

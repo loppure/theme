@@ -87,12 +87,15 @@ class Router
     public function fromConfig()
     {
         $theme = Theme::getInstance();
+        $theme['log']->debug("loading routes from config");
 
         if (isset($theme['config']['routing'])) {
             foreach ($theme['config']['routing'] as $route => $controller) {
                 $this->add($route, $controller);
             }
         }
+
+        $theme['log']->debug("finished loading routes");
 
         $this->choose();
     }
@@ -105,18 +108,23 @@ class Router
      */
     public function choose()
     {
+        $theme = Theme::getInstance();
+        $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
         $controller = null;
 
         foreach ($this->routes as $route => $controller) {
             if (self::is($route)) {
+                $theme['log']->debug("$controller matches $actual_link ($route)");
                 $controller = $this->execute($controller);
                 break;
             }
         }
 
         if ($controller == null && isset($this->routes['default'])) {
+            $theme->notice();
             $controller = $this->execute($this->routes['default']);
         } else {
+            $theme->critical("No route has matched \"$actual_link\"!");
             new \Exception("no default route configured!");
         }
 
@@ -134,6 +142,7 @@ class Router
      */
     private function execute($controller)
     {
+        Theme::getInstance()['log']->debug("executing $controller");
         if (strstr($controller, "::")) {
             list($class, $method) = explode("::", $controller);
             $c = new $class();
