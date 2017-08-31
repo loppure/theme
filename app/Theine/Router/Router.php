@@ -37,6 +37,7 @@ class Router
      * @var array
      */
     private static $mapping = [
+        'admin'     => 'is_admin',
         'author'    => 'is_author',
         'category'  => 'is_category',
         //'taxonomy'  => 'is_tax',
@@ -56,6 +57,7 @@ class Router
      * Permette all'utente di configurare le route da PHP
      *
      * @param string $path Il tipo di route si vuole definire. Sono supportati:
+     *  * `admin` => Dashboard o pannelli d'amministrazione
      *  * `author` => Archivio dell'autore
      *  * `category` => Archivio della categoria
      *  * `taxonomy` => Archivio della tassonomia
