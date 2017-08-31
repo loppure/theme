@@ -8,6 +8,7 @@ use \Theine\Assets\Script;
 use \Theine\Assets\Style;
 use \Theine\Extras\Extras;
 use \Theine\PageTemplate\CustomPageTemplate;
+use \Theine\Router\Router;
 
 use \Loppure\Component\TaxCitta;
 use \Loppure\Component\TaxProgetti;
@@ -74,6 +75,14 @@ $theme['evento_type'] = new Loppure\Component\EventoType();
 
 // Costum post Type -> Team
 $theme['team_type'] = new Loppure\Component\TeamType();
+
+/**
+ * remove the debug if we are in the backend
+ * @see https://github.com/loppure/theme/issues/23
+ */
+if (Router::is('admin')) {
+    unset($theme['debug']);
+}
 
 $theme->run(); // lancia il tema ^^
 
