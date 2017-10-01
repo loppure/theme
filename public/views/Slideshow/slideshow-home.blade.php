@@ -1,48 +1,31 @@
-<div class="slide-home">
+<div class="container-slider-citta">
+	<div class="slider">
     <ul>
-        <li>
-          <div class="section-blur" style="background-image: url(https://demo.ndstyle.it/simple-slideshow-css3/images/slide/1.jpg);">
-            <div class="radian-blur"></div>
-          </div>
-          <div class="payoff-slide-home" style="background-image: url(https://demo.ndstyle.it/simple-slideshow-css3/images/slide/1.jpg);">
-            <h3>Uno sguardo sulla tua città ovvunque tu ti trovi</h3>
-          </div>
-        </li>
+   	<li>
+    <figure style="background-image: url(http://www.alessioatzeni.com/CSS3-Cycle-Image-Slider/images/img_1.jpg);">
+		</figure>
+    </li>
 
-        <li>
-          <div class="section-blur" style="background-image: url(https://demo.ndstyle.it/simple-slideshow-css3/images/slide/2.jpg);">
-            <div class="radian-blur"></div>
-          </div>
-          <div class="payoff-slide-home" style="background-image: url(https://demo.ndstyle.it/simple-slideshow-css3/images/slide/2.jpg);">
-            <h3>Uno sguardo sulla tua città ovvunque tu ti trovi</h3>
-          </div>
-        </li>
+    <li>
+			<figure style="background-image: url(http://www.alessioatzeni.com/CSS3-Cycle-Image-Slider/images/img_2.jpg);">
+			</figure>
+    </li>
 
-        <li>
-          <div class="section-blur" style="background-image: url(https://demo.ndstyle.it/simple-slideshow-css3/images/slide/3.jpg);">
-            <div class="radian-blur"></div>
-          </div>
-          <div class="payoff-slide-home" style="background-image: url(https://demo.ndstyle.it/simple-slideshow-css3/images/slide/3.jpg);">
-            <h3>Uno sguardo sulla tua città ovvunque tu ti trovi</h3>
-          </div>
-        </li>
+    <li>
+			<figure style="background-image: url(http://www.alessioatzeni.com/CSS3-Cycle-Image-Slider/images/img_3.jpg);">
+			</figure>
+    </li>
 
-        <li>
-          <div class="section-blur" style="background-image: url(https://demo.ndstyle.it/simple-slideshow-css3/images/slide/4.jpg);">
-            <div class="radian-blur"></div>
-          </div>
-          <div class="payoff-slide-home" style="background-image: url(https://demo.ndstyle.it/simple-slideshow-css3/images/slide/4.jpg);">
-            <h3>Uno sguardo sulla tua città ovvunque tu ti trovi</h3>
-          </div>
-        </li>
+    <li>
+			<figure style="background-image: url(http://www.alessioatzeni.com/CSS3-Cycle-Image-Slider/images/img_4.jpg);">
+			</figure>
+    </li>
 
-        <li>
-          <div class="section-blur" style="background-image: url(https://demo.ndstyle.it/simple-slideshow-css3/images/slide/5.jpg);">
-            <div class="radian-blur"></div>
-          </div>
-          <div class="payoff-slide-home" style="background-image: url(https://demo.ndstyle.it/simple-slideshow-css3/images/slide/5.jpg);">
-            <h3>Uno sguardo sulla tua città ovvunque tu ti trovi</h3>
-          </div>
-        </li>
-      </ul>
+    <li>
+			<figure style="background-image: url(http://www.alessioatzeni.com/CSS3-Cycle-Image-Slider/images/img_5.jpg);">
+			</figure>
+    </li>
+    </ul>
+    <h3>Uno sguardo sulla tua città ovvunque tu ti trovi</h3>
+  </div>
 </div>

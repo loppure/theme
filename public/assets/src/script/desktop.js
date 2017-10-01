@@ -30,3 +30,23 @@ document.addEventListener('DOMContentLoaded', () => {
         $('nav.main-navigation').toggleClass('toggle');
     });
 });
+
+//tab function
+
+$(document).ready(function(){
+
+  $('.content-col-servizi ul li').click(function(){
+    $('.content-col-servizi').addClass('vissible');
+    var tab_id = $(this).attr('data-tab');
+
+    $('.content-col-servizi ul li').removeClass('vissible');
+    $('.contento-servizio').removeClass('vissible');
+
+    $(this).addClass('vissible');
+    $(".content-contenuto-servizi #"+tab_id).addClass('vissible');
+  })
+    $('.content-contenuto-servizi button.close-servizi').click(function(){
+      $('.content-col-servizi').removeClass('vissible');
+      $('.content-contenuto-servizi .contento-servizio').removeClass('vissible');
+    })
+})

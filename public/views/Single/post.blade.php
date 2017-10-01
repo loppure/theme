@@ -12,7 +12,7 @@
   <div class="content-single">
     <div class="content-text">
       <div class="text">
-        {{ $post->content }}
+        {!! $post->content !!}
       </div>
       <div class="content-fonti">
           <h6>Fonti:</h6>

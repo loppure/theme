@@ -11,7 +11,6 @@
 
     <div class="text">
         {{ $post->content }}
-
     </div> <!-- .text -->
   </div>
 
