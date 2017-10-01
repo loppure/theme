@@ -3,8 +3,11 @@
 @section('content')
 
   <!-- TODO prima sezione rubrica - Presentazione della rubrica -->
-<header>
-  <div>
+<header class="header-category">
+  <div class="immagine-categoria">
+    <img src="#" />
+  </div>
+  <div class="descrizione-categoria">
     <h1>{{ $category }}</h1>
     <!-- stampa descrizione della rubrica -->
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -18,13 +21,13 @@
   </div>
 </header>
 
-<section>
+<section class="section-page loop-article">
   <!-- TODO seconda sezione rubrica - loop Rubrica -->
   <div class="block-sinistra">
-    <!-- Sidebar widget sinistra -->
+  @include('Widget/Home/HomeBlockSinistra/index')
   </div>
 
-  <div class="block-centrale post-category">
+  <div class="block-destra">
     @if( $posts )
         @include('shared.general_loop')
 
@@ -41,14 +44,7 @@
     </div>
   </div>
 
-  <div class="block-destra">
-    <!-- Sidebar widget destra -->
-  </div>
-
 </section>
 
-<section>
-  <!-- TODO terza sezione rubrica - altre rubriche -->
-</section>
 
 @endsection

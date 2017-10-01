@@ -7,12 +7,16 @@
   >
   <div class="sfondo">
     <header>
-        @if ($post->category)
-            <span class="text-name-rubrica {{ $post->category[0]->slug }}"><a href="{{ $post->category[0]->link }}">{{ $post->category[0]->name }}</a></span>
-        @endif
-        @if ($post->city)
-            <span class="text-name-citta {{ $post->city[0]->slug }}"><a href="{{ $post->city[0]->link }}">{{ $post->city[0]->name }}</a></span>
-        @endif
+      @if ($post->category)
+          <span class="text-name-rubrica {{ $post->category[0]->slug }}"><a href="{{ get_category_link( $post->category[0]->cat_ID ) }} ">{{ $post->category[0]->name }}</a></span>
+      @endif
+
+      <ul class="lista-citta">
+        @foreach ($post->city as $city)
+        <li class="{{ $city->slug }}"><a href="{{ $city->link }}">{{ $city->name }}</a></li>
+        @endforeach
+
+      </ul>
     </header>
     <div class="content-text">
       <h4><a href="{{ $post->permalink }}">{{ $post->title }}</a></h4>

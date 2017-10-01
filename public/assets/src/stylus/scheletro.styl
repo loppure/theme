@@ -141,7 +141,7 @@ section
     float: none
     margin: 0 auto
 
-.bock-centrale
+.block-centrale
   width: 50%
   display: block
   float: left
@@ -185,6 +185,42 @@ section
 
   @media (max-width: fat-phone)
     width: 30%
+
+  @media (max-width: smartphone)
+    width: 100%
+    display: block
+    margin: 0 auto
+    float: none
+
+//scheletro -> archive categoty e Autore
+.archive.category .block-sinistra,
+.archive.author .block-sinistra
+  width: 20%
+  display: block
+  float: left
+  padding: 20px 0
+  text-align: center
+
+  @media (max-width: tablet)
+    width: 100%
+    float: none
+    margin: 0 auto
+
+.archive.category .block-destra,
+.archive.author .block-destra
+  width: 75%
+  display: block
+  float: left
+  margin: 0 2%
+  padding: 20px 0
+  text-align: center
+  border-left: 2px solid colore-loppure
+
+  @media (max-width: mini-tablet)
+    width: 90%
+    margin: 0 auto
+    border: none
+    border-right: 2px solid colore-loppure
 
   @media (max-width: smartphone)
     width: 100%

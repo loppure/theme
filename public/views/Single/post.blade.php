@@ -23,11 +23,7 @@
   </div> <!-- .content-single -->
   <footer class="content-author-single">
     <div class="author-single">
-        {{--{{ $author->thumb }} TODO sistemare--}}
-
-
-        <img src="http://0.gravatar.com/avatar/3d7b1f1a4908cbf92bcee0fb28291087?s=96&d=mm&r=g" width="96" height="96" alt="" class="avatar avatar-96wp-user-avatar wp-user-avatar-96 alignnone photo avatar-default" />
-
+        
         <h4>{{ the_author_posts_link() }}</h4>
         <p class="author-bio">{{ get_the_author_meta( 'description' ) }}</p>
     </div>
