@@ -2,8 +2,8 @@
 
 //Elementi -> card: Scheletro
 .card
-  max-width: 450px
-  min-height: 400px
+  width: 450px
+  height: 400px
   height: auto
   display: block
   margin: 20px auto
@@ -282,12 +282,12 @@
 
 //Elementi -> card -> Post standard
 .card-post-standard
-  width: 400px
-  height: 400px
+  width: 350px
+  height: 350px
   overflow: hidden
   display: block
   margin: 0 auto
-  margin-bottom: 40px
+  margin-bottom: 20px
   color: bianco
   background-size: cover
   background-position: center
@@ -306,8 +306,8 @@
   header
     height: auto
     overflow: hidden
-    padding: 5px
-    border-bottom: 2px solid bianco
+    padding: 0
+    padding-bottom: 0
     text-align: center
 
     a, & a:visited, & a:hover, & a:focus, & a:active
@@ -319,31 +319,34 @@
 
       a, & a:visited, & a:hover, & a:focus, & a:active
         color: bianco
-        font-size: 18px
+        font-size: 16px
         font-weight: 700
-        text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4);
+        text-shadow: 2px 2px 1px rgba(0,0,0,0.6)
 
       &::before
-        width: 50px
-        height: 50px
+        width: 40px
+        height: 40px
         content: ' '
         display: block
         margin: 0 auto
+        margin-bottom: 5px
         border: 2px solid bianco
         border-radius: 50%
         background-size: 80%
         background-position: center
         background-repeat: none
 
+    ul.lista-citta
+      height: 30px
+      text-align: center
+      border-top: 1px solid bianco
 
-    .text-name-citta
-      display: inline-block
-      padding: 5px
-      margin: 0 auto
-      float: right
-      margin-left: -100px
-      color: bianco
-      border: 1px solid bianco
+      li
+        display: inline-block
+        margin: 3px
+
+        a
+          text-shadow: 2px 2px 1px rgba(0,0,0,0.6)
 
   .sfondo
     max-width: 100%
@@ -355,19 +358,20 @@
     background-image: radial-gradient( ellipse at center, rgba(64,72,76,0.25) 0%, rgba(64,72,76,1) 100% )
 
     .content-text
-      width: 80%
-      height: 220px
+      max-width: 90%
+      height: 175px
       overflow: hidden
       display: block
       float: none
       margin: 0 auto
-      margin-top: 15px
+      margin-top: 5px
       background: none
 
       h4, & a
+        margin: 0
         color: bianco
-        font-size: 35px
-        line-height: 37px
+        font-size: 30px
+        line-height: 34px
         text-align: center
         font-weight: 700
         text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.6);
@@ -420,3 +424,22 @@
 
     .text-name-rubrica::before
       background-image: img-pensieri-tra-le-pagine-bianco
+
+//Elementi -> Card -> archive category e Autore
+.archive.category .block-destra .card-post-standard,
+.archive.author .block-destra .card-post-standard
+  width: 300px
+  height: 300px
+  margin: 10px
+  float: left
+
+  .text-name-rubrica::before
+      width: 35px
+      height: 35px
+
+  .content-text
+    height: 140px
+
+    h4, & a
+      font-size: 26px
+      line-height: 29px

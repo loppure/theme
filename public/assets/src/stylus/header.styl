@@ -1,10 +1,10 @@
-/*header site - header*/
+//header -> site-branding e menu
 header.site-header
   position: fixed
   left: 0
   top: 0
   width: 100%
-  height: 50px
+  height: 45px
   padding: 0;
   background: #F7F7F7
   border-bottom: 2px solid colore-loppure
@@ -15,30 +15,83 @@ header.site-header
   *
     overflow: visible
 
-  .cerchio-logo
-    width: 110px
-    height: 110px
-    position: relative
-    background: #F7F7F7
-    border: 2px solid colore-loppure
-    border-radius: 50%
-    top: -30px
-    left: 2px
 
-    img
-      height: 60px
-      margin: 0 auto
+  button, a
+    display: inline-block
+    margin: 0 2px
+    padding: 9px 5px
+    border: none
+    background: none
+    color: colore-loppure
+    font-size: 14px
+    line-height: 27px
+    font-weight: 700
+    text-decoration: none
+    border-radius: 0
+
+    &::before
       display: block
-      position: relative
-      z-index: 99
-      top: 35px
+      width: 20px
+      height: 20px
+      content: ' '
+      margin: 2px 3px
+      margin-left: 0
+      float: left
+      border: 1px solid bianco
+      border-radius: 50%
+      background-color: colore-loppure
 
-  .nascondi-cerchio
-    width: 200px
-    height: 100%
-    background: #F7F7F7
-    position: absolute
-    z-index: 9
+    &:hover, &:focus, &:active
+      border: none
+      color: bianco
+      background-color: colore-loppure
+
+
+  .control-navigation-menu,
+  .menu-classic
+    width: 40%
+    float: left
+    display: block
+
+
+  .site-branding
+    width: 20%
+    height: 75px
+    float: left
+    display: block
+
+    .cerchio-logo
+      width: 80px
+      height: 80px
+      display: block
+      margin: 0 auto
+      position: relative
+      background: #F7F7F7
+      border: 2px solid colore-loppure
+      border-radius: 50%
+      bottom: 56px
+
+      a
+        padding: 0
+        margin: 0
+
+        &::before
+          display: none
+
+      img
+        height: 45px
+        margin: 0 auto
+        display: block
+        position: relative
+        z-index: 9
+        top: 23px
+
+    .nascondi-cerchio
+      width: 100%
+      height: 45px
+      background: #F7F7F7
+      position: relative
+      z-index: 2
 
     @media (max-width: 519px)
       margin-left: -3%
@@ -65,14 +118,3 @@ header.site-header
     @media (max-width: min)
       width: 95%
       max-width: 100%
-
-  .site-branding
-    width: 30%
-    float: left
-    margin: 0 auto
-    height: 100%
-
-    @media (max-width: smartphone)
-      float: none
-      display: inline-block
-      margin: 0 auto

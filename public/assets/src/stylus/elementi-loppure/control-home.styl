@@ -1,7 +1,7 @@
 //Elementi-loppure -> Control Navigation in HOME
 .control-home
-  margin: 30px auto
-  margin-top: 120px
+  margin: 0 auto
+  margin-top: 80px
   text-align: center
 
   .col-servizi
@@ -9,15 +9,22 @@
     height: 100px
     overflow: hidden
     display: inline-block
-    padding: 25px 10px
+    padding: 10px
     margin: 0 20px
-    background-color: rgba(255,255,255,0.5)
-    border: 1px solid bianco
 
-    h2
+    button
+      width: 100%
+      height: 100%
+      display: block
+      margin: 0
+      padding: 0
       font-size: 20px
+      font-weight: 800
       text-align: center
       color: colore-loppure
+      background: none
+      border: 1px solid bianco
+      border-radius: 0
 
       &:before
         width: 50px
@@ -25,9 +32,69 @@
         content: ' '
         display: block
         margin: 0 auto
-        margin-bottom: 20px
-        border: 2px solid colore-loppure
+        margin-bottom: 5px
+        border: 1px solid colore-loppure
+
+      &:hover, &:active, &:focus
+        border: 1px solid colore-loppure
+
+
+  .content-col-servizi.vissible .col-servizi
+    width: auto
+    height: auto
+    padding: 10px 5px
+
+    button
+      margin: 0
+      padding: 0
+      font-size: 16px
+
+      &:before
+        width: 20px
+        height: 20px
+        margin: 5px
+        float: left
 
   //Elementi-loppure -> Control Navigation in HOME -> content-contenuto-servizi
-  .content-contenuto-servizi
+
+  .contento-servizio
     display: none
+    max-width: 60%
+    overflow: hidden
+    margin: 10px auto
+    margin-bottom: 20px
+    float: none
+    background: #fff
+    box-shadow: ombra-scura
+
+    &.vissible
+      display:block
+
+    ul
+      display: block
+      clear: both
+      margin-bottom: 30px
+
+
+//Elementi-loppure -> Control Navigation in HOME -> botton-close
+.close-servizi
+
+  width: 40px
+  height: 40px
+  position: relative
+  top: 10px
+  right: 10px
+  float: right
+  border-radius: 50%
+  background: red
+
+
+//Elementi-loppure -> Control Navigation in HOME -> Sezione promozione
+.control-home .lista-tipi-promozione
+  text-align: center
+
+  li
+    width: 200px
+    height: 100px
+    display: inline-block
+    background-color: red

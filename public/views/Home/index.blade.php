@@ -32,7 +32,7 @@
       @include('Widget/Home/HomeBlockSinistra/index')
     </div>
 
-    <div class="bock-centrale">
+    <div class="block-centrale">
 
         @if( $posts )
             @include('shared.general_loop', ['show_city' => true])

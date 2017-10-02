@@ -1,91 +1,49 @@
-/*menu*/
-.main-navigation
+//Menu -> menu classico
+.main-navigation.menu-classic
   height: 100%
 
-  @media (max-width: smartphone)
+  .menu-menu-container li:last-child,
+  .button-control-navigation
+    display: none
+
+    @media (max-width: fat-phone)
+      display: inline-block
+
+
+  & a, & button
+    float: left
+
+  .menu-menu-container
+    @media (max-width: fat-phone)
+      display: none
+      position: absolute
+      width: 30%
+      top: 70px
+      right: 0
+      background: bianco
+
+  &.toggle .menu-menu-container
+    display: block
+
+
+
+//Menu -> Controll navigation menu
+.control-navigation-menu
+
+  ul
     float: right
-    height: 100%
+
+    li
+      float: left
+
+    li.iscriviti,
+    li.esplora
+      @media (max-width: fat-phone)
+        display: none
+
 
   .menu-toggle
     display: none
 
-    @media (max-width: smartphone)
+    @media (max-width: fat-phone)
       display: block
-      padding: 0 0 0 0
-      position: absolute
-      right: 50px
-      width: 40px
-      height: 40px
-      margin-top: 5px
-      background-color: transparent
-      background-position: center
-      background-size: 60%
-      background-repeat: no-repeat
-      border-radius: 50%
-      background-image: url("../../src/img/icone-generiche/menu-nero.svg") /*rivedere*/
-      background-size: 70%
-      background-repeat: no-repeat
-      background-position: center
-      border: none
-
-  .menu-menu-container
-    max-width: 65%
-    height: 100%
-    float: right
-
-    ul
-      height: auto
-      overflow: hidden
-      text-align: center
-
-      @media (max-width: smartphone)
-        display: none;
-
-      li
-        display: inline-block
-        margin: 0 5px
-
-        a
-          display: inline-block
-          padding: 15px 10px
-          text-decoration: none
-
-          &:hover, &:focus, &:active
-            color: bianco
-            background-color: colore-loppure
-            text-decoration: none
-
-nav.toggle
-  width: 100vh
-  height: 100vh
-  display: block
-  background: bianco
-  position: absolute
-  top: 0
-  left: 0
-  z-index: 99999
-
-  .menu-toggle
-    background-image: url("../../src/img/icone-generiche/close-nero.svg")
-    background-size: 80%
-    position: absolute
-    top: 0
-    right: 150px
-
-
-  .menu-menu-container
-    max-width: 100%
-    float: none
-    margin: 0 auto
-
-    ul
-      display: block
-
-      li
-
-        display: block
-        float: none
-        margin: 10px auto
-        font-size: 20px
-        padding: 5px 0
-        border-bottom: 1px solid colore-loppure
