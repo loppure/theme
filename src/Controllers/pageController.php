@@ -63,7 +63,8 @@ class pageController extends Controller
                 $a->name  = $user->data->display_name;
                 $a->bio   = get_the_author_meta('description', $user->ID);
                 $a->url   = get_author_posts_url($user->ID);
-                $a->thumb = get_wp_user_avatar($user->ID, 96);
+                //$a->thumb = get_wp_user_avatar($user->ID, 96);
+                $a->thumb = "";
                 $users[] = $a;
             }
         }

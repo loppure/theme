@@ -23,7 +23,8 @@ class searchController extends Controller
                 $a = new StdClass();
 
                 $a->id = $author->ID;
-                $a->thumb = get_avatar($author->user_email, $size=96);
+                // $a->thumb = get_avatar($author->user_email, $size=96);
+                $a->thumb = "";
                 $a->url = get_author_posts_url($author->ID);
                 $a->name = $author->display_name;
                 $a->bio = get_the_author_meta('description', $author->ID);
