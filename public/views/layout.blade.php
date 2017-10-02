@@ -15,8 +15,10 @@
 
                       <!-- menu classico -->
                       <nav id="site-navigation" class="main-navigation menu-classic" role="navigation">
-                          <button class="menu-toggle" aria-controls="menu-menu-1" aria-expanded="false">Menu</button>
-                          {{ wp_nav_menu( array( 'theme_location' => 'header-menu' ) ) }}
+                        <button id="click-action-open-close" data-tab="content-menu-navigation-cotrol" class="button-control-navigation">
+                          Esplora
+                        </button>
+                        {{ wp_nav_menu( array( 'theme_location' => 'header-menu' ) ) }}
                       </nav>
 
                       <!-- Spazio logo -->
@@ -31,9 +33,19 @@
 
                         <!--menu cosa facciamo-->
                         <nav id="control-navigation" class="control-navigation-menu">
-                          <button id="click-action-open-close" data-tab="content-menu-navigation-cotrol" class="button-control-navigation">Guarda</button>
-                          <a href="#">Naviga</a>
-                          <a href="#">Iscriviti</a>
+                          <ul>
+                            <li class="iscriviti">
+                              <button id="click-action-open-close" data-tab="content-menu-navigation-cotrol" class="button-control-navigation">
+                                Esplora
+                              </button>
+                            </li>
+                            <li class="esplora">
+                              <a href="#">Iscriviti</a>
+                            </li>
+                            <li>
+                              <button class="menu-toggle" aria-controls="menu-menu-1" aria-expanded="false">Menu</button>
+                            </li>
+                          </ul>
                           @include('ControlNavigation.controlnavigation-menu')
                         </nav>
                     </div><!-- .header-wrapper -->
@@ -47,16 +59,11 @@
                     </div> <!-- #primary -->
                 </section> <!-- #content -->
 
-              <!--- TODO  <div class="content-assistant">
-                  <span class="novita">Novità</span>
+                <div class="pie-pagina">
+                  <button class="share"></button>
                   <button class="assistant"></button>
-                  <h6>Cerbero</h6>
-                  <span>la tua guida</span>
+                  <button class="scroll_up" id="scroll_up"></button>
                 </div>
-                <div class="views-assistent">
-
-                </div>
-                <button class="scroll_up" id="scroll_up"></button> -->
 
                 <footer id="colophon" class="site-footer" role="contentinfo">
                     @include('Footer.footer')

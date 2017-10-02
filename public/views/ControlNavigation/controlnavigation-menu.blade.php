@@ -10,6 +10,9 @@
       <li class="col-servizi eventi" data-tab="eventi-menu">
         <button>Eventi</button>
       </li>
+      <li class="col-servizi espolora">
+        <a href="#">Guarda le nostre città</a> <!-- TODO va indirizzato alla cartina con le città -->
+      </li>
     </ul>
   </div>
 

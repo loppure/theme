@@ -1,40 +1,44 @@
 <article>
+  <button class="close">X</button>
   <header>
-    <button class="close"></button>
-    <div class="content-foto-assistant">
-      <img src="#"/>
-      <h6>Cerbero</h6>
-    </div>
-    <div class="help-assistant">
-      <span>Novità</span>
-      <a href="#">Cononoscimi</a>
-    </div>
+    <span>Ciao sono Fiammetta</span>
+    <span>come posso aiutarti?</span>
   </header>
-  <div class="col-assistant content-categorie">
-    <span>L'oppure ti racconta questo:</span>
+  <div class="contenuto-assistente">
     <ul>
-      <!-- lista rubriche -->
-    </ul>
-  </div>
-  <div class="col-assistant content-citta">
-    <span>L'oppure si trova:</span>
-    <ul>
-      <!-- lista città -->
-    </ul>
-  </div>
-  <div class="col-assistant content-last-article">
-    <span>L'ultimo sguardo sul terrriotorio</span>
-    <!-- contiene la card dell'ultimo articolo-->
-  </div>
-  <div class="col-assistant content-search">
-    <span>I nostri progetti in atto</span>
-    <!-- contiene la barra di ricerca -->
-  </div>
-  <footer>
-    <!-- contiene la barra di ricerca -->
-    <div class="content-search">
-      <span>Se quello che ti ho proposto non basta cercalo qui</span>
-
+      <li>
+        <button>Conosci la mia storia?</button>
+        <div class="risposta">
+          <p>La mia storia viene raccontata in un fumetto realizzato dai miei amici
+            de L'oppure su questa pagina.
+          </p>
+          <a href="#">Scopri la mia storia</a>
+        </div>
+      </li>
+      <li>
+        <button>Hai visto cos'è uscito oggi?</button>
+        <div class="risposta">
+          <p>Oggi è uscito NOME ARTICOLO per NOME RUBRICA O ALTRO,
+            te lo consiglio è molto interssante.
+          </p>
+          <a href="#">Leggi</a>
+        </div>
+      </li>
+      <li>
+        <button>Ti va di scrivere?</button>
+        <div class="risposta">
+          <p>Se vuoi scrivere perchè non ti aggiungi alla famiglia de L'oppure,
+            io scrivo da ormai un anno per questo progetto</p>
+          <a href="#">Scrivi</a>
+        </div>
+      </li>
+      <li>
+        <button>Hai visto un qualche errore?</button>
+        <div class="risposta">
+          <p>Hai visto un errore, succede, aiutaci a correggerlo
+            te ne sarei infinitamente grata.
+          </p>
+        </div>
+      </li>
     </div>
-  </footer>
-</article>
+  </article>
