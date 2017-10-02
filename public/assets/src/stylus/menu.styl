@@ -1,6 +1,9 @@
-/*menu*/
-.main-navigation
+//Menu -> menu classico
+.main-navigation.menu-classic
   height: 100%
+
+  & a, & button
+    float: left
 
   @media (max-width: smartphone)
     float: right
@@ -28,32 +31,6 @@
       background-position: center
       border: none
 
-  .menu-menu-container
-    max-width: 65%
-    height: 100%
-    float: right
-
-    ul
-      height: auto
-      overflow: hidden
-      text-align: center
-
-      @media (max-width: smartphone)
-        display: none;
-
-      li
-        display: inline-block
-        margin: 0 5px
-
-        a
-          display: inline-block
-          padding: 15px 10px
-          text-decoration: none
-
-          &:hover, &:focus, &:active
-            color: bianco
-            background-color: colore-loppure
-            text-decoration: none
 
 nav.toggle
   width: 100vh
@@ -78,14 +55,8 @@ nav.toggle
     float: none
     margin: 0 auto
 
-    ul
-      display: block
+//Menu -> Controll navigation menu
+.control-navigation-menu
 
-      li
-
-        display: block
-        float: none
-        margin: 10px auto
-        font-size: 20px
-        padding: 5px 0
-        border-bottom: 1px solid colore-loppure
+  & a, & button
+    float: right

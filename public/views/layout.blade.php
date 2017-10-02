@@ -12,25 +12,30 @@
 
                 <header id="masthead" class="site-header" role="banner">
                     <div class="header-wrapper">
-                        <div class="site-branding">
-                            <div class="nascondi-cerchio"></div>
-                            <div class="cerchio-logo">
-                                <a href="{{ esc_url( home_url( '/' )) }}" rel="home">
-                                    <img alt="logo L'oppure" src="<?php echo get_template_directory_uri()?>/public/assets/src/img/logo/loppure-logo-nero.svg">
-                                </a>
-                            </div>
-                        </div><!-- .site-branding -->
 
-                        <!--menu funziona solo da mobile per la navigazione tra i seguvizi-->
-                        <nav id="control-navigation" class="menu">
-                          <button class="button-control-navigation"></button>
-                          @include('ControlNavigation.controlnavigation')
+                      <!-- menu classico -->
+                      <nav id="site-navigation" class="main-navigation menu-classic" role="navigation">
+                          <button class="menu-toggle" aria-controls="menu-menu-1" aria-expanded="false">Menu</button>
+                          {{ wp_nav_menu( array( 'theme_location' => 'header-menu' ) ) }}
+                      </nav>
+
+                      <!-- Spazio logo -->
+                      <div class="site-branding">
+                        <div class="nascondi-cerchio"></div>
+                        <div class="cerchio-logo">
+                            <a href="{{ esc_url( home_url( '/' )) }}" rel="home">
+                                <img alt="logo L'oppure" src="<?php echo get_template_directory_uri()?>/public/assets/src/img/logo/loppure-logo-nero.svg">
+                            </a>
+                        </div>
+                      </div>
+
+                        <!--menu cosa facciamo-->
+                        <nav id="control-navigation" class="control-navigation-menu">
+                          <button id="click-action-open-close" data-tab="content-menu-navigation-cotrol" class="button-control-navigation">Guarda</button>
+                          <a href="#">Naviga</a>
+                          <a href="#">Iscriviti</a>
+                          @include('ControlNavigation.controlnavigation-menu')
                         </nav>
-                        <nav id="site-navigation" class="main-navigation" role="navigation">
-                            <button class="menu-toggle" aria-controls="menu-menu-1" aria-expanded="false"></button>
-                            {{ wp_nav_menu( array( 'theme_location' => 'header-menu' ) ) }}
-                        </nav><!-- #site-navigation -->
-
                     </div><!-- .header-wrapper -->
                 </header><!-- #masthead -->
 

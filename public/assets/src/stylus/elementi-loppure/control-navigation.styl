@@ -1,2 +1,48 @@
-#control-navigation
+
+.contentuto-controll-navigation-menu
   display: none
+  max-width: 500px
+  width: 100%
+  background: #fff
+  position: absolute
+  right: 50px
+  top: 80px
+
+  &.vissible
+    display: block
+
+  .col-servizi
+    overflow: hidden
+    display: inline-block
+    padding: 10px
+    margin: 5px
+
+    button
+      margin: 0
+      font-size: 20px
+      font-weight: 800
+      text-align: center
+      color: colore-loppure
+      background: none
+      border: 1px solid bianco
+
+      &::before
+        width: 40px
+        height: 40px
+        content: ' '
+        display: block
+        margin: 0 auto
+        float: left
+        margin-bottom: 5px
+        border: 1px solid colore-loppure
+
+      &:hover, &:active, &:focus
+        border: 1px solid colore-loppure
+
+
+
+.contentuto-controll-navigation-menu .contento-servizio
+  display: none
+
+.contentuto-controll-navigation-menu .contento-servizio.visible
+  display: block

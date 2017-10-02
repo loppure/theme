@@ -1,13 +1,13 @@
 <div class="content-col-servizi">
   <ul>
     <li class="col-servizi promozione"  data-tab="promozione">
-      <h2>Promozione</h2>
+      <button>Promozione</button>
     </li>
     <li class="col-servizi progetti" data-tab="progetti">
-      <h2>Progetti</h2>
+      <button>Progetti</button>
     </li>
     <li class="col-servizi eventi" data-tab="eventi">
-      <h2>Eventi</h2>
+      <button>Eventi</button>
     </li>
 
   </ul>
