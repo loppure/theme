@@ -1,5 +1,7 @@
 <?php
 
+Tested-by: Omar Polo <omar.polo@europecom.net>
+
 // composer autoload
 require_once( get_template_directory() . '/vendor/autoload.php' );
 
@@ -84,18 +86,20 @@ if (Router::is('admin')) {
     unset($theme['debug']);
 }
 
-$theme->run(); // lancia il tema ^^
-
 // load custom post type in home
-// TODO: add our custom post type
 add_filter('pre_get_posts', function($query) {
-    if (is_home() && $query->is_main_query()) {
-        $query->set('post_type', ['post'] );
+    if (Router::is('home') && $query->is_main_query()) {
+        $query->set('post_type', ['post', 'loppure_polaroid'] );
     }
 
     return $query;
 });
 
+$theme->run(); // lancia il tema ^^
+
 // old theme shit:
 require get_template_directory() . '/old-theme/custom-comment.php';
 require get_template_directory() . '/old-theme/custom-stat.php';
+
+// temporary
+flush_rewrite_rules(false);
