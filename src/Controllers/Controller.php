@@ -38,6 +38,16 @@ class Controller extends \Theine\Controller\Controller
         $custom_filters = array_merge(
             array(
                 array(
+                    "name"    => "category_link",
+                    "closure" => function($id) {
+                        $cat = get_the_category($id);
+                        if (!empty($cat)) {
+                            return get_category_link($cat[0]);
+                        }
+                        return false;
+                    }
+                )
+                array(
                     "name"    => "type",
                     "closure" => function($id) {
                         return get_post_type();
