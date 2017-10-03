@@ -106,6 +106,23 @@ class Controller extends \Theine\Controller\Controller
                     }
                 ),
                 array(
+                    "name"    => "progetto",
+                    "closure" => function ($id) {
+                        $terms = get_the_terms($id, 'progetti');
+                        $terms = is_array($terms) ? $terms : [];
+                        return array_map(
+                            function ($term) {
+                                $t = new StdClass();
+                                $t->name = $term->name;
+                                $t->slug = $term->slug;
+                                $t->link = get_term_link($term);
+                                return $t;
+                            },
+                            $terms
+                        );
+                    }
+                ),
+                array(
                     "name"    => "thumbnail",
                     "closure" => function ($id) {
                         $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($id), 'medium');
