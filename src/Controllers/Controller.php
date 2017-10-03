@@ -46,7 +46,7 @@ class Controller extends \Theine\Controller\Controller
                         }
                         return false;
                     }
-                )
+                ),
                 array(
                     "name"    => "type",
                     "closure" => function($id) {
