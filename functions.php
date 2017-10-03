@@ -1,7 +1,5 @@
 <?php
 
-Tested-by: Omar Polo <omar.polo@europecom.net>
-
 // composer autoload
 require_once( get_template_directory() . '/vendor/autoload.php' );
 
