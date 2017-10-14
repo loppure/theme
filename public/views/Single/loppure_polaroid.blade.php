@@ -2,16 +2,19 @@
 
 @section('content')
 
-<article id="post-{{ $post->id }}" data-image="image here" data-id="{{ $post->id }}" {{ post_class() }}>
-  <header class="single-header">
-    <h1 class="entry-title">{{ $post->title }}</h1>
-  </header>
-  <div class="content-polaroid">
-    <figure class="single-image" style="background-image: url({{ $post->thumbnail }})"></figure>
+<article id="post-{{ $post->id }}" data-id="{{ $post->id }}" {{ post_class() }}>
+  <div class="content-immagine-polaroid">
+    <figure style="background-image: url({{ $post->thumbnail }})" data-image-url="{{ $post->thumbnail }}"></figure>
+  </div>
+  <div class="content-text-polaroid">
+    <header class="single-header">
+      <h1 class="entry-title">{{ $post->title }}</h1>
+    </header>
 
     <div class="text">
         {{ $post->content }}
     </div> <!-- .text -->
+
   </div>
 
 </article>

@@ -2,7 +2,7 @@
 
 @section('content')
 
-  <section class="section-page">
+  <section class="section-page-full">
 
     <!-- TODO primo sezione home -->
     <!-- Questo contine il menu di navigazione - Payoff - Input di ricerca -->
@@ -13,7 +13,7 @@
     @include('Slideshow.slideshow-home')
   </section>
 
-  <section class="section-page section-ricerca">
+  <section class="section-page-full section-ricerca">
     <!-- TODO seconda sezione home -->
     <!-- Questa parte compare solo quando avviene la ricerca -->
     <div class="content-ricerca">

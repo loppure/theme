@@ -14,4 +14,11 @@
     <p>{{ $author->bio }}</p>
   </div>
 
+  <footer>
+    <a href="#">Facebook</a>
+    <a href="#">Twitter</a>
+    <a href="#">Email</a>
+    <a href="#">sito</a>
+  </footer>
+
 </article>

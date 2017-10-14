@@ -106,7 +106,7 @@ class Controller extends \Theine\Controller\Controller
                     }
                 ),
                 array(
-                    "name"    => "progetto",
+                    "name"    => "progetti",
                     "closure" => function ($id) {
                         $terms = get_the_terms($id, 'progetti');
                         $terms = is_array($terms) ? $terms : [];

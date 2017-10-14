@@ -30,7 +30,7 @@ class ReportageType extends CustomPostType
             'taxonomies'    => array( 'category', 'citta' ),
             'public'        => true,
             'menu_position' => 5,
-            'supports'      => array( 'title', 'excerpt', 'thumbnail', 'comments', 'custom-fields', 'revisions' ),
+            'supports'      => array( 'title', 'editor', 'thumbnail' ),
             'has_archive'   => false,
             'menu_icon'     => 'dashicons-format-image',
             'rewrite'       => array( 'slug' => 'reportage' )

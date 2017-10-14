@@ -2,15 +2,18 @@
 
 //Elementi -> card: Scheletro
 .card
-  width: 450px
-  height: 400px
-  height: auto
+  width: 350px
+  height: 350px
+  overflow: hidden
   display: block
-  margin: 20px auto
+  margin: 0 auto
+  margin-bottom: 20px
   background-color: bianco
-  border: 0.08rem solid grigio-intermedio
-  border-bottom: 7px solid colore-loppure
-  text-align: left
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.3)
+  border: 1px solid colore-loppure
 
   @media (max-width: min-smartphone)
     max-width: 100%
@@ -106,7 +109,7 @@
   min-height: 50px
   display: block
   position: relative
-  margin-top: -50px
+  bottom: 50px
 
   //Elementi che si aprono nel footer
   .Open-Hide
@@ -424,6 +427,85 @@
 
     .text-name-rubrica::before
       background-image: img-pensieri-tra-le-pagine-bianco
+
+//Elementi -> Card -> Post Polaroid
+.card-post-polaroid
+
+  .contenuto-post-polaroid
+    max-width: 100%
+    max-height: 100%
+    padding: 15px
+    background-color: bianco
+
+  figure
+    height: 260px
+    padding: 0
+    margin: 0
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+
+    header
+      height: 50px
+      padding: 10px
+
+
+//Elementi -> Card -> Post eventi
+.card-evento
+
+  figure
+    height: 170px
+    display: block
+    margin: 0
+
+    .calendario
+      width: 100px
+      height: 100px
+      margin: 0 auto
+      position: relative
+      top: 100px
+      background-color: bianco
+      border: 1px solid colore-loppure
+
+      span
+        font-weight: 700
+        font-size: 20px
+        color: #000
+
+  header
+    height: auto
+    display: block
+    padding: 0
+    padding-top: 60px
+    padding-bottom: 10px
+    margin: 0
+
+    & span, & h3
+      display: block
+      margin: 0 auto
+      padding: 0
+      text-align: center
+      color: bianco
+      font-weight: 700
+
+    h3
+      font-size: 25px
+
+  footer
+    display: block
+    position: static
+
+//Elementi -> Card -> Post reportage
+.card-reportage
+  width: 450px
+  height: 400px
+  height: auto
+  display: block
+  margin: 20px auto
+  background-color: bianco
+  border: 0.08rem solid grigio-intermedio
+  border-bottom: 7px solid colore-loppure
+  text-align: left
 
 //Elementi -> Card -> archive category e Autore
 .archive.category .block-destra .card-post-standard,

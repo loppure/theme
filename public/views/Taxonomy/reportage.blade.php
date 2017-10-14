@@ -1,16 +1,16 @@
 @extends('layout')
 
 @section('content')
+<section>
+  <!-- TODO prima sezione progetto - presentazione progetti -->
+</section>
+<section>
+  <!-- TODO seconda sezione - loop TERM progetto -->
+</section>
+<section>
+  <!-- TODO terza sezione - loop tutti i post type progetto -->
+</section>
 
-<section>
-  <!-- TODO prima sezione reportage - presentazione -->
-</section>
-<section>
-  <!-- TODO seconda sezione reportage - loop TERM reportage -->
-</section>
-<section>
-  <!-- TODO terza sezione reportage - loop costum post type reportage -->
-</section>
 
     <header class="header-taxonomy-progetti">
         @if( $taxonomy->cover )
@@ -27,11 +27,7 @@
 
     <section class="site-content content-post-citta">
         <div class="widget-sx" role="complementary">
-    <?php
-    // TODO: temporary
-    (new Loppure\Component\Widgets\TimelineWidget())->widget('', '');
-    ?>
-
+    
             {{--{{ dynamic_sidebar('sidebar-sx') }} --}}
         </div>
 

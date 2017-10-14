@@ -27,11 +27,7 @@
 
     <section class="site-content content-post-citta">
         <div class="widget-sx" role="complementary">
-    <?php
-    // TODO: temporary
-    (new Loppure\Component\Widgets\TimelineWidget())->widget('', '');
-    ?>
-
+    
             {{--{{ dynamic_sidebar('sidebar-sx') }} --}}
         </div>
 

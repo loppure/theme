@@ -87,7 +87,7 @@ if (Router::is('admin')) {
 // load custom post type in home
 add_filter('pre_get_posts', function($query) {
     if (Router::is('home') && $query->is_main_query()) {
-        $query->set('post_type', ['post', 'loppure_polaroid'] );
+        $query->set('post_type', ['post', 'loppure_polaroid', 'loppure_evento', 'loppure_reportage'] );
     }
 
     return $query;
