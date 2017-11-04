@@ -16,7 +16,7 @@
         <a href="{{ esc_url( home_url( '/' )) }}/rubriche/pausa-caffe">Pausa caffè</a>
       </li>
       <li>
-        <a href="{{ esc_url( home_url( '/' )) }}/rubriche/pensieri-tra-le-pagine">Penseri tra le pagine</a>
+        <a href="{{ esc_url( home_url( '/' )) }}/rubriche/pensieri-tra-le-pagine">Pensieri tra le pagine</a>
       </li>
     </ul>
   </div>
