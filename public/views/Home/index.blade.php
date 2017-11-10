@@ -13,17 +13,6 @@
     @include('Slideshow.slideshow-home')
   </section>
 
-  <section class="section-page-full section-ricerca">
-    <!-- TODO seconda sezione home -->
-    <!-- Questa parte compare solo quando avviene la ricerca -->
-    <div class="content-ricerca">
-      @include('shared.searchform')
-    </div>
-    <div class="content-risultati-ricerca">
-      <!-- TODO stampare i risultati di ricerca -->
-    </div>
-  </section>
-
   <section class="section-page loop-article">
     <!-- TODO terza sezione home -->
     <!-- Questa parte contiene il loop della home -->

@@ -24,16 +24,31 @@ class ReportageType extends CustomPostType
             'menu_name'          => 'Reportage'
         );
 
-        $args = array(
-            'labels'        => $labels,
-            'description'   => 'Holds our post reportage and reportage specific data',
-            'taxonomies'    => array( 'category', 'citta' ),
-            'public'        => true,
-            'menu_position' => 5,
-            'supports'      => array( 'title', 'editor', 'thumbnail' ),
-            'has_archive'   => false,
-            'menu_icon'     => 'dashicons-format-image',
-            'rewrite'       => array( 'slug' => 'reportage' )
+        $rewrite = array(
+      		'slug'                  => 'reportage',
+      		'with_front'            => true,
+      		'pages'                 => true,
+      		'feeds'                 => true,
+      	);
+      	$args = array(
+      		'label'                 => __( 'reportage', 'text_domain' ),
+      		'description'           => __( 'Post Type Description', 'text_domain' ),
+      		'labels'                => $labels,
+      		'supports'              => array( 'title', 'editor', 'thumbnail' ),
+      		'taxonomies'            => array( 'category', 'citta' ),
+      		'hierarchical'          => true,
+      		'public'                => true,
+      		'show_ui'               => true,
+      		'show_in_menu'          => true,
+      		'menu_position'         => 5,
+      		'show_in_admin_bar'     => true,
+      		'show_in_nav_menus'     => true,
+      		'can_export'            => true,
+      		'has_archive'           => true,
+      		'exclude_from_search'   => false,
+      		'publicly_queryable'    => true,
+      		'rewrite'               => $rewrite,
+      		'capability_type'       => 'page',
         );
 
         parent::__construct('loppure_reportage', $args);

@@ -25,7 +25,6 @@
       <p class="author-bio">{{ get_the_author_meta( 'description' ) }}</p>
   </div>
 
-
   @include('Widget/Social/share/index')
 
   <div class="informativa">

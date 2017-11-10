@@ -47,4 +47,7 @@
       </article>
     </div>
   </div>
+  <div class="content-ricerca">
+    @include('shared.searchform')
+  </div>
 </div>
