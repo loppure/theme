@@ -2,17 +2,24 @@
 
 @section('content')
 
-<header>
-	<h1>Eventi</h1>
-</header>
+	<header>
+		<h1>Eventi</h1>
+	</header>
 
-<section>
-	<!--TODO prima sezione archive eventi - prossimi eventi e eventi passati -->
-	<div class="prossimi-eventi">
-	</div>
-	<div class="eventi-passati">
-	</div>
+	<section>
+		<h3>Prossimi eventi</h3>
+	</section>
+	<section>
+		<h3>Eventi passati</h3>
+	</section>
 
-</section>
+	<section>
+		<!--TODO prima sezione archive reportage - loop post type Reportage -->
+		@if( $posts )
+			@include('shared.general_loop')
+		@else
+			@include('shared.empty')
+		@endif
+	</section>
 
 @endsection

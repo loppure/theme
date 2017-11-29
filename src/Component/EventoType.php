@@ -25,7 +25,7 @@ class EventoType extends CustomPostType
         );
 
         $rewrite = array(
-      		'slug'                  => 'evento',
+      		'slug'                  => 'eventi',
       		'with_front'            => true,
       		'pages'                 => true,
       		'feeds'                 => true,
