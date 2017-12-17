@@ -68,6 +68,6 @@
 
 </div>
 <div class="legal">
-  <p>Copyright (c) 2017 Copyright Associzione L'oppure All Rights Reserved.</p>
+  <p>Copyright (c) 2017 Copyright Associazione L'oppure All Rights Reserved.</p>
 </div>
 </div>
