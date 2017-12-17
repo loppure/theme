@@ -43,7 +43,7 @@
 </div>
 <div class="col-footer">
   <h6>Associazione L'oppure</h6>
-  <span>Uno sguardo sul territorio<br/>ovunque tu ti trovi</span>
+  <span>Uno sguardo sulla tua città<br/>ovunque ti trovi</span>
   <ul class="contatti-footer">
     <li>C.F. 91091430933</li>
     <li><a href="mailto:info@loppure.it">info@loppure.it</a></li>
@@ -51,7 +51,7 @@
   </ul>
   <div class="list-social-bianchi">
     <h6>@LoppureIT</h6>
-    <span>Cercaci sui social tramite qusto nickname</span>
+    <span>Cercaci sui social tramite questo nickname</span>
     <ul>
       <li class="item-social">
         <a href="https://www.facebook.com/LoppureIT/" target="_blank" title="Seguici su Facebook">
